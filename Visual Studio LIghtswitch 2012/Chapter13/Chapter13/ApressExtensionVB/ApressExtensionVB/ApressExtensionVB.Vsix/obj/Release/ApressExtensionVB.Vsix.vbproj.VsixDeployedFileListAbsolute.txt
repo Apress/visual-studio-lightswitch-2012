@@ -1,0 +1,3 @@
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.1\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.1\\license.txt
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.1\\ApressExtensionVB.lspkg

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication
+    Name="LightSwitchServiceApplication"
+    Version="1.0.0.0">
+    <ServiceApplication.Attributes>
+      <ModuleNamespace
+        Namespace="LightSwitchApplication" />
+    </ServiceApplication.Attributes>
+  </ServiceApplication>
+  <DataService
+    DataProvider="EntityFrameworkDataProvider"
+    EntityContainer="LightSwitchCommonModule:ApplicationData"
+    Name="ApplicationDataMapping">
+    <EntitySetMapping
+      EntitySet="Issues" />
+    <AssociationSetMapping
+      AssociationSet="EngineerSkill_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="EngineerSkill_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Engineers]/Members[EngineerSkill]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="EngineerSkill_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Engineers]/Members[Engineer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="EngineerSkills">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="EngineerSkill_Engineer"
+          Nullable="False"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="EngineerSkill_Skill"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="EngineerSkill_Skills">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="EngineerSkill_Skills" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Skills]/Members[EngineerSkill]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="EngineerSkill_Skill" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Skills]/Members[Skill]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Engineer_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Engineer_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Engineer_Engineers]/Members[Engineer1]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Engineer_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Engineer_Engineers]/Members[Engineer2]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="Engineers">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Engineer_Engineer"
+          Nullable="True"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="TimeTracking_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="TimeTracking_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[TimeTracking_Engineers]/Members[TimeTracking]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimeTracking_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[TimeTracking_Engineers]/Members[Engineer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="TimeTrackings">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="TimeTracking_Engineer"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Department_Users">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Department_Users" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Department_Users]/Members[Department]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Department_Users]/Members[User]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Department_User" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="Users">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Department_User"
+          Nullable="True"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="IssueResponses" />
+    <EntitySetMapping
+      EntitySet="IssueDocuments" />
+    <EntitySetMapping
+      EntitySet="IssueFeedbacks" />
+  </DataService>
+</ModelFragment>

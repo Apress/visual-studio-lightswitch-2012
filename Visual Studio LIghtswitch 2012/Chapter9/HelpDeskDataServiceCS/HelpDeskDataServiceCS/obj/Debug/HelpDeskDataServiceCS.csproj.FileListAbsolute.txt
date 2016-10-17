@@ -1,0 +1,4 @@
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceCS\HelpDeskDataServiceCS\bin\Debug\HelpDeskDataServiceCS.dll
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceCS\HelpDeskDataServiceCS\bin\Debug\HelpDeskDataServiceCS.pdb
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceCS\HelpDeskDataServiceCS\obj\Debug\HelpDeskDataServiceCS.dll
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceCS\HelpDeskDataServiceCS\obj\Debug\HelpDeskDataServiceCS.pdb

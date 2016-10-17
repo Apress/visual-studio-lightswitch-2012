@@ -1,0 +1,1222 @@
+<!--****************************************************************************
+* This file defines a Microsoft LightSwitch runtime color theme.               *
+*****************************************************************************-->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Text Styles - Can be displayed on ScreenBackground, if not use FontBackgroundBrush -->
+    <!-- States:  FontFamily, FontStyle, FontSize, FontWeight, FontBrush, FontBackgroundBrush -->
+
+    <!-- Font Style: Normal -->
+    <!-- The standard font style -->
+    <FontFamily x:Key="NormalFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="NormalFontSize">11</sys:Double>
+    <FontWeight x:Key="NormalFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="NormalFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="NormalFontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="NormalFontBackgroundBrush"
+                     Color="White" />
+
+    <!-- Font Style: Heading1 -->
+    <FontFamily x:Key="Heading1FontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="Heading1FontSize">16</sys:Double>
+    <FontWeight x:Key="Heading1FontWeight">Bold</FontWeight>
+    <FontStyle x:Key="Heading1FontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="Heading1FontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="Heading1FontBackgroundBrush"
+                     Color="White" />
+
+    <!-- Font Style: Heading2 -->
+    <FontFamily x:Key="Heading2FontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="Heading2FontSize">14</sys:Double>
+    <FontWeight x:Key="Heading2FontWeight">Normal</FontWeight>
+    <FontStyle x:Key="Heading2FontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="Heading2FontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="Heading2FontBackgroundBrush"
+                     Color="White" />
+
+    <!-- Font Style: Strong -->
+    <FontFamily x:Key="StrongFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="StrongFontSize">11</sys:Double>
+    <FontWeight x:Key="StrongFontWeight">Bold</FontWeight>
+    <FontStyle x:Key="StrongFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="StrongFontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="StrongFontBackgroundBrush"
+                     Color="White" />
+
+    <!-- Font Style: Emphasis -->
+    <FontFamily x:Key="EmphasisFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="EmphasisFontSize">11</sys:Double>
+    <FontWeight x:Key="EmphasisFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="EmphasisFontStyle">Italic</FontStyle>
+    <SolidColorBrush x:Key="EmphasisFontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="EmphasisFontBackgroundBrush"
+                     Color="White" />
+
+    <!-- Font Style: Warning -->
+    <!-- Generally red -->
+    <FontFamily x:Key="WarningFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="WarningFontSize">11</sys:Double>
+    <FontWeight x:Key="WarningFontWeight">Bold</FontWeight>
+    <FontStyle x:Key="WarningFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="WarningFontBrush"
+                     Color="#FFDC000C" />
+    <SolidColorBrush x:Key="WarningFontBackgroundBrush"
+                     Color="#FFFFC7CE" />
+
+    <!-- Font Style: Note -->
+    <FontFamily x:Key="NoteFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="NoteFontSize">9</sys:Double>
+    <FontWeight x:Key="NoteFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="NoteFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="NoteFontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="NoteFontBackgroundBrush"
+                     Color="White" />
+
+    <!-- Font Style: Good -->
+    <!-- Generally green -->
+    <FontFamily x:Key="GoodFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="GoodFontSize">11</sys:Double>
+    <FontWeight x:Key="GoodFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="GoodFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="GoodFontBrush"
+                     Color="#FF006100" />
+    <SolidColorBrush x:Key="GoodFontBackgroundBrush"
+                     Color="#FFC6EFCE" />
+
+    <!-- Font Style: Bad -->
+    <!-- Generally red -->
+    <FontFamily x:Key="BadFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="BadFontSize">11</sys:Double>
+    <FontWeight x:Key="BadFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="BadFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="BadFontBrush"
+                     Color="#FFDC000C" />
+    <SolidColorBrush x:Key="BadFontBackgroundBrush"
+                     Color="#FFFFC7CE" />
+
+    <!-- Font Style: Neutral -->
+    <!-- Generally yellow/brown -->
+    <FontFamily x:Key="NeutralFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="NeutralFontSize">11</sys:Double>
+    <FontWeight x:Key="NeutralFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="NeutralFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="NeutralFontBrush"
+                     Color="#FFAD653E" />
+    <SolidColorBrush x:Key="NeutralFontBackgroundBrush"
+                     Color="#FFFFEB9C" />
+
+    <!-- Font Style: ToolTip -->
+    <!-- Style used for tooltips -->
+    <FontFamily x:Key="ToolTipFontFamily">Segoe UI, Arial</FontFamily>
+    <sys:Double x:Key="ToolTipFontSize">11</sys:Double>
+    <FontWeight x:Key="ToolTipFontWeight">Normal</FontWeight>
+    <FontStyle x:Key="ToolTipFontStyle">Normal</FontStyle>
+    <SolidColorBrush x:Key="ToolTipFontBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="ToolTipFontBackgroundBrush"
+                     Color="White" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Screen -->
+    <!-- States:  NormalBrush -->
+
+    <!-- ScreenBackground - The background of the screen. -->
+    <SolidColorBrush x:Key="ScreenBackgroundBrush"
+                     Color="White" />
+
+    <!-- ScreenLoadingBackground - The background of a control that is loading -->
+    <SolidColorBrush x:Key="ScreenLoadingBackgroundBrush"
+                     Color="#FFF7F7F7" />
+
+    <!-- ScreenControlBorder - The border of a control that is not based on another control already defined -->
+    <SolidColorBrush x:Key="ScreenControlBorderBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Button -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, DisabledBrush, PressedBrush -->
+
+    <!-- ButtonBorder -->
+    <SolidColorBrush x:Key="ButtonBorderBrush"
+                     Color="#FF707070" />
+    <SolidColorBrush x:Key="ButtonBorderFocusedBrush"
+                     Color="#FF3C7FB1" />
+    <SolidColorBrush x:Key="ButtonBorderMouseOverBrush"
+                     Color="#FF3C7FB1" />
+    <SolidColorBrush x:Key="ButtonBorderDisabledBrush"
+                     Color="#FFADB2B5" />
+    <SolidColorBrush x:Key="ButtonBorderPressedBrush"
+                     Color="#FF68B3DB" />
+
+    <!-- ButtonInnerBorder - Appears just inside the border -->
+    <SolidColorBrush x:Key="ButtonInnerBorderBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="ButtonInnerBorderFocusedBrush"
+                     Color="#FF81D3EB" />
+    <SolidColorBrush x:Key="ButtonInnerBorderMouseOverBrush"
+                     Color="#FF81D3EB" />
+    <SolidColorBrush x:Key="ButtonInnerBorderDisabledBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="ButtonInnerBorderPressedBrush"
+                     Color="#FF81D3EB" />
+
+    <!-- ButtonBackground -->
+    <LinearGradientBrush x:Key="ButtonBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF9F9F9"
+                      Offset="0" />
+        <GradientStop Color="#FFEBEBEB"
+                      Offset="0.49" />
+        <GradientStop Color="#FFDBDBDB"
+                      Offset="0.5" />
+        <GradientStop Color="#FFE7E7E7"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBackgroundFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF9F9F9"
+                      Offset="0" />
+        <GradientStop Color="#FFEBEBEB"
+                      Offset="0.49" />
+        <GradientStop Color="#FFDBDBDB"
+                      Offset="0.5" />
+        <GradientStop Color="#FFE7E7E7"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBackgroundMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFEAF6FD"
+                      Offset="0" />
+        <GradientStop Color="#FFD9F0FC"
+                      Offset="0.49" />
+        <GradientStop Color="#FFBEE6FD"
+                      Offset="0.5" />
+        <GradientStop Color="#FFA7D9F5"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonBackgroundDisabledBrush"
+                     Color="#FFF4F4F4" />
+    <LinearGradientBrush x:Key="ButtonBackgroundPressedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFE5F4FC"
+                      Offset="0" />
+        <GradientStop Color="#FFC4E5F6"
+                      Offset="0.49" />
+        <GradientStop Color="#FF98D1EF"
+                      Offset="0.5" />
+        <GradientStop Color="#FF68B3DB"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- ButtonText -->
+    <SolidColorBrush x:Key="ButtonTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="ButtonTextMouseOverBrush"
+                     Color="#FF404040" />
+
+    <!-- ButtonGlyph - The foreground color of a non-icon glyph such as a down arrow. -->
+    <SolidColorBrush x:Key="ButtonGlyphBrush"
+                     Color="#FF424242" />
+
+    <!-- ButtonGlyphBorder - The border around the glyph -->
+    <SolidColorBrush x:Key="ButtonGlyphBorderBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- ButtonFocusBorder - Some themes may display a rectangle around the text content but inside of the border when the button has keyboard focus. -->
+    <SolidColorBrush x:Key="ButtonFocusBorderFocusedBrush"
+                     Color="Transparent" />
+
+    <!-- ButtonBackgroundOverlayEffect - A translucent overlay over the background. -->
+    <SolidColorBrush x:Key="ButtonBackgroundOverlayEffectBrush"
+                     Color="Transparent" />
+
+    <!-- ButtonBackgroundWaveEffect - A translucent path over the background. -->
+    <SolidColorBrush x:Key="ButtonBackgroundWaveEffectBrush"
+                     Color="Transparent" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: TextBox - The selected state is used for the color of selected text in the textbox. -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, DisabledBrush, ReadOnlyBrush, SelectedBrush -->
+
+    <!-- TextBoxBorder -->
+    <SolidColorBrush x:Key="TextBoxBorderBrush"
+                     Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="TextBoxBorderFocusedBrush"
+                     Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="TextBoxBorderMouseOverBrush"
+                     Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="TextBoxBorderDisabledBrush"
+                     Color="#FFDDDDDD" />
+    <SolidColorBrush x:Key="TextBoxBorderReadOnlyBrush"
+                     Color="#FFDDDDDD" />
+
+    <!-- TextBoxBackground -->
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="TextBoxBackgroundFocusedBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="TextBoxBackgroundMouseOverBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="TextBoxBackgroundDisabledBrush"
+                     Color="#FFF1F1F1" />
+    <SolidColorBrush x:Key="TextBoxBackgroundReadOnlyBrush"
+                     Color="#FFF1F1F1" />
+    <SolidColorBrush x:Key="TextBoxBackgroundSelectedBrush"
+                     Color="#FF6593CF" />
+
+    <!-- TextBoxText -->
+    <SolidColorBrush x:Key="TextBoxTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="TextBoxTextDisabledBrush"
+                     Color="#FF707070" />
+    <SolidColorBrush x:Key="TextBoxTextReadOnlyBrush"
+                     Color="#FF707070" />
+    <SolidColorBrush x:Key="TextBoxTextSelectedBrush"
+                     Color="White" />
+
+    <!-- TextBoxInfoText - The color of text that appears as a hint or default value. Usually a lighter color and in italics. -->
+    <SolidColorBrush x:Key="TextBoxInfoTextBrush"
+                     Color="#FF808080" />
+
+    <!-- TextBoxCaret - The color of the text entry caret (the blinking thing) -->
+    <SolidColorBrush x:Key="TextBoxCaretBrush"
+                     Color="Black" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: ComboBox/TextBox Button - In this case the 'Normal' state is displayed when the TextBox has focus or if another area of the TextBox is MouseOver -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, PressedBrush -->
+
+    <!-- TextBoxButtonBackground - A button that appears in the boundary of the textbox and can get keyboard focus. Like search button in Grid/List -->
+    <LinearGradientBrush x:Key="TextBoxButtonBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF7F7F7"
+                      Offset="0" />
+        <GradientStop Color="#FFE7E7E7"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TextBoxButtonBackgroundFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF7F7F7"
+                      Offset="0" />
+        <GradientStop Color="#FFE7E7E7"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TextBoxButtonBackgroundMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFEAF6FD"
+                      Offset="0" />
+        <GradientStop Color="#FFD9F0FC"
+                      Offset="0.49" />
+        <GradientStop Color="#FFBEE6FD"
+                      Offset="0.5" />
+        <GradientStop Color="#FFA7D9F5"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TextBoxButtonBackgroundPressedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFE5F4FC"
+                      Offset="0" />
+        <GradientStop Color="#FFC4E5F6"
+                      Offset="0.49" />
+        <GradientStop Color="#FF98D1EF"
+                      Offset="0.5" />
+        <GradientStop Color="#FF68B3DB"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- TextBoxButtonBorder -->
+    <SolidColorBrush x:Key="TextBoxButtonBorderFocusedBrush"
+                     Color="#FF3C7FB1" />
+    <SolidColorBrush x:Key="TextBoxButtonBorderMouseOverBrush"
+                     Color="#FF3C7FB1" />
+    <SolidColorBrush x:Key="TextBoxButtonBorderPressedBrush"
+                     Color="#FF68B3DB" />
+
+    <!-- TextBoxButtonGlyph - Text or glyph color -->
+    <SolidColorBrush x:Key="TextBoxButtonGlyphBrush"
+                     Color="#FF424242" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Link -->
+    <!-- States:  NormalBrush, FocusedBrush -->
+
+    <!-- LinkText -->
+    <SolidColorBrush x:Key="LinkTextBrush"
+                     Color="#FF0066CC" />
+    <SolidColorBrush x:Key="LinkTextFocusedBrush"
+                     Color="#FF0066CC" />
+
+    <!-- LinkFocusBorder - Some themes may display a rectangle around the link to indicate it has keyboard focus. -->
+    <SolidColorBrush x:Key="LinkFocusBorderFocusedBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Label -->
+    <!-- States:  NormalBrush, DisabledBrush -->
+
+    <!-- LabelText -->
+    <SolidColorBrush x:Key="LabelTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="LabelTextDisabledBrush"
+                     Color="#FF707070" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: CheckBox -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, DisabledBrush -->
+
+    <!-- CheckBoxBorder - The square that contains the check glyph -->
+    <SolidColorBrush x:Key="CheckBoxBorderBrush"
+                     Color="#FFA5ACB5" />
+    <SolidColorBrush x:Key="CheckBoxBorderFocusedBrush"
+                     Color="#FF3C7FB1" />
+    <SolidColorBrush x:Key="CheckBoxBorderMouseOverBrush"
+                     Color="#FFA5ACB5" />
+    <SolidColorBrush x:Key="CheckBoxBorderDisabledBrush"
+                     Color="#FFDDDDDD" />
+
+    <!-- CheckBoxBackground -->
+    <SolidColorBrush x:Key="CheckBoxBackgroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="CheckBoxBackgroundDisabledBrush"
+                     Color="#FFF1F1F1" />
+
+    <!-- CheckBoxGlyph - The color of the check glyph -->
+    <SolidColorBrush x:Key="CheckBoxGlyphBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="CheckBoxGlyphDisabledBrush"
+                     Color="#FF707070" />
+    <!-- Label -->
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: TabControl -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, DisabledBrush, ActiveBrush -->
+
+    <!-- TabControlBorder - The border around the entire tab control -->
+    <SolidColorBrush x:Key="TabControlBorderBrush"
+                     Color="#FFA5ACB5" />
+    <SolidColorBrush x:Key="TabControlBorderDisabledBrush"
+                     Color="#FFDDDDDD" />
+
+    <!-- TabControlBackground - The background of the tab panel, this should be the same or similar to the ScreenBackground color -->
+    <SolidColorBrush x:Key="TabControlBackgroundBrush"
+                     Color="White" />
+
+    <!-- TabControlTabBackground - The background of the tab label. -->
+    <LinearGradientBrush x:Key="TabControlTabBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF6F7F8"
+                      Offset="0" />
+        <GradientStop Color="#FFDDE0E4"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="TabControlTabBackgroundMouseOverBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="TabControlTabBackgroundDisabledBrush"
+                     Color="#FFF4F4F4" />
+    <SolidColorBrush x:Key="TabControlTabBackgroundActiveBrush"
+                     Color="White" />
+
+    <!-- TabControlTabText - The text of the tab label. -->
+    <SolidColorBrush x:Key="TabControlTabTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="TabControlTabTextDisabledBrush"
+                     Color="#FF707070" />
+    <SolidColorBrush x:Key="TabControlTabTextActiveBrush"
+                     Color="#FF404040" />
+
+    <!-- TabControlTabFocusBorder - Some themes may display a rectangle around the text content but inside of the border when the tab has keyboard focus. -->
+    <SolidColorBrush x:Key="TabControlTabFocusBorderFocusedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Toolbar - A toolbar can be used in any control that needs additional buttons or a header, like a List, Grid or future control -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, DisabledBrush, PressedBrush -->
+
+    <!-- ToolbarBackground - The background of the toolbar -->
+    <SolidColorBrush x:Key="ToolbarBackgroundBrush"
+                     Color="#FFE9EDF1" />
+
+    <!-- ToolbarSeparator - Any separator lines drawn between buttons or rows -->
+    <SolidColorBrush x:Key="ToolbarSeparatorBrush"
+                     Color="#FFBEC3CB" />
+
+    <!-- ToolbarButtonBorder -->
+    <SolidColorBrush x:Key="ToolbarButtonBorderBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ToolbarButtonBorderFocusedBrush"
+                     Color="#FFFB9141" />
+    <SolidColorBrush x:Key="ToolbarButtonBorderMouseOverBrush"
+                     Color="#FFFFCC99" />
+    <SolidColorBrush x:Key="ToolbarButtonBorderDisabledBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ToolbarButtonBorderPressedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- ToolbarButtonBackground -->
+    <SolidColorBrush x:Key="ToolbarButtonBackgroundBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ToolbarButtonBackgroundFocusedBrush"
+                     Color="Transparent" />
+    <RadialGradientBrush x:Key="ToolbarButtonBackgroundMouseOverBrush"
+                         RadiusX="4"
+                         RadiusY="1.1"
+                         Opacity="0.9">
+        <RadialGradientBrush.RelativeTransform>
+            <CompositeTransform CenterY="0.5"
+                                CenterX="0.5"
+                                TranslateY="0.5" />
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFFCE38A"
+                      Offset="0.172" />
+        <GradientStop Color="#FFFDE389"
+                      Offset="0.424" />
+        <GradientStop Color="#FFFDE389"
+                      Offset="0.756" />
+        <GradientStop Color="#FFFDEEB3"
+                      Offset="0.872" />
+    </RadialGradientBrush>
+    <SolidColorBrush x:Key="ToolbarButtonBackgroundDisabledBrush"
+                     Color="Transparent" />
+    <RadialGradientBrush x:Key="ToolbarButtonBackgroundPressedBrush"
+                         RadiusX="4"
+                         RadiusY="1.1">
+        <RadialGradientBrush.RelativeTransform>
+            <CompositeTransform CenterY="0.5"
+                                CenterX="0.5"
+                                TranslateY="0.5" />
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Color="#FFFFF480"
+                      Offset="0" />
+        <GradientStop Color="#FFFFDB6D"
+                      Offset="0.28" />
+        <GradientStop Color="#FFFFDB6D"
+                      Offset="0.76" />
+        <GradientStop Color="#FFFFE575"
+                      Offset="0.968" />
+    </RadialGradientBrush>
+
+    <!-- ToolbarButtonText -->
+    <SolidColorBrush x:Key="ToolbarButtonTextBrush"
+                     Color="Black" />
+    <SolidColorBrush x:Key="ToolbarButtonTextFocusedBrush"
+                     Color="Black" />
+    <SolidColorBrush x:Key="ToolbarButtonTextMouseOverBrush"
+                     Color="Black" />
+    <SolidColorBrush x:Key="ToolbarButtonTextDisabledBrush"
+                     Color="#FF707070" />
+    <SolidColorBrush x:Key="ToolbarButtonTextPressedBrush"
+                     Color="Black" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: ScrollBar -->
+    <!-- States:  NormalBrush, MouseOverBrush, DisabledBrush, PressedBrush -->
+
+    <!-- ScrollBarBackground -->
+    <SolidColorBrush x:Key="ScrollBarBackgroundBrush"
+                     Color="#FFEDEDED" />
+    <SolidColorBrush x:Key="ScrollBarBackgroundDisabledBrush"
+                     Color="#FFEDEDED" />
+
+    <!-- ScrollBarButtonBorder - The directional buttons, up, down, left ,right -->
+    <SolidColorBrush x:Key="ScrollBarButtonBorderBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarButtonBorderMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarButtonBorderDisabledBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarButtonBorderPressedBrush"
+                     Color="Transparent" />
+
+    <!-- ScrollBarButtonBackground -->
+    <SolidColorBrush x:Key="ScrollBarButtonBackgroundBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarButtonBackgroundMouseOverBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="ScrollBarButtonBackgroundDisabledBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarButtonBackgroundPressedBrush"
+                     Color="#FFE1E2E3" />
+
+    <!-- ScrollBarButtonGlyph -->
+    <SolidColorBrush x:Key="ScrollBarButtonGlyphBrush"
+                     Color="#FF333333" />
+    <SolidColorBrush x:Key="ScrollBarButtonGlyphMouseOverBrush"
+                     Color="#FF333333" />
+    <SolidColorBrush x:Key="ScrollBarButtonGlyphDisabledBrush"
+                     Color="#FF333333" />
+    <SolidColorBrush x:Key="ScrollBarButtonGlyphPressedBrush"
+                     Color="#FF333333" />
+
+    <!-- ScrollBarThumbBorder - The thumb bar that displays/adjusts the current position. -->
+    <SolidColorBrush x:Key="ScrollBarThumbBorderBrush"
+                     Color="#FFA5ACB5" />
+    <SolidColorBrush x:Key="ScrollBarThumbBorderMouseOverBrush"
+                     Color="#FFA5ACB5" />
+    <SolidColorBrush x:Key="ScrollBarThumbBorderDisabledBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarThumbBorderPressedBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- ScrollBarThumbBackground -->
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundBrush"
+                     Color="#FFF5F5F5" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundMouseOverBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundDisabledBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundPressedBrush"
+                     Color="#FFE1E2E3" />
+
+    <!-- ScrollBarThumbGlyph -->
+    <SolidColorBrush x:Key="ScrollBarThumbGlyphBrush"
+                     Color="#FF333333" />
+    <SolidColorBrush x:Key="ScrollBarThumbGlyphMouseOverBrush"
+                     Color="#FF333333" />
+    <SolidColorBrush x:Key="ScrollBarThumbGlyphDisabledBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarThumbGlyphPressedBrush"
+                     Color="#FF333333" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: List/Grid - The drag state appears when the column header is dragged, the Border is used for the drop position color -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, PressedBrush, DraggedBrush -->
+
+    <!-- ListHeaderBackground - The header at the top of a list/grid that shows the column header and can be clicked on the change sorting -->
+    <SolidColorBrush x:Key="ListHeaderBackgroundBrush"
+                     Color="#FFFCFCFC" />
+    <LinearGradientBrush x:Key="ListHeaderBackgroundFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFE9F2F9"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ListHeaderBackgroundMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFE9F2F9"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ListHeaderBackgroundPressedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFE9F2F9"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ListHeaderBackgroundDraggedBrush"
+                     Color="#66808080" />
+
+    <!-- ListHeaderBorder - Separator between columns, in grid also used as grid lines -->
+    <SolidColorBrush x:Key="ListHeaderBorderBrush"
+                     Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ListHeaderBorderFocusedBrush"
+                     Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ListHeaderBorderMouseOverBrush"
+                     Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ListHeaderBorderPressedBrush"
+                     Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ListHeaderBorderDraggedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- ListHeaderText -->
+    <SolidColorBrush x:Key="ListHeaderTextBrush"
+                     Color="#FF404040" />
+
+    <!-- ListBorder - The border around the entire List/Grid -->
+    <SolidColorBrush x:Key="ListBorderBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Grid -->
+    <!-- States:  NormalBrush, MouseOverBrush, SelectedBrush, UnfocusedSelectedBrush, MouseOverSelectedBrush -->
+
+    <!-- GridRowBackground - The background of a grid row -->
+    <SolidColorBrush x:Key="GridRowBackgroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="GridRowBackgroundMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="GridRowBackgroundSelectedBrush"
+                     Color="#FFC4DCF7" />
+    <SolidColorBrush x:Key="GridRowBackgroundUnfocusedSelectedBrush"
+                     Color="#FFDDDDDD" />
+    <SolidColorBrush x:Key="GridRowBackgroundMouseOverSelectedBrush"
+                     Color="#FFC4DCF7" />
+
+    <!-- GridAlternateRowBackground - The alternating background of a grid row. This is only used in the Normal state, the colors from GridRowBackground1 are used for other states. -->
+    <SolidColorBrush x:Key="GridAlternateRowBackgroundBrush"
+                     Color="#FFE9F2F9" />
+
+    <!-- GridActiveCellBorder - Border displayed around a selected cell (even when the grid isn’t focused) -->
+    <SolidColorBrush x:Key="GridActiveCellBorderBrush"
+                     Color="#FF7DA2CE" />
+
+    <!-- GridEditedBackground - The background of a row after the record is edited -->
+    <SolidColorBrush x:Key="GridEditedBackgroundBrush"
+                     Color="#FFF9F9F9" />
+
+    <!-- GridAddedBackground - The background of a row after the record is created -->
+    <SolidColorBrush x:Key="GridAddedBackgroundBrush"
+                     Color="#FFF9F9F9" />
+
+    <!-- GridDeletedBackground - The background of a row after the record is deleted -->
+    <SolidColorBrush x:Key="GridDeletedBackgroundBrush"
+                     Color="#FFF9F9F9" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: List -->
+    <!-- States:  NormalBrush, MouseOverBrush, SelectedBrush, UnfocusedSelectedBrush, MouseOverSelectedBrush -->
+
+    <!-- ListRowBackground - The background of a list row -->
+    <SolidColorBrush x:Key="ListRowBackgroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="ListRowBackgroundMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ListRowBackgroundSelectedBrush"
+                     Color="#FFC4DCF7" />
+    <SolidColorBrush x:Key="ListRowBackgroundUnfocusedSelectedBrush"
+                     Color="#FFDDDDDD" />
+    <SolidColorBrush x:Key="ListRowBackgroundMouseOverSelectedBrush"
+                     Color="#FFC4DCF7" />
+
+    <!-- ListRowBorder - The border around the entire row. Not used for our standard theme, but useful on high contrast. -->
+    <SolidColorBrush x:Key="ListRowBorderBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ListRowBorderMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ListRowBorderSelectedBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ListRowBorderUnfocusedSelectedBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ListRowBorderMouseOverSelectedBrush"
+                     Color="Transparent" />
+
+    <!-- ListRowSeparator - The horizontal line displayed between two rows -->
+    <SolidColorBrush x:Key="ListRowSeparatorBrush"
+                     Color="#FFDBDEE1" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Popup/Menu - Colors used either for popups, like combobox, or menus. -->
+    <!-- States:  NormalBrush, MouseOverBrush, SelectedBrush, MouseOverSelectedBrush, PressedBrush -->
+
+    <!-- MenuBackground - Background for the entire popup -->
+    <SolidColorBrush x:Key="MenuBackgroundBrush"
+                     Color="White" />
+
+    <!-- MenuBorder - Border around the entire popup -->
+    <SolidColorBrush x:Key="MenuBorderBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- MenuItemBackground -->
+    <SolidColorBrush x:Key="MenuItemBackgroundMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="MenuItemBackgroundSelectedBrush"
+                     Color="#FFC4DCF7" />
+    <SolidColorBrush x:Key="MenuItemBackgroundMouseOverSelectedBrush"
+                     Color="#FFFFEFC6" />
+    <SolidColorBrush x:Key="MenuItemBackgroundPressedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- MenuItemBorder -->
+    <SolidColorBrush x:Key="MenuItemBorderMouseOverBrush"
+                     Color="#FF3C7FB1" />
+    <SolidColorBrush x:Key="MenuItemBorderSelectedBrush"
+                     Color="#FFC4DCF7" />
+    <SolidColorBrush x:Key="MenuItemBorderMouseOverSelectedBrush"
+                     Color="#FFFB9141" />
+    <SolidColorBrush x:Key="MenuItemBorderPressedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- MenuItemText -->
+    <SolidColorBrush x:Key="MenuItemTextBrush"
+                     Color="#FF404040" />
+
+    <!-- ******************************************************************************** -->
+    <!-- The following are Shell Theme colors                                             -->
+    <!-- ******************************************************************************** -->
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Ribbon -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, PressedBrush, DisabledBrush -->
+
+    <!--Listing 13-20. Setting the Theme Colors-->
+    
+    <!-- RibbonBackground - The background of the ribbon menu -->
+    <LinearGradientBrush x:Key="RibbonBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="1,1">
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFC7C7C7"
+                      Offset="0.769" />
+        <GradientStop Color="#FF898989"
+                      Offset="0.918" />
+        <GradientStop Color="#FF595959"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- RibbonBorder - The border between the ribbon and the screen -->
+    <SolidColorBrush x:Key="RibbonBorderBrush"
+                     Color="#FF8B9097" />
+
+    <!-- RibbonSeparator - The separator between groups -->
+    <LinearGradientBrush x:Key="RibbonSeparatorBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF5F6F7"
+                      Offset="0" />
+        <GradientStop Color="#FFB0B6BC"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- RibbonSeparator2 - The padding between the separator and the background -->
+    <SolidColorBrush x:Key="RibbonSeparator2Brush"
+                     Color="#FFFBFBFB" />
+
+    <!-- RibbonGroupText - The text labeling the ribbon group -->
+    <SolidColorBrush x:Key="RibbonGroupTextBrush"
+                     Color="#FF686B6E" />
+
+    <!-- RibbonButtonBorder -->
+    <SolidColorBrush x:Key="RibbonButtonBorderBrush"
+                     Color="Transparent" />
+    <LinearGradientBrush x:Key="RibbonButtonBorderFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="RibbonButtonBorderMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="RibbonButtonBorderPressedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFC28A30"
+                      Offset="0" />
+        <GradientStop Color="#FFC2A44D"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- RibbonButtonInnerBorder -->
+    <SolidColorBrush x:Key="RibbonButtonInnerBorderBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="RibbonButtonInnerBorderMouseOverBrush"
+                     Color="#FFFDF6DE" />
+    <SolidColorBrush x:Key="RibbonButtonInnerBorderPressedBrush"
+                     Color="Transparent" />
+
+    <!-- RibbonButtonBackground -->
+    <SolidColorBrush x:Key="RibbonButtonBackgroundBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="RibbonButtonBackgroundFocusedBrush"
+                     Color="Transparent" />
+    <RadialGradientBrush x:Key="RibbonButtonBackgroundMouseOverBrush"
+                         RadiusX="4"
+                         RadiusY="1.1"
+                         Opacity="0.9">
+        <RadialGradientBrush.RelativeTransform>
+            <CompositeTransform CenterY="0.5"
+                                CenterX="0.5"
+                                TranslateY="0.5" />
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFFCE38A"
+                      Offset="0.172" />
+        <GradientStop Color="#FFFDE389"
+                      Offset="0.424" />
+        <GradientStop Color="#FFFDE389"
+                      Offset="0.756" />
+        <GradientStop Color="#FFFDEEB3"
+                      Offset="0.872" />
+    </RadialGradientBrush>
+    <RadialGradientBrush x:Key="RibbonButtonBackgroundPressedBrush"
+                         RadiusX="4"
+                         RadiusY="1.1">
+        <RadialGradientBrush.RelativeTransform>
+            <CompositeTransform CenterY="0.5"
+                                CenterX="0.5"
+                                TranslateY="0.5" />
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Color="#FFFFF480"
+                      Offset="0" />
+        <GradientStop Color="#FFFFDB6D"
+                      Offset="0.28" />
+        <GradientStop Color="#FFFFDB6D"
+                      Offset="0.76" />
+        <GradientStop Color="#FFFFE575"
+                      Offset="0.968" />
+    </RadialGradientBrush>
+
+    <!-- RibbonButtonText -->
+    <SolidColorBrush x:Key="RibbonButtonTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="RibbonButtonTextFocusedBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="RibbonButtonTextMouseOverBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="RibbonButtonTextPressedBrush"
+                     Color="#FF404040" />
+
+    <!-- RibbonDropShadow -->
+    <LinearGradientBrush x:Key="RibbonDropShadowBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFC6C9CD"
+                      Offset="0" />
+        <GradientStop Color="#FFD8DCE0"
+                      Offset="0.528" />
+        <GradientStop Color="#FFE9EDF1"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Navigation Menu -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, PressedBrush -->
+
+    <!-- NavShellBackground - The color of the area "behind" the screen tab -->
+    <SolidColorBrush x:Key="NavShellBackgroundBrush"
+                     Color="#FFEBEDF0" />
+
+    <!-- NavBackground - The background of the navigation menu -->
+    <SolidColorBrush x:Key="NavBackgroundBrush"
+                     Color="#FFEBEDF0" />
+
+    <!-- NavGroupBackground - The buttons that represent navigation groups -->
+    <SolidColorBrush x:Key="NavGroupBackgroundBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="NavGroupBackgroundFocusedBrush"
+                     Color="Transparent" />
+    <LinearGradientBrush x:Key="NavGroupBackgroundMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFDEE4EB"
+                      Offset="0" />
+        <GradientStop Color="#FFD6DCE4"
+                      Offset="0.438" />
+        <GradientStop Color="#FFD4DAE2"
+                      Offset="0.528" />
+        <GradientStop Color="#FFEFF2F5"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- NavGroupBorder -->
+    <SolidColorBrush x:Key="NavGroupBorderBrush"
+                     Color="#FFC5CED8" />
+    <LinearGradientBrush x:Key="NavGroupBorderFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="NavGroupBorderMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- NavGroupInnerBorder - An inner glow on a selected nav group -->
+    <SolidColorBrush x:Key="NavGroupInnerBorderBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="NavGroupInnerBorderFocusedBrush"
+                     Color="#80FFFFFF" />
+
+    <!-- NavGroupText -->
+    <SolidColorBrush x:Key="NavGroupTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="NavGroupTextMouseOverBrush"
+                     Color="#FF404040" />
+
+    <!-- NavItemBackground - The buttons that represent navigation items. Clicking opens a screen. -->
+    <SolidColorBrush x:Key="NavItemBackgroundBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="NavItemBackgroundFocusedBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="NavItemBackgroundMouseOverBrush"
+                     Color="#FFF4E7AE" />
+    <SolidColorBrush x:Key="NavItemBackgroundPressedBrush"
+                     Color="#FFF4E7AE" />
+
+    <!-- NavItemBorder -->
+    <SolidColorBrush x:Key="NavItemBorderBrush"
+                     Color="Transparent" />
+    <LinearGradientBrush x:Key="NavItemBorderFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="NavItemBorderMouseOverBrush"
+                     Color="Transparent" />
+    <LinearGradientBrush x:Key="NavItemBorderPressedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFC28A30"
+                      Offset="0" />
+        <GradientStop Color="#FFC2A44D"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- NavItemText -->
+    <SolidColorBrush x:Key="NavItemTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="NavItemTextMouseOverBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="NavItemTextPressedBrush"
+                     Color="#FF404040" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: ScreenTab -->
+    <!-- States:  NormalBrush, MouseOverBrush, ActiveBrush -->
+
+    <!-- ScreenTabBorder - The border around the entire screen tab -->
+    <SolidColorBrush x:Key="ScreenTabBorderBrush"
+                     Color="#FF8B9097" />
+
+    <!-- ScreenTabBackground - The background of just the tab header -->
+    <LinearGradientBrush x:Key="ScreenTabBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF6F7F8"
+                      Offset="0" />
+        <GradientStop Color="#FFDDE0E4"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ScreenTabBackgroundMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF6F7F8"
+                      Offset="0" />
+        <GradientStop Color="#FFF7E7E3"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- ScreenTabText - The text of the tab header -->
+    <SolidColorBrush x:Key="ScreenTabTextBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="ScreenTabTextMouseOverBrush"
+                     Color="#FF404040" />
+    <SolidColorBrush x:Key="ScreenTabTextActiveBrush"
+                     Color="#FF404040" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Shell Component -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, DisabledBrush, PressedBrush -->
+
+    <!-- ShellGlyphButtonBorder - The small button used to expand the nav menu/the ribbon/close a tab/close modal window -->
+    <SolidColorBrush x:Key="ShellGlyphButtonBorderBrush"
+                     Color="Transparent" />
+    <LinearGradientBrush x:Key="ShellGlyphButtonBorderFocusedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ShellGlyphButtonBorderMouseOverBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFF1CA58"
+                      Offset="0" />
+        <GradientStop Color="#FFF4D649"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ShellGlyphButtonBorderDisabledBrush"
+                     Color="Transparent" />
+    <LinearGradientBrush x:Key="ShellGlyphButtonBorderPressedBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#FFC28A30"
+                      Offset="0" />
+        <GradientStop Color="#FFC2A44D"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- ShellGlyphButtonBackground -->
+    <SolidColorBrush x:Key="ShellGlyphButtonBackgroundBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="ShellGlyphButtonBackgroundFocusedBrush"
+                     Color="Transparent" />
+    <RadialGradientBrush x:Key="ShellGlyphButtonBackgroundMouseOverBrush"
+                         RadiusX="4"
+                         RadiusY="1.1"
+                         Opacity="0.9">
+        <RadialGradientBrush.RelativeTransform>
+            <CompositeTransform CenterY="0.5"
+                                CenterX="0.5"
+                                TranslateY="0.5" />
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="#FFFCE38A"
+                      Offset="0.172" />
+        <GradientStop Color="#FFFDE389"
+                      Offset="0.424" />
+        <GradientStop Color="#FFFDE389"
+                      Offset="0.756" />
+        <GradientStop Color="#FFFDEEB3"
+                      Offset="0.872" />
+    </RadialGradientBrush>
+    <SolidColorBrush x:Key="ShellGlyphButtonBackgroundDisabledBrush"
+                     Color="Transparent" />
+    <RadialGradientBrush x:Key="ShellGlyphButtonBackgroundPressedBrush"
+                         RadiusX="4"
+                         RadiusY="1.1">
+        <RadialGradientBrush.RelativeTransform>
+            <CompositeTransform CenterY="0.5"
+                                CenterX="0.5"
+                                TranslateY="0.5" />
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Color="#FFFFF480"
+                      Offset="0" />
+        <GradientStop Color="#FFFFDB6D"
+                      Offset="0.28" />
+        <GradientStop Color="#FFFFDB6D"
+                      Offset="0.76" />
+        <GradientStop Color="#FFFFE575"
+                      Offset="0.968" />
+    </RadialGradientBrush>
+
+    <!-- ShellGlyphButtonArrowGlyph - The color of the expand/collapse arrow -->
+    <SolidColorBrush x:Key="ShellGlyphButtonArrowGlyphBrush"
+                     Color="#FF757677" />
+
+    <!-- ShellGlyphButtonCloseGlyph - The color of the screen close glyph -->
+    <SolidColorBrush x:Key="ShellGlyphButtonCloseGlyphBrush"
+                     Color="Black" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Validation Popup - The floating message that appears over a control when an error exists in the control. -->
+    <!-- States:  NormalBrush -->
+
+    <!-- ValidationPopupBackground -->
+    <SolidColorBrush x:Key="ValidationPopupBackgroundBrush"
+                     Color="White" />
+
+    <!-- ValidationPopupText - The text color -->
+    <SolidColorBrush x:Key="ValidationPopupTextBrush"
+                     Color="#FF404040" />
+
+    <!-- ValidationPopupErrorBorder - The border used when the message is an error -->
+    <SolidColorBrush x:Key="ValidationPopupErrorBorderBrush"
+                     Color="#FFDC000C" />
+
+    <!-- ValidationPopupMessageBorder - The border used when the message is an informative message -->
+    <SolidColorBrush x:Key="ValidationPopupMessageBorderBrush"
+                     Color="Black" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Screen Tab Validation - The control that appears at the top of a screen when validation errors occur. This has a header and a popup list of errors that can be clicked on. -->
+    <!-- States:  NormalBrush, FocusedBrush, MouseOverBrush, PressedBrush -->
+
+    <!-- TabValidationBackground - The background of the validation header. -->
+    <SolidColorBrush x:Key="TabValidationBackgroundBrush"
+                     Color="#FFFDF7E7" />
+    <SolidColorBrush x:Key="TabValidationBackgroundMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="TabValidationBackgroundPressedBrush"
+                     Color="#FFFCDF8D" />
+
+    <!-- TabValidationBorder -->
+    <SolidColorBrush x:Key="TabValidationBorderBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="TabValidationBorderFocusedBrush"
+                     Color="#FFFB9141" />
+    <SolidColorBrush x:Key="TabValidationBorderMouseOverBrush"
+                     Color="#FFFB9141" />
+    <SolidColorBrush x:Key="TabValidationBorderPressedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- TabValidationGlyph - The glyph that expands the popup -->
+    <SolidColorBrush x:Key="TabValidationGlyphBrush"
+                     Color="#FF424242" />
+
+    <!-- TabValidationText -->
+    <SolidColorBrush x:Key="TabValidationTextBrush"
+                     Color="#FF404040" />
+
+    <!-- TabValidationItemBackground - The background of an individual validation error -->
+    <SolidColorBrush x:Key="TabValidationItemBackgroundMouseOverBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="TabValidationItemBackgroundPressedBrush"
+                     Color="#FFFCDF8D" />
+
+    <!-- TabValidationItemBorder -->
+    <SolidColorBrush x:Key="TabValidationItemBorderFocusedBrush"
+                     Color="#FFFB9141" />
+    <SolidColorBrush x:Key="TabValidationItemBorderPressedBrush"
+                     Color="#FFFB9141" />
+
+    <!-- TabValidationItemText -->
+    <SolidColorBrush x:Key="TabValidationItemTextBrush"
+                     Color="#FF404040" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Modal Window -->
+    <!-- States:  NormalBrush -->
+
+    <!-- WindowTitleBackground - The background of the title bar -->
+    <SolidColorBrush x:Key="WindowTitleBackgroundBrush"
+                     Color="White" />
+
+    <!-- WindowTitleText - The text of the title bar -->
+    <SolidColorBrush x:Key="WindowTitleTextBrush"
+                     Color="#FF404040" />
+
+    <!-- WindowBorder - The border around the window -->
+    <SolidColorBrush x:Key="WindowBorderBrush"
+                     Color="#FFA5ACB5" />
+
+    <!-- WindowBackground - The background of the body of the dialog. In most cases if UI is displayed on the background it is in a control that uses ScreenBackground. However, message box dialogs display text on this color. -->
+    <SolidColorBrush x:Key="WindowBackgroundBrush"
+                     Color="#FFF7F3F3" />
+
+    <!-- ******************************************************************************** -->
+    <!-- Control: Runtime Screen Designer -->
+    <!-- States:  SelectedBrush -->
+
+    <!-- ContentItemBorder - The border around the selected content item in the runtime screen designer -->
+    <SolidColorBrush x:Key="ContentItemBorderSelectedBrush"
+                     Color="#FFFB9141" />
+</ResourceDictionary>

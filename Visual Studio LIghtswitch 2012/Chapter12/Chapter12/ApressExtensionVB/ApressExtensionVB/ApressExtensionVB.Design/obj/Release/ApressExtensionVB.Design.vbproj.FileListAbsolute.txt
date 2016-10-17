@@ -1,0 +1,15 @@
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\bin\Release\ApressExtensionVB.Design.dll
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\bin\Release\ApressExtensionVB.Design.pdb
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\bin\Release\ApressExtensionVB.Design.xml
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\bin\Release\Microsoft.LightSwitch.Design.Utilities.dll
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\Editors\EntityPropertyDropdown.g.vb
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\GeneratedInternalTypeHelper.g.vb
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design_MarkupCompile.cache
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design_MarkupCompile.lref
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\Editors\EntityPropertyDropdown.baml
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design.g.resources
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Resources.resources
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design.vbproj.GenerateResource.Cache
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design.dll
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design.xml
+C:\Source\Chapter12\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Design\obj\Release\ApressExtensionVB.Design.pdb

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Timesheet">
+    <Key>
+      <PropertyRef Name="TimesheetId" />
+    </Key>
+    <Property Name="TimesheetId" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Client" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="UserId" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Hours" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Minutes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityContainer Name="SharePointDataSourceObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Timesheets" EntityType="LightSwitchApplication.Timesheet" />
+  </EntityContainer>
+</Schema>

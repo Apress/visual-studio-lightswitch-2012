@@ -1,0 +1,16 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="ApressExtensionVB" Version="1.0" Language="en-US" Publisher="Tim Leung" />
+    <DisplayName>ApressExtensionVB</DisplayName>
+    <Description xml:space="preserve">Apress LightSwitch 2012 (Tim Leung)- Chapter 12 Extension Project</Description>
+    <License>license.txt</License>
+    <Tags>Visual Studio LightSwitch</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,12.0)" />
+  </Installation>
+  <Dependencies></Dependencies>
+  <Assets>
+    <Asset Type="LightSwitchPackage" Path="ApressExtensionVB.lspkg" />
+  </Assets>
+</PackageManifest>

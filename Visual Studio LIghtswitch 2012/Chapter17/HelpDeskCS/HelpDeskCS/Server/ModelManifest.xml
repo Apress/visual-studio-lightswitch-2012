@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Source\Chapter17\HelpDeskCS\HelpDeskCS\Common\Properties\Common.lsml" Checksum="3A7714371E0DF88C828E4B0C935052BE30F1F38F4AC2C1BA72D5023923056218" />
+    <Document FullPath="C:\Source\Chapter17\HelpDeskCS\HelpDeskCS\Server\Properties\Service.lsml" Checksum="BF1B12D8C762E9477227DFE38D85F3306A4462FE2706FD79984BBD38306D1BB6" />
+  </Documents>
+</ModelDocumentManifest>

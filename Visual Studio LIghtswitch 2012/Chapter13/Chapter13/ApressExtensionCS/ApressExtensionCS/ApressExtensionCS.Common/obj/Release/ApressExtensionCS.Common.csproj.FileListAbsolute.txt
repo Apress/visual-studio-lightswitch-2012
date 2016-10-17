@@ -1,0 +1,7 @@
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\Bin\Release\ApressExtensionCS.Common.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\Bin\Release\ApressExtensionCS.Common.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Release\ApressExtensionCS.Common.csprojResolveAssemblyReference.cache
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Release\ApressExtensionCS.Resources.ModuleResources.resources
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Release\ApressExtensionCS.Common.csproj.GenerateResource.Cache
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Release\ApressExtensionCS.Common.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Release\ApressExtensionCS.Common.pdb

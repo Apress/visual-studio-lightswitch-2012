@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ApressExtensionVB.Client
+</name>
+</assembly>
+<members>
+<member name="M:ApressExtensionVB.Presentation.Controls.DurationEditor.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressExtensionVB.Presentation.Shells.ApressShell.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressExtensionVB.Presentation.Controls.ToggleControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressExtensionVB.Presentation.Controls.ComboBox.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressExtensionVB.Presentation.Controls.HighlightButton.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressExtensionVB.Presentation.Controls.DurationTypeControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressExtensionVB.Presentation.Controls.DurationViewer.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

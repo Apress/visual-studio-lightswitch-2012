@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="ApplicationDataObjectContext" StorageEntityContainer="ApplicationDataStore">
+    <EntitySetMapping Name="Engineers">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Engineer)">
+        <MappingFragment StoreEntitySet="Engineers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="EngineerPhoto" ColumnName="EngineerPhoto" />
+          <ScalarProperty Name="SecurityVetted" ColumnName="SecurityVetted" />
+          <ScalarProperty Name="ClearanceReference" ColumnName="ClearanceReference" />
+          <ScalarProperty Name="VettingExpiryDate" ColumnName="VettingExpiryDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Engineer_Engineer" ColumnName="Engineer_Engineer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Issues">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Issue)">
+        <MappingFragment StoreEntitySet="Issues">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="TargetEndDateTime" ColumnName="TargetEndDateTime" />
+          <ScalarProperty Name="Issue_Engineer" ColumnName="Issue_Engineer" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Issue_Engineer1" ColumnName="Issue_Engineer1" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="ProblemDescription" ColumnName="ProblemDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssueStatusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.IssueStatus)">
+        <MappingFragment StoreEntitySet="IssueStatusSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Skill)">
+        <MappingFragment StoreEntitySet="Skills">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SkillDescription" ColumnName="SkillDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EngineerSkills">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.EngineerSkill)">
+        <MappingFragment StoreEntitySet="EngineerSkills">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="EngineerSkill_Skill" ColumnName="EngineerSkill_Skill" />
+          <ScalarProperty Name="EngineerSkill_Engineer" ColumnName="EngineerSkill_Engineer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

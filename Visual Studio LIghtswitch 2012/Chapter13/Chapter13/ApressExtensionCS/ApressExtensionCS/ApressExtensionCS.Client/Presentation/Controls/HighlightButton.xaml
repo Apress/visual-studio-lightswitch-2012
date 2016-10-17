@@ -1,0 +1,41 @@
+<!--You can use and redistribute the code from this book (and sample application) for non-commercial and 
+most commercial purposes as long as you acknowledge the source and authorship. 
+You should note the source of the code in any documentation as well as in the program code itself (as a comment). 
+The acknowledgment should include author, title, publisher, and ISBN. 
+An example of such an acknowledgment would be "Derived from Listing 2-10, LightSwitch 2012 by Tim Leung, published by Apress, ISBN 9781430250715".-->
+
+<UserControl x:Class="ApressExtensionCS.Presentation.Controls.HighlightButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Button Content="{Binding DisplayName}"
+            Foreground="White"                      
+      Width="{Binding Properties[Microsoft.LightSwitch:RootControl/Width]}" 
+      Height="{Binding Properties[Microsoft.LightSwitch:RootControl/Height]}" 
+      MinWidth="{Binding Properties[Microsoft.LightSwitch:RootControl/MinWidth]}"
+      MaxWidth="{Binding Properties[Microsoft.LightSwitch:RootControl/MaxWidth]}"
+      MinHeight=
+         "{Binding Properties[Microsoft.LightSwitch:RootControl/MinHeight]}"
+      MaxHeight=
+         "{Binding Properties[Microsoft.LightSwitch:RootControl/MaxHeight]}"
+      Click="CustomButton_Click" >
+        <Button.Template>
+            <ControlTemplate TargetType="Button">
+                <Border x:Name="Border"
+                        CornerRadius="4">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1"
+                                             StartPoint="0.5,0">
+                            <GradientStop Color="#FF294008"
+                                          Offset="0" />
+                            <GradientStop Color="#FF74BB20"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <ContentPresenter VerticalAlignment="Center"
+                                      HorizontalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+</UserControl>

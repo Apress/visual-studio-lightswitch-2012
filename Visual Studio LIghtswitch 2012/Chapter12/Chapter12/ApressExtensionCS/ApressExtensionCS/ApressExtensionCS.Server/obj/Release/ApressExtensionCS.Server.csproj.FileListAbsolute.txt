@@ -1,0 +1,4 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\bin\Release\ApressExtensionCS.Server.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\bin\Release\ApressExtensionCS.Server.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Release\ApressExtensionCS.Server.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Release\ApressExtensionCS.Server.pdb

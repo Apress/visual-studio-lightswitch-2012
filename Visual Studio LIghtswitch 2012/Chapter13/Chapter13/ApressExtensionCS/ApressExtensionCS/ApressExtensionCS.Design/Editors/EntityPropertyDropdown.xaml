@@ -1,0 +1,57 @@
+﻿<!--You can use and redistribute the code from this book (and sample application) for non-commercial and 
+most commercial purposes as long as you acknowledge the source and authorship. 
+You should note the source of the code in any documentation as well as in the program code itself (as a comment). 
+The acknowledgment should include author, title, publisher, and ISBN. 
+An example of such an acknowledgment would be "Derived from Listing 2-10, LightSwitch 2012 by Tim Leung, published by Apress, ISBN 9781430250715".-->
+
+<UserControl x:Class="Editors.EntityPropertyDropdown"                         
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+   mc:Ignorable="d" 
+   xmlns:e="clr-namespace:ApressExtensionCS.Editors">
+
+    <UserControl.Resources>
+        <e:GetAllEntityPropertiesConverter x:Key="GetAllEntityPropertiesConverter" />
+        <e:AppendSemiColonConverter x:Key="AppendSemiColonConverter" />
+        <e:EmptyStringToSummaryConverter x:Key="EmptyStringToSummaryConverter" />
+    </UserControl.Resources>
+
+    <!-- Set fonts -->
+    <Grid TextBlock.FontSize="{DynamicResource DesignTimeFontSize}"
+          TextBlock.FontFamily="{DynamicResource DesignTimeFontFamily}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--   This shows the Property Label -->
+        <TextBlock x:Name="ComboBoxLabel"
+                   Text="{Binding Entry.DisplayName, Mode=OneWay,
+                  Converter={StaticResource AppendSemiColonConverter}}"
+                   TextWrapping="WrapWithOverflow"
+                   ToolTip="{Binding Entry.Description, Mode=OneWay}"
+                   Margin="0,0,0,2" />
+
+        <!--  This is the ComboBox -->
+        <ComboBox x:Name="ComboBox"
+                  Grid.Row="1"
+                  SelectedItem="{Binding Entry.PropertyValue.Value}"
+                  ItemsSource="{Binding Entry.PropertyValue.ModelItem, 
+               Mode=OneWay, 
+               Converter={StaticResource GetAllEntityPropertiesConverter}}">
+
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <!--  This shows the ComboBox data items-->
+                    <TextBlock Text="{Binding Converter=
+                       {StaticResource EmptyStringToSummaryConverter}}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+    </Grid>
+
+</UserControl>
+

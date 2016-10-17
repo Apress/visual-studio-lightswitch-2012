@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="Engineers" EntityType="ApplicationDataStore.Engineer" store:Type="Tables" Schema="dbo" Table="Engineers" />
+    <EntitySet Name="Issues" EntityType="ApplicationDataStore.Issue" store:Type="Tables" Schema="dbo" Table="Issues" />
+    <EntitySet Name="IssueStatusSet" EntityType="ApplicationDataStore.IssueStatus" store:Type="Tables" Schema="dbo" Table="IssueStatusSet" />
+    <EntitySet Name="IssueDocuments" EntityType="ApplicationDataStore.IssueDocument" store:Type="Tables" Schema="dbo" Table="IssueDocuments" />
+    <EntitySet Name="IssueResponses" EntityType="ApplicationDataStore.IssueResponse" store:Type="Tables" Schema="dbo" Table="IssueResponses" />
+    <EntitySet Name="Priorities" EntityType="ApplicationDataStore.Priority" store:Type="Tables" Schema="dbo" Table="Priorities" />
+    <EntitySet Name="TimeTrackings" EntityType="ApplicationDataStore.TimeTracking" store:Type="Tables" Schema="dbo" Table="TimeTrackings" />
+    <EntitySet Name="IssueFeedbacks" EntityType="ApplicationDataStore.IssueFeedback" store:Type="Tables" Schema="dbo" Table="IssueFeedbacks" />
+    <EntitySet Name="Users" EntityType="ApplicationDataStore.User" store:Type="Tables" Schema="dbo" Table="Users" />
+    <EntitySet Name="EmailOperations" EntityType="ApplicationDataStore.EmailOperation" store:Type="Tables" Schema="dbo" Table="EmailOperations" />
+    <EntitySet Name="OfficeLocations" EntityType="ApplicationDataStore.OfficeLocation" store:Type="Tables" Schema="dbo" Table="OfficeLocations" />
+    <EntitySet Name="Departments" EntityType="ApplicationDataStore.Department" store:Type="Tables" Schema="dbo" Table="Departments" />
+    <EntitySet Name="AppOptions" EntityType="ApplicationDataStore.AppOption" store:Type="Tables" Schema="dbo" Table="AppOptions" />
+    <EntitySet Name="IssueStatusChanges" EntityType="ApplicationDataStore.IssueStatusChange" store:Type="Tables" Schema="dbo" Table="IssueStatusChanges" />
+    <AssociationSet Name="Issue_Engineer" Association="ApplicationDataStore.Issue_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_Engineer1" Association="ApplicationDataStore.Issue_Engineer1">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="IssueResponse_Issue" Association="ApplicationDataStore.IssueResponse_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueResponse" EntitySet="IssueResponses" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_Priority" Association="ApplicationDataStore.Issue_Priority">
+      <End Role="Priority" EntitySet="Priorities" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="TimeTracking_Engineer" Association="ApplicationDataStore.TimeTracking_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="TimeTracking" EntitySet="TimeTrackings" />
+    </AssociationSet>
+    <AssociationSet Name="TimeTracking_Issue" Association="ApplicationDataStore.TimeTracking_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="TimeTracking" EntitySet="TimeTrackings" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_IssueStatus" Association="ApplicationDataStore.Issue_IssueStatus">
+      <End Role="IssueStatus" EntitySet="IssueStatusSet" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="IssueDocument_Issue" Association="ApplicationDataStore.IssueDocument_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueDocument" EntitySet="IssueDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="IssueFeedback_Issue" Association="ApplicationDataStore.IssueFeedback_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueFeedback" EntitySet="IssueFeedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="Engineer_Engineer" Association="ApplicationDataStore.Engineer_Engineer">
+      <End Role="Engineer2" EntitySet="Engineers" />
+      <End Role="Engineer1" EntitySet="Engineers" />
+    </AssociationSet>
+    <AssociationSet Name="User_Department" Association="ApplicationDataStore.User_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_User" Association="ApplicationDataStore.Issue_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="IssueStatusChange_IssueStatus" Association="ApplicationDataStore.IssueStatusChange_IssueStatus">
+      <End Role="IssueStatus" EntitySet="IssueStatusSet" />
+      <End Role="IssueStatusChange" EntitySet="IssueStatusChanges" />
+    </AssociationSet>
+    <AssociationSet Name="IssueStatusChange_IssueStatus1" Association="ApplicationDataStore.IssueStatusChange_IssueStatus1">
+      <End Role="IssueStatus" EntitySet="IssueStatusSet" />
+      <End Role="IssueStatusChange" EntitySet="IssueStatusChanges" />
+    </AssociationSet>
+    <AssociationSet Name="IssueStatusChange_Issue" Association="ApplicationDataStore.IssueStatusChange_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueStatusChange" EntitySet="IssueStatusChanges" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Engineer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="255" />
+    <Property Name="SSN" Type="nvarchar" MaxLength="255" />
+    <Property Name="EngineerPhoto" Type="varbinary(max)" />
+    <Property Name="SecurityVetted" Type="bit" Nullable="false" />
+    <Property Name="ClearanceReference" Type="nvarchar" MaxLength="255" />
+    <Property Name="VettingExpiryDate" Type="datetime" />
+    <Property Name="Engineer_Engineer" Type="int" />
+  </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="TargetEndDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ClosedDateTime" Type="datetime" />
+    <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ProblemDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="255" />
+    <Property Name="Issue_Engineer" Type="int" Nullable="false" />
+    <Property Name="Issue_Engineer1" Type="int" />
+    <Property Name="Issue_Priority" Type="int" />
+    <Property Name="Issue_IssueStatus" Type="int" />
+    <Property Name="Issue_User" Type="int" />
+  </EntityType>
+  <EntityType Name="IssueStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="StatusDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="IssueDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="IssueFile" Type="varbinary(max)" Nullable="false" />
+    <Property Name="IssueDocument_Issue" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IssueResponse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="ResponseDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ResponseText" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ReviewDate" Type="datetime" />
+    <Property Name="AwaitingClient" Type="bit" Nullable="false" />
+    <Property Name="IssueResponse_Issue" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Priority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="PriorityDesc" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TimeTracking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DurationMins" Type="int" Nullable="false" />
+    <Property Name="TimeTracking_Engineer" Type="int" Nullable="false" />
+    <Property Name="TimeTracking_Issue" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IssueFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="QualityRating" Type="int" Nullable="false" />
+    <Property Name="ResponseRating" Type="int" Nullable="false" />
+    <Property Name="StaffRating" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="OverallRating" Type="float" Nullable="false" />
+    <Property Name="IssueFeedback_Issue" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Username" Type="nvarchar" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="Country" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="User_Department" Type="int" />
+  </EntityType>
+  <EntityType Name="EmailOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SenderEmail" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="RecipientEmail" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Subject" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Body" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Attachment" Type="varbinary(max)" />
+    <Property Name="AttachmentFileName" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="OfficeLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="OfficeName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Country" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Address1" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Address2" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DepartmentName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="Country" Type="nvarchar" MaxLength="255" />
+    <Property Name="DepartmentManager" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AppOption">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="AuditChangesOn" Type="bit" Nullable="false" />
+    <Property Name="SendEmailOn" Type="bit" Nullable="false" />
+    <Property Name="SMTPServer" Type="nvarchar" MaxLength="255" />
+    <Property Name="SMTPPort" Type="int" />
+    <Property Name="SMTPUsername" Type="nvarchar" MaxLength="255" />
+    <Property Name="SMTPPassword" Type="nvarchar" MaxLength="255" />
+    <Property Name="ReportWebSiteRootURL" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="IssueStatusChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="ChangeDate" Type="datetime" Nullable="false" />
+    <Property Name="IssueStatusChange_IssueStatus" Type="int" />
+    <Property Name="IssueStatusChange_IssueStatus1" Type="int" />
+    <Property Name="IssueStatusChange_Issue" Type="int" />
+  </EntityType>
+  <Association Name="Issue_Engineer">
+    <End Role="Engineer" Type="ApplicationDataStore.Engineer" Multiplicity="1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_Engineer1">
+    <End Role="Engineer" Type="ApplicationDataStore.Engineer" Multiplicity="0..1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Engineer1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueResponse_Issue">
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="1" />
+    <End Role="IssueResponse" Type="ApplicationDataStore.IssueResponse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueResponse">
+        <PropertyRef Name="IssueResponse_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_Priority">
+    <End Role="Priority" Type="ApplicationDataStore.Priority" Multiplicity="0..1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Priority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Priority" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TimeTracking_Engineer">
+    <End Role="Engineer" Type="ApplicationDataStore.Engineer" Multiplicity="1" />
+    <End Role="TimeTracking" Type="ApplicationDataStore.TimeTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TimeTracking">
+        <PropertyRef Name="TimeTracking_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TimeTracking_Issue">
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="1" />
+    <End Role="TimeTracking" Type="ApplicationDataStore.TimeTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TimeTracking">
+        <PropertyRef Name="TimeTracking_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_IssueStatus">
+    <End Role="IssueStatus" Type="ApplicationDataStore.IssueStatus" Multiplicity="0..1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IssueStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_IssueStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueDocument_Issue">
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="1" />
+    <End Role="IssueDocument" Type="ApplicationDataStore.IssueDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueDocument">
+        <PropertyRef Name="IssueDocument_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueFeedback_Issue">
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IssueFeedback" Type="ApplicationDataStore.IssueFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueFeedback">
+        <PropertyRef Name="IssueFeedback_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Engineer_Engineer">
+    <End Role="Engineer2" Type="ApplicationDataStore.Engineer" Multiplicity="0..1" />
+    <End Role="Engineer1" Type="ApplicationDataStore.Engineer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer2">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Engineer1">
+        <PropertyRef Name="Engineer_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_Department">
+    <End Role="Department" Type="ApplicationDataStore.Department" Multiplicity="0..1" />
+    <End Role="User" Type="ApplicationDataStore.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="User_Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_User">
+    <End Role="User" Type="ApplicationDataStore.User" Multiplicity="0..1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueStatusChange_IssueStatus">
+    <End Role="IssueStatus" Type="ApplicationDataStore.IssueStatus" Multiplicity="0..1" />
+    <End Role="IssueStatusChange" Type="ApplicationDataStore.IssueStatusChange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IssueStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueStatusChange">
+        <PropertyRef Name="IssueStatusChange_IssueStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueStatusChange_IssueStatus1">
+    <End Role="IssueStatus" Type="ApplicationDataStore.IssueStatus" Multiplicity="0..1" />
+    <End Role="IssueStatusChange" Type="ApplicationDataStore.IssueStatusChange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IssueStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueStatusChange">
+        <PropertyRef Name="IssueStatusChange_IssueStatus1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueStatusChange_Issue">
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="0..1" />
+    <End Role="IssueStatusChange" Type="ApplicationDataStore.IssueStatusChange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueStatusChange">
+        <PropertyRef Name="IssueStatusChange_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

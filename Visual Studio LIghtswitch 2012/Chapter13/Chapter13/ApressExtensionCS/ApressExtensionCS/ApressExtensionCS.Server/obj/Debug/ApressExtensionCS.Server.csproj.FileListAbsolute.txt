@@ -1,0 +1,9 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\bin\Debug\ApressExtensionCS.Server.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\bin\Debug\ApressExtensionCS.Server.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Debug\ApressExtensionCS.Server.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Debug\ApressExtensionCS.Server.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Debug\ApressExtensionCS.Server.csprojResolveAssemblyReference.cache
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\bin\Debug\ApressExtensionCS.Server.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\bin\Debug\ApressExtensionCS.Server.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Debug\ApressExtensionCS.Server.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Server\obj\Debug\ApressExtensionCS.Server.pdb

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Source\Chapter10\HelpDeskVB\HelpDeskVB\Client\My Project\Client.lsml" Checksum="C94D45EE411F499DFE375417DABA7A4B120EDB691DA6B3D6EC168CEB963F53D4" />
+    <Document FullPath="C:\Source\Chapter10\HelpDeskVB\HelpDeskVB\Common\My Project\Common.lsml" Checksum="223D14E864482C681286F16866DEF0E48815C291F00507E3FBF1F3A971693EBF" />
+  </Documents>
+</ModelDocumentManifest>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="SharePointDataSourceObjectContext" StorageEntityContainer="SharePointDataSourceStore">
+    <EntitySetMapping Name="Timesheets">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Timesheet)">
+        <MappingFragment StoreEntitySet="Timesheets">
+          <ScalarProperty Name="TimesheetId" ColumnName="TimesheetId" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TimesheetDate" ColumnName="TimesheetDate" />
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="Minutes" ColumnName="Minutes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

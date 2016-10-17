@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Engineer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="DateOfBirth" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="LoginName" Type="Edm.String" MaxLength="255" />
+    <Property Name="SSN" Type="Edm.String" MaxLength="255" />
+    <Property Name="EngineerPhoto" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="SecurityVetted" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="ClearanceReference" Type="Edm.String" MaxLength="255" />
+    <Property Name="VettingExpiryDate" Type="Edm.DateTime" />
+    <Property Name="EmailAddress" Type="Edm.String" MaxLength="255" />
+    <Property Name="Engineer_Engineer" Type="Edm.Int32" />
+    <NavigationProperty Name="Issues" Relationship="LightSwitchApplication.Issue_Engineer" ToRole="Issue" FromRole="Engineer" />
+    <NavigationProperty Name="EngineerIssues" Relationship="LightSwitchApplication.Issue_Engineer1" ToRole="Issue" FromRole="Engineer" />
+    <NavigationProperty Name="Subordinates" Relationship="LightSwitchApplication.Engineer_Engineer" ToRole="Engineer1" FromRole="Engineer2" />
+    <NavigationProperty Name="Manager" Relationship="LightSwitchApplication.Engineer_Engineer" ToRole="Engineer2" FromRole="Engineer1" />
+    <NavigationProperty Name="EngineerSkills" Relationship="LightSwitchApplication.EngineerSkill_Engineer" ToRole="EngineerSkill" FromRole="Engineer" />
+    <NavigationProperty Name="TimeTrackings" Relationship="LightSwitchApplication.TimeTracking_Engineer" ToRole="TimeTracking" FromRole="Engineer" />
+  </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="TargetEndDateTime" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="Subject" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreateDateTime" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="ProblemDescription" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="ClosedDateTime" Type="Edm.DateTime" />
+    <Property Name="Issue_Engineer" Type="Edm.Int32" />
+    <Property Name="Issue_Engineer1" Type="Edm.Int32" />
+    <Property Name="Priority_Issue" Type="Edm.Int32" Nullable="false" />
+    <Property Name="User_Issue" Type="Edm.Int32" />
+    <Property Name="IssueStatus_Issue" Type="Edm.Int32" />
+    <NavigationProperty Name="AssignedTo" Relationship="LightSwitchApplication.Issue_Engineer" ToRole="Engineer" FromRole="Issue" />
+    <NavigationProperty Name="ClosedByEngineer" Relationship="LightSwitchApplication.Issue_Engineer1" ToRole="Engineer" FromRole="Issue" />
+    <NavigationProperty Name="TimeTrackings" Relationship="LightSwitchApplication.TimeTracking_Issue" ToRole="TimeTracking" FromRole="Issue" />
+    <NavigationProperty Name="Priority" Relationship="LightSwitchApplication.Priority_Issue" ToRole="Priority" FromRole="Issue" />
+    <NavigationProperty Name="User" Relationship="LightSwitchApplication.User_Issue" ToRole="User" FromRole="Issue" />
+    <NavigationProperty Name="IssueStatus" Relationship="LightSwitchApplication.IssueStatus_Issue" ToRole="IssueStatus" FromRole="Issue" />
+    <NavigationProperty Name="IssueResponses" Relationship="LightSwitchApplication.IssueResponse_Issue" ToRole="IssueResponse" FromRole="Issue" />
+    <NavigationProperty Name="IssueDocuments" Relationship="LightSwitchApplication.IssueDocument_Issue" ToRole="IssueDocument" FromRole="Issue" />
+    <NavigationProperty Name="IssueFeedbacks" Relationship="LightSwitchApplication.IssueFeedback_Issue" ToRole="IssueFeedback" FromRole="Issue" />
+  </EntityType>
+  <EntityType Name="IssueStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="StatusDescription" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <NavigationProperty Name="Issues" Relationship="LightSwitchApplication.IssueStatus_Issue" ToRole="Issue" FromRole="IssueStatus" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="SkillDescription" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <NavigationProperty Name="EngineerSkills" Relationship="LightSwitchApplication.EngineerSkill_Skill" ToRole="EngineerSkill" FromRole="Skill" />
+  </EntityType>
+  <EntityType Name="EngineerSkill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="EngineerSkill_Skill" Type="Edm.Int32" Nullable="false" />
+    <Property Name="EngineerSkill_Engineer" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Skill" Relationship="LightSwitchApplication.EngineerSkill_Skill" ToRole="Skill" FromRole="EngineerSkill" />
+    <NavigationProperty Name="Engineer" Relationship="LightSwitchApplication.EngineerSkill_Engineer" ToRole="Engineer" FromRole="EngineerSkill" />
+  </EntityType>
+  <EntityType Name="TimeTracking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DurationMins" Type="Edm.Int32" Nullable="false" />
+    <Property Name="EntryDate" Type="Edm.DateTime" />
+    <Property Name="TimeTracking_Engineer" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimeTracking_Issue" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Engineer" Relationship="LightSwitchApplication.TimeTracking_Engineer" ToRole="Engineer" FromRole="TimeTracking" />
+    <NavigationProperty Name="Issue" Relationship="LightSwitchApplication.TimeTracking_Issue" ToRole="Issue" FromRole="TimeTracking" />
+  </EntityType>
+  <EntityType Name="Priority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PriorityDesc" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <NavigationProperty Name="Issues" Relationship="LightSwitchApplication.Priority_Issue" ToRole="Issue" FromRole="Priority" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DepartmentName" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Address1" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Address2" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Postcode" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="DepartmentManager" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <NavigationProperty Name="Users" Relationship="LightSwitchApplication.Department_User" ToRole="User" FromRole="Department" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Username" Type="Edm.String" MaxLength="255" />
+    <Property Name="Password" Type="Edm.String" MaxLength="255" />
+    <Property Name="Address1" Type="Edm.String" MaxLength="255" />
+    <Property Name="Address2" Type="Edm.String" MaxLength="255" />
+    <Property Name="City" Type="Edm.String" MaxLength="255" />
+    <Property Name="Postcode" Type="Edm.String" MaxLength="255" />
+    <Property Name="Country" Type="Edm.String" MaxLength="255" />
+    <Property Name="Email" Type="Edm.String" MaxLength="255" />
+    <Property Name="Department_User" Type="Edm.Int32" />
+    <NavigationProperty Name="Issues" Relationship="LightSwitchApplication.User_Issue" ToRole="Issue" FromRole="User" />
+    <NavigationProperty Name="Department" Relationship="LightSwitchApplication.Department_User" ToRole="Department" FromRole="User" />
+  </EntityType>
+  <EntityType Name="IssueResponse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ResponseDateTime" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="ResponseText" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="ReviewDate" Type="Edm.DateTime" />
+    <Property Name="AwaitingClient" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="IssueResponse_Issue" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Issue" Relationship="LightSwitchApplication.IssueResponse_Issue" ToRole="Issue" FromRole="IssueResponse" />
+  </EntityType>
+  <EntityType Name="IssueDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentName" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="FileExtension" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="IssueFile" Type="Edm.Binary" Nullable="false" MaxLength="Max" />
+    <Property Name="IssueDocument_Issue" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Issue" Relationship="LightSwitchApplication.IssueDocument_Issue" ToRole="Issue" FromRole="IssueDocument" />
+  </EntityType>
+  <EntityType Name="IssueFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="QualityRating" Type="Edm.Int32" Nullable="false" />
+    <Property Name="ResponseRating" Type="Edm.Int32" Nullable="false" />
+    <Property Name="StaffRating" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Comment" Type="Edm.Int32" Nullable="false" />
+    <Property Name="OverallRating" Type="Edm.Double" />
+    <Property Name="IssueFeedback_Issue" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Issue" Relationship="LightSwitchApplication.IssueFeedback_Issue" ToRole="Issue" FromRole="IssueFeedback" />
+  </EntityType>
+  <EntityType Name="AppOption">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="AuditChangesOn" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="SendEmailOn" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="SMTPServer" Type="Edm.String" MaxLength="255" />
+    <Property Name="SMTPPort" Type="Edm.String" MaxLength="255" />
+    <Property Name="EmailFrom" Type="Edm.String" MaxLength="255" />
+    <Property Name="SMTPUsername" Type="Edm.String" MaxLength="255" />
+    <Property Name="SMTPPassword" Type="Edm.String" MaxLength="255" />
+    <Property Name="ReportServer" Type="Edm.String" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EmailOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="SenderEmail" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="RecipientEmail" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Subject" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Body" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Attachment" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="AttachmentFileName" Type="Edm.String" MaxLength="255" />
+  </EntityType>
+  <Association Name="Issue_Engineer">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="0..1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_Engineer1">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="0..1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Engineer1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Engineer_Engineer">
+    <End Role="Engineer2" Type="LightSwitchApplication.Engineer" Multiplicity="0..1" />
+    <End Role="Engineer1" Type="LightSwitchApplication.Engineer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer2">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Engineer1">
+        <PropertyRef Name="Engineer_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EngineerSkill_Skill">
+    <End Role="Skill" Type="LightSwitchApplication.Skill" Multiplicity="1" />
+    <End Role="EngineerSkill" Type="LightSwitchApplication.EngineerSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EngineerSkill">
+        <PropertyRef Name="EngineerSkill_Skill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EngineerSkill_Engineer">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="1" />
+    <End Role="EngineerSkill" Type="LightSwitchApplication.EngineerSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EngineerSkill">
+        <PropertyRef Name="EngineerSkill_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TimeTracking_Engineer">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="1" />
+    <End Role="TimeTracking" Type="LightSwitchApplication.TimeTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TimeTracking">
+        <PropertyRef Name="TimeTracking_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TimeTracking_Issue">
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="1" />
+    <End Role="TimeTracking" Type="LightSwitchApplication.TimeTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TimeTracking">
+        <PropertyRef Name="TimeTracking_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Priority_Issue">
+    <End Role="Priority" Type="LightSwitchApplication.Priority" Multiplicity="1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Priority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Priority_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_Issue">
+    <End Role="User" Type="LightSwitchApplication.User" Multiplicity="0..1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="User_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Department_User">
+    <End Role="Department" Type="LightSwitchApplication.Department" Multiplicity="0..1" />
+    <End Role="User" Type="LightSwitchApplication.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Department_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueStatus_Issue">
+    <End Role="IssueStatus" Type="LightSwitchApplication.IssueStatus" Multiplicity="0..1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IssueStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="IssueStatus_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueResponse_Issue">
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="1" />
+    <End Role="IssueResponse" Type="LightSwitchApplication.IssueResponse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueResponse">
+        <PropertyRef Name="IssueResponse_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueDocument_Issue">
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="1" />
+    <End Role="IssueDocument" Type="LightSwitchApplication.IssueDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueDocument">
+        <PropertyRef Name="IssueDocument_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IssueFeedback_Issue">
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="1" />
+    <End Role="IssueFeedback" Type="LightSwitchApplication.IssueFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueFeedback">
+        <PropertyRef Name="IssueFeedback_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Engineers" EntityType="LightSwitchApplication.Engineer" />
+    <EntitySet Name="Issues" EntityType="LightSwitchApplication.Issue" />
+    <EntitySet Name="IssueStatusSet" EntityType="LightSwitchApplication.IssueStatus" />
+    <EntitySet Name="Skills" EntityType="LightSwitchApplication.Skill" />
+    <EntitySet Name="EngineerSkills" EntityType="LightSwitchApplication.EngineerSkill" />
+    <EntitySet Name="TimeTrackings" EntityType="LightSwitchApplication.TimeTracking" />
+    <EntitySet Name="Priorities" EntityType="LightSwitchApplication.Priority" />
+    <EntitySet Name="Departments" EntityType="LightSwitchApplication.Department" />
+    <EntitySet Name="Users" EntityType="LightSwitchApplication.User" />
+    <EntitySet Name="IssueResponses" EntityType="LightSwitchApplication.IssueResponse" />
+    <EntitySet Name="IssueDocuments" EntityType="LightSwitchApplication.IssueDocument" />
+    <EntitySet Name="IssueFeedbacks" EntityType="LightSwitchApplication.IssueFeedback" />
+    <EntitySet Name="AppOptions" EntityType="LightSwitchApplication.AppOption" />
+    <EntitySet Name="EmailOperations" EntityType="LightSwitchApplication.EmailOperation" />
+    <AssociationSet Name="Issue_Engineer" Association="LightSwitchApplication.Issue_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_Engineer1" Association="LightSwitchApplication.Issue_Engineer1">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Engineer_Engineer" Association="LightSwitchApplication.Engineer_Engineer">
+      <End Role="Engineer2" EntitySet="Engineers" />
+      <End Role="Engineer1" EntitySet="Engineers" />
+    </AssociationSet>
+    <AssociationSet Name="EngineerSkill_Skill" Association="LightSwitchApplication.EngineerSkill_Skill">
+      <End Role="Skill" EntitySet="Skills" />
+      <End Role="EngineerSkill" EntitySet="EngineerSkills" />
+    </AssociationSet>
+    <AssociationSet Name="EngineerSkill_Engineer" Association="LightSwitchApplication.EngineerSkill_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="EngineerSkill" EntitySet="EngineerSkills" />
+    </AssociationSet>
+    <AssociationSet Name="TimeTracking_Engineer" Association="LightSwitchApplication.TimeTracking_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="TimeTracking" EntitySet="TimeTrackings" />
+    </AssociationSet>
+    <AssociationSet Name="TimeTracking_Issue" Association="LightSwitchApplication.TimeTracking_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="TimeTracking" EntitySet="TimeTrackings" />
+    </AssociationSet>
+    <AssociationSet Name="Priority_Issue" Association="LightSwitchApplication.Priority_Issue">
+      <End Role="Priority" EntitySet="Priorities" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="User_Issue" Association="LightSwitchApplication.User_Issue">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Department_User" Association="LightSwitchApplication.Department_User">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="IssueStatus_Issue" Association="LightSwitchApplication.IssueStatus_Issue">
+      <End Role="IssueStatus" EntitySet="IssueStatusSet" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="IssueResponse_Issue" Association="LightSwitchApplication.IssueResponse_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueResponse" EntitySet="IssueResponses" />
+    </AssociationSet>
+    <AssociationSet Name="IssueDocument_Issue" Association="LightSwitchApplication.IssueDocument_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueDocument" EntitySet="IssueDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="IssueFeedback_Issue" Association="LightSwitchApplication.IssueFeedback_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="IssueFeedback" EntitySet="IssueFeedbacks" />
+    </AssociationSet>
+    <FunctionImport Name="EngineersWithOutstandingIssues" ReturnType="Collection(LightSwitchApplication.Engineer)" EntitySet="Engineers" m:HttpMethod="GET" />
+    <FunctionImport Name="IssuesWithAttachments" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET" />
+    <FunctionImport Name="IssuesWithNoResponse" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET" />
+    <FunctionImport Name="IssuesByMonthAndYear" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET">
+      <Parameter Name="IssueMonth" Type="Edm.Int32" Mode="In" />
+      <Parameter Name="IssueYear" Type="Edm.Int32" Mode="In" />
+    </FunctionImport>
+    <FunctionImport Name="IssuesWithHighestFeedback" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET" />
+    <FunctionImport Name="IssuesDue7DaysAgo" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET" />
+    <FunctionImport Name="IssueSearchAll" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET">
+      <Parameter Name="EngineerID" Type="Edm.Int32" Mode="In" />
+      <Parameter Name="ProblemDescription" Type="Edm.String" Mode="In" />
+      <Parameter Name="CreateDateTimeStart" Type="Edm.DateTime" Mode="In" />
+      <Parameter Name="CreateDateTimeEnd" Type="Edm.DateTime" Mode="In" />
+      <Parameter Name="StatusId" Type="Edm.Int32" Mode="In" />
+      <Parameter Name="PriorityId" Type="Edm.Int32" Mode="In" />
+    </FunctionImport>
+    <FunctionImport Name="UsersByDepartment" ReturnType="Collection(LightSwitchApplication.User)" EntitySet="Users" m:HttpMethod="GET">
+      <Parameter Name="DepartmentId" Type="Edm.Int32" Mode="In" />
+    </FunctionImport>
+    <FunctionImport Name="IssuesByUser" ReturnType="Collection(LightSwitchApplication.Issue)" EntitySet="Issues" m:HttpMethod="GET">
+      <Parameter Name="UserId" Type="Edm.Int32" Mode="In" />
+    </FunctionImport>
+    <FunctionImport Name="Microsoft_LightSwitch_GetCanInformation" ReturnType="Edm.String" m:HttpMethod="GET">
+      <Parameter Name="dataServiceMembers" Type="Edm.String" Mode="In" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelFragment
+  xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Control Name="ToggleControl"
+    SupportedContentItemKind="Group"
+    DesignerImageResource="ApressExtensionVB.ToggleControl::ControlImage"
+           AttachedLabelSupport="DisplayedByControl"
+           
+           >
+    <Control.Attributes>
+      <DisplayName Value="Toggle Layout" />
+    </Control.Attributes>
+    <Control.PropertyOverrides>
+      <!-- Override AttachedLabelPosition to allow it to be shown on the 
+          property sheet. -->
+      <ControlPropertyOverride
+          Property=":RootControl/Properties[AttachedLabelPosition]"
+          EditorVisibility="PropertySheet">
+      </ControlPropertyOverride>
+    </Control.PropertyOverrides>
+
+  </Control>
+
+</ModelFragment>

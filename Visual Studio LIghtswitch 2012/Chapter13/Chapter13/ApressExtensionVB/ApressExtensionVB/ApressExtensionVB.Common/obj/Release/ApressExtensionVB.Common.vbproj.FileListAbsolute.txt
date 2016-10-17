@@ -1,0 +1,9 @@
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\Bin\Release\ApressExtensionVB.Common.dll
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\Bin\Release\ApressExtensionVB.Common.pdb
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\Bin\Release\ApressExtensionVB.Common.xml
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\obj\Release\ApressExtensionVB.Common.vbprojResolveAssemblyReference.cache
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\obj\Release\ApressExtensionVB.ModuleResources.resources
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\obj\Release\ApressExtensionVB.Common.vbproj.GenerateResource.Cache
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\obj\Release\ApressExtensionVB.Common.dll
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\obj\Release\ApressExtensionVB.Common.xml
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Common\obj\Release\ApressExtensionVB.Common.pdb

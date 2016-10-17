@@ -1,0 +1,6 @@
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Vsix\bin\Release\license.txt
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Vsix\bin\Release\ApressExtensionVB.vsix
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Vsix\bin\Release\extension.vsixmanifest
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Vsix\obj\Release\ApressExtensionVB.dll
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Vsix\obj\Release\ApressExtensionVB.pdb
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Vsix\obj\Release\extension.vsixmanifest

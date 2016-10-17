@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="EngineerDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EngineerDataStore">
+    <EntitySet Name="GetEngineerData" EntityType="EngineerDataStore.EngineerRecord" store:Type="Tables" Schema="dbo" Table="HelpDeskDataServiceVB.EngineerRecord" />
+  </EntityContainer>
+  <EntityType Name="EngineerRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="SecurityVetted" Type="bit" Nullable="false" />
+    <Property Name="IssueCount" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

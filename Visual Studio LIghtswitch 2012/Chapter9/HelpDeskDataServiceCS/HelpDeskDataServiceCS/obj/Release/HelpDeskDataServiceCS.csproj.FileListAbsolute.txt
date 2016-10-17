@@ -1,0 +1,5 @@
+C:\Source\Chapter9\HelpDeskDataServiceCS\HelpDeskDataServiceCS\bin\Release\HelpDeskDataServiceCS.dll
+C:\Source\Chapter9\HelpDeskDataServiceCS\HelpDeskDataServiceCS\bin\Release\HelpDeskDataServiceCS.pdb
+C:\Source\Chapter9\HelpDeskDataServiceCS\HelpDeskDataServiceCS\obj\Release\HelpDeskDataServiceCS.dll
+C:\Source\Chapter9\HelpDeskDataServiceCS\HelpDeskDataServiceCS\obj\Release\HelpDeskDataServiceCS.pdb
+C:\Source\Chapter9\HelpDeskDataServiceCS\HelpDeskDataServiceCS\obj\Release\HelpDeskDataServiceCS.csprojResolveAssemblyReference.cache

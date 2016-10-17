@@ -1,0 +1,4 @@
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\C8\HelpDeskVB\HelpDeskVB.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\C8\HelpDeskVB\HelpDeskVB.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Source\Chapter8\HelpDeskVB\HelpDeskVB.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Source\Chapter8\HelpDeskVB\HelpDeskVB.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

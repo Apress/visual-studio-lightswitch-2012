@@ -1,0 +1,12 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\Bin\Debug\ApressExtensionCS.Common.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\Bin\Debug\ApressExtensionCS.Common.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Resources.ModuleResources.resources
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Common.csproj.GenerateResource.Cache
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Common.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Common.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\Bin\Debug\ApressExtensionCS.Common.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\Bin\Debug\ApressExtensionCS.Common.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Resources.ModuleResources.resources
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Common.csproj.GenerateResource.Cache
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Common.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Common\obj\Debug\ApressExtensionCS.Common.pdb

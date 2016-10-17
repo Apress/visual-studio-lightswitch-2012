@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ApressExtensionVB.Client.Design
+</name>
+</assembly>
+<members>
+<member name="M:ApressExtensionVB.Editors.SilverlightEntityPropertyDropdown.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

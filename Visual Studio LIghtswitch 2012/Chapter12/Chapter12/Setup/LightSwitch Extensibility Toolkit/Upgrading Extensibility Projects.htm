@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" >
+<head>
+    <title>Upgrading Projects Created with the Visual Studio LightSwitch 2011 Extensibility Toolkit</title>
+    <style type="text/css">
+        .newStyle1
+        {
+        }
+        .style2
+        {
+            color: black;
+        }
+    </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">UZUK5WV5UJ57-7-427</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">127fd5c3-05ec-4753-be03-68b7840e038c</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://sharepoint/sites/vsbizapps2/LightSwitch/_layouts/DocIdRedir.aspx?ID=UZUK5WV5UJ57-7-427, UZUK5WV5UJ57-7-427</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <p>
+        Extensibility projects created with the Visual Studio LightSwitch 2011 Extensibility Toolkit can be upgraded to run in Visual Studio 11 Beta by making a few modifications to the project files.
+         </p>
+    <p style="margin-left: 40px">
+        <strong>Note:</strong> Make sure that both the <strong>LightSwitch Extensibility 
+        Toolkit for Visual Studio 11 </strong>and the <strong>Visual Studio 11 SDK</strong> 
+        are installed before upgrading your projects.</p>
+    <p>
+        <strong>Upgrade the Solution</strong></p>
+    <ol>
+        <li>Open the solution in Visual Studio 11 and in the <strong>Review Project And 
+            Solution Changes</strong> dialog box choose <strong>OK</strong>. The solution 
+            will be upgraded and loaded; the old solution will be saved in a Backup folder.</li>
+        <li>Close the solution and navigate to the directory that contains the upgraded 
+            project files.</li>
+    </ol>
+    <p>
+        <strong>Modify the Lspkg Project File</strong></p>
+    <ol>
+        <li>In the <em>ProjectName</em>.Lspkg folder, select the <em>ProjectName</em>.Lspkg 
+            file and open it in Notepad.</li>
+        <li>In the <strong>&lt;PropertyGroup&gt;</strong> section, locate the <strong>
+            &lt;LightSwitchVersion&gt;</strong> property and change the value from v1.0 to v2.0.</li>
+        <li>Save the file.</li>
+    </ol>
+    <p>
+        <strong>Modify the Client Project File</strong></p>
+    <ol>
+        <li>In the <em>ProjectName</em>.Client folder, select the <em>ProjectName</em>.Client 
+            file and open it in Notepad.</li>
+        <li>In the <strong>&lt;PropertyGroup&gt;</strong> section, locate the <strong>
+            &lt;TargetFrameworkVersion&gt;</strong> property and change the value from v4.0 to 
+            v5.0.</li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">10.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            property and change it to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">11.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>System.ComponentModel.Composition</strong> and 
+            remove the metadata for <strong>Version</strong>, <strong>Culture</strong>,
+            <strong>PublicKeyToken</strong>, and <strong>processorArchitecture</strong>. 
+            After removal the reference should be<p class="MsoNormal">
+                <span style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">
+                &lt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Reference</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">
+                </span>
+                <span style="font-size: 9.5pt; font-family: Consolas; color: red; background: white; mso-highlight: white">
+                Include</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">=</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">&quot;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">System.ComponentModel.Composition</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">&quot;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white"><o:p></o:p></span></p>
+            <p class="MsoNormal">
+                <span style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &lt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Private</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">False</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&lt;/</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Private</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white"><o:p></o:p></span></p>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Reference</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;.</span></li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch</strong> and change the
+            <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch.Client</strong> and change 
+            the <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.Client.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.Client.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch.SdkProxy</strong> and 
+            change the <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.SdkProxy.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.SdkProxy.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Save the file.</li>
+    </ol>
+    <p>
+        <strong>Modify the Client.Design Project File</strong></p>
+    <ol>
+        <li>In the <em>ProjectName</em>.Client.Design folder, select the <em>ProjectName</em>.Client.Design 
+            file and open it in Notepad.</li>
+        <li>In the <strong>&lt;PropertyGroup&gt;</strong> section, locate the <strong>
+            &lt;TargetFrameworkVersion&gt;</strong> property and change the value from v4.0 to 
+            v5.0.</li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitch</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\10.0@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;
+            </span>property and delete it. </li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">10.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            property and change it to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">11.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>System.ComponentModel.Composition</strong> and 
+            remove the metadata for <strong>Version</strong>, <strong>Culture</strong>,
+            <strong>PublicKeyToken</strong>, and <strong>processorArchitecture</strong>. 
+            After removal the reference should be<p class="MsoNormal">
+                <span style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">
+                &lt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Reference</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">
+                </span>
+                <span style="font-size: 9.5pt; font-family: Consolas; color: red; background: white; mso-highlight: white">
+                Include</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">=</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">&quot;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">System.ComponentModel.Composition</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">&quot;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white"><o:p></o:p></span></p>
+            <p class="MsoNormal">
+                <span style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &lt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Private</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">False</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&lt;/</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Private</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white"><o:p></o:p></span></p>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Reference</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;.</span></li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch</strong> and change the
+            <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch.Client</strong> and change 
+            the <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.Client.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.Client.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Save the file.</li>
+    </ol>
+    <p>
+        <strong>Modify the Common Project File</strong></p>
+    <ol>
+        <li>In the <em>ProjectName</em>.Common folder, select the <em>ProjectName</em>.Common 
+            file and open it in Notepad.</li>
+        <li>In the <strong>&lt;PropertyGroup&gt;</strong> section, locate the <strong>
+            &lt;TargetFrameworkVersion&gt;</strong> property and change the value from v4.0 to 
+            v5.0.</li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitch</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\10.0@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;
+            </span>property and delete it. </li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">10.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            property and change it to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">11.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>System.ComponentModel.Composition</strong> and 
+            remove the metadata for <strong>Version</strong>, <strong>Culture</strong>,
+            <strong>PublicKeyToken</strong>, and <strong>processorArchitecture</strong>. 
+            After removal the reference should be<p class="MsoNormal">
+                <span style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">
+                &lt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Reference</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">
+                </span>
+                <span style="font-size: 9.5pt; font-family: Consolas; color: red; background: white; mso-highlight: white">
+                Include</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">=</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">&quot;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">System.ComponentModel.Composition</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">&quot;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white"><o:p></o:p></span></p>
+            <p class="MsoNormal">
+                <span style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &lt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Private</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white">False</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&lt;/</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: white; mso-highlight: white">Private</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: blue; background: white; mso-highlight: white">&gt;</span><span 
+                    style="font-size: 9.5pt; font-family: Consolas; color: black; background: white; mso-highlight: white"><o:p></o:p></span></p>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Reference</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;.</span></li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch</strong> and change the
+            <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Save the file.</li>
+    </ol>
+    <p>
+        <strong>Modify the Design Project File</strong></p>
+    <ol>
+        <li>In the <em>ProjectName</em>.Design folder, select the <em>ProjectName</em>.Design 
+            file and open it in Notepad.</li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitch</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\10.0@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;
+            </span>property and delete it. </li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">10.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            property and change it to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">11.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch</strong> and change the
+            <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;&lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Server</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+    </ol>
+    <p>
+        <strong>Modify the Server Project File</strong></p>
+    <ol>
+        <li>In the <em>ProjectName</em>.Server folder, select the <em>ProjectName</em>.Server 
+            file and open it in Notepad.</li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitch</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\10.0@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;
+            </span>property and delete it. </li>
+        <li>Locate the
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">10.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            property and change it to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: red; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            Condition</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">=</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> 
+            &#39;$(LightSwitchPath)&#39; == &#39;&#39; </span>
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &quot;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">11.0</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">@InstallDir)</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">LightSwitchPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span>.</li>
+        <li>Locate the reference to <strong>Microsoft.LightSwitch</strong> and change the
+            <strong>HintPath</strong> from
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;&lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1.0\Server</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span> 
+            to
+            <span style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+            &lt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">$(LightSwitchPath)\LightSwitch\</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: yellow; mso-highlight: yellow; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Client</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: black; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">\Microsoft.LightSwitch.dll</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;/</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: #A31515; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">HintPath</span><span 
+                style="font-size: 9.5pt; font-family: Consolas; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; color: blue; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</span.</li>
+    </ol>
+    </span><span 
+                
+        style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; background: white; mso-highlight: white; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA" 
+        class="style2">
+    <p>
+        No changes are needed for the Vsix project. You should now be able to open 
+        the solution in Visual Studio 11.</p>
+
+</body>
+</html>

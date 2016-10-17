@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="SharePointDataSourceStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SharePointDataSourceStore">
+    <EntitySet Name="Timesheets" EntityType="SharePointDataSourceStore.Timesheet" store:Type="Tables" Schema="dbo" Table="Timesheet" />
+  </EntityContainer>
+  <EntityType Name="Timesheet">
+    <Key>
+      <PropertyRef Name="TimesheetId" />
+    </Key>
+    <Property Name="TimesheetId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Project" Type="nchar" MaxLength="10" />
+    <Property Name="Client" Type="nchar" MaxLength="10" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="TimesheetDate" Type="date" />
+    <Property Name="Hours" Type="int" />
+    <Property Name="Minutes" Type="int" />
+  </EntityType>
+</Schema>

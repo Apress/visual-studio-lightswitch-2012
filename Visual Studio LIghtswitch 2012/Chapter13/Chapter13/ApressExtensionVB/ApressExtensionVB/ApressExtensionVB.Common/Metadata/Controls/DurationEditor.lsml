@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelFragment
+  xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Control Name="DurationEditor"
+    SupportedContentItemKind="Value"
+    DesignerImageResource="ApressExtensionVB.DurationEditor::ControlImage">
+    <Control.Attributes>
+      <DisplayName Value="DurationEditor" />
+    </Control.Attributes>
+    <Control.SupportedDataTypes>
+      <SupportedDataType DataType=":Int32"/>
+      <SupportedDataType DataType="DurationType"/>
+    </Control.SupportedDataTypes>
+  </Control>
+
+</ModelFragment>

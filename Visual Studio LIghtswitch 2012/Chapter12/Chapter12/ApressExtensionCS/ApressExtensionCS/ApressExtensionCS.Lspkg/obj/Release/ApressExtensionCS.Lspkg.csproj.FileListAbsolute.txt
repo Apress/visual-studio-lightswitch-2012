@@ -1,0 +1,16 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.lspkg
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Client.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Common.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Design.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Server.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressControlsCS.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Client.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Client.Design.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Common.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Design.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\bin\Release\ApressExtensionCS.Server.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\obj\Release\ApressExtensionCS.Lspkg.csprojResolveAssemblyReference.cache
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\obj\Release\ApressExtensionCS.lspkg
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\obj\Release\ApressExtensionCS.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Lspkg\obj\Release\ApressExtensionCS.pdb

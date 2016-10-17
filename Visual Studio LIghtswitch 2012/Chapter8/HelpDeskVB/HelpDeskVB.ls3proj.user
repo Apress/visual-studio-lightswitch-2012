@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EnableENC>False</EnableENC>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ServerPort>39659</ServerPort>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635108676050953981</SchemaManagementLastModelWriteTime>
+    <EncryptedPublishConnectionString />
+    <EncryptedPublishSchemaConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAATQednJBnEy8sxaVP6Dm7AAAAAACAAAAAAADZgAAwAAAABAAAADVh+17tja+XveDQZl+JxnOAAAAAASAAACgAAAAEAAAAOk0kl8ilwulFQtcj+QqTAGoAAAAThBuZ+qXgPToqYhDFfZeDPHkJKXbbw/2aYhq+AR+gWkXWzRIQK4qnLD5hdoHYu8ybfr9aAo4sgQaexisO/LUDH7euBvaoMBzAZnqk+PiOqFqc1gjzPMsmHMDJbUg0SxuuJ9C02g54f2yiQfn/8f3+6beEOl6wFgUNcfx4aFXBQof9eoXmgF3ROvgDEVZZ6gezF1a2mvTLAQChJxG7os7Ju0HbZ1lfOMSFAAAAAiKK99axrwagFDespDWIC7saqn/</EncryptedPublishSchemaConnectionString>
+    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAATQednJBnEy8sxaVP6Dm7AAAAAACAAAAAAADZgAAwAAAABAAAACJBvnvK0CyvhUfeakz/3mhAAAAAASAAACgAAAAEAAAAL6rDAaHr27d52rsDYM22aKoAAAA4g5yhAtHYsO6n0viUdyauuFuMHTjbQLXTNbIb7+XLrjDzCNQDo95O1OVWNybe53BahfbM5E6eEod35mQ6yJkTbW3Curdv4fhnN15OQhGCYkoUMBXlQBHt7DHKZbj015qgBlS9YdLViwgp0CdfDKkuFL7dQHda10uOj34tz75SjMyvHJQmUDy1TUEkPx2U0WyLozr1a4CJHXaan5dIKqFD+0yzFDVqf04FAAAAGQUdA8pHMolQppSSJnACfZa2KZI</EncryptedClientConnectionString>
+    <EncryptedAdministratorPassword>
+    </EncryptedAdministratorPassword>
+    <PublishUserName />
+    <EncryptedPublishUserPassword />
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration</GrantedPermissions>
+    <StartUpClientProject>HelpDeskVB.HTMLClient</StartUpClientProject>
+    <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
+    <AzureManagementThumbprint />
+    <SharePointServerToServerCertificatePassword />
+  </PropertyGroup>
+</Project>

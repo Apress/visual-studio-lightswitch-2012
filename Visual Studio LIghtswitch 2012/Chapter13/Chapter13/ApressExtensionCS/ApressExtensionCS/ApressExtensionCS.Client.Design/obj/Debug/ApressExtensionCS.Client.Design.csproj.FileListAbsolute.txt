@@ -1,0 +1,12 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\Bin\Debug\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\Bin\Debug\ApressExtensionCS.Client.Design.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\Editors\SilverlightEntityPropertyDropdown.g.cs
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\ApressExtensionCS.Client.Design.g.resources
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\ApressExtensionCS.Client.Design.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\Bin\Debug\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\Bin\Debug\ApressExtensionCS.Client.Design.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\Editors\SilverlightEntityPropertyDropdown.g.cs
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\ApressExtensionCS.Client.Design.g.resources
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Debug\ApressExtensionCS.Client.Design.pdb

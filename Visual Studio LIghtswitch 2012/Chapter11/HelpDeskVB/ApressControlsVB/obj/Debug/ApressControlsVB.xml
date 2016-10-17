@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ApressControlsVB
+</name>
+</assembly>
+<members>
+<member name="M:ApressControlsVB.DurationEditorInternal.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressControlsVB.WebBrowser.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressControlsVB.SaveControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:ApressControlsVB.DurationEditor.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

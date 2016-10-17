@@ -1,0 +1,9 @@
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\Bin\Release\ApressExtensionVB.Client.Design.dll
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\Bin\Release\ApressExtensionVB.Client.Design.pdb
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\Bin\Release\ApressExtensionVB.Client.Design.xml
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\obj\Release\ApressExtensionVB.Client.Design.vbprojResolveAssemblyReference.cache
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\obj\Release\Editors\SilverlightEntityPropertyDropdown.g.i.vb
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\obj\Release\ApressExtensionVB.Client.Design.g.resources
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\obj\Release\ApressExtensionVB.Client.Design.dll
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\obj\Release\ApressExtensionVB.Client.Design.xml
+C:\Source\Chapter13\ApressExtensionVB\ApressExtensionVB\ApressExtensionVB.Client.Design\obj\Release\ApressExtensionVB.Client.Design.pdb

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ApressExtensionVB.Design
+</name>
+</assembly>
+<members>
+<member name="M:ApressExtensionVB.Editors.EntityPropertyDropdown.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:ApressExtensionVB.Editors.EntityPropertyDropdown">
+	<summary>
+EntityPropertyDropdown
+</summary>
+</member><member name="P:ApressExtensionVB.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ApressExtensionVB.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ApressExtensionVB.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

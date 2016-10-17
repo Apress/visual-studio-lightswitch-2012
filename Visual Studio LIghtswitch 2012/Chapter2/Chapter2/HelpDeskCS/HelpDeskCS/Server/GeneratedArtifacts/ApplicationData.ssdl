@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="Engineers" EntityType="ApplicationDataStore.Engineer" store:Type="Tables" Schema="dbo" Table="Engineers" />
+    <EntitySet Name="Issues" EntityType="ApplicationDataStore.Issue" store:Type="Tables" Schema="dbo" Table="Issues" />
+    <EntitySet Name="IssueStatusSet" EntityType="ApplicationDataStore.IssueStatus" store:Type="Tables" Schema="dbo" Table="IssueStatusSet" />
+    <EntitySet Name="Skills" EntityType="ApplicationDataStore.Skill" store:Type="Tables" Schema="dbo" Table="Skills" />
+    <EntitySet Name="EngineerSkills" EntityType="ApplicationDataStore.EngineerSkill" store:Type="Tables" Schema="dbo" Table="EngineerSkills" />
+    <AssociationSet Name="Issue_IssueStatus" Association="ApplicationDataStore.Issue_IssueStatus">
+      <End Role="IssueStatus" EntitySet="IssueStatusSet" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Engineer_Issue" Association="ApplicationDataStore.Engineer_Issue">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_Engineer" Association="ApplicationDataStore.Issue_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="EngineerSkill_Engineer" Association="ApplicationDataStore.EngineerSkill_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="EngineerSkill" EntitySet="EngineerSkills" />
+    </AssociationSet>
+    <AssociationSet Name="EngineerSkill_Skill" Association="ApplicationDataStore.EngineerSkill_Skill">
+      <End Role="Skill" EntitySet="Skills" />
+      <End Role="EngineerSkill" EntitySet="EngineerSkills" />
+    </AssociationSet>
+    <AssociationSet Name="Engineer_Engineer" Association="ApplicationDataStore.Engineer_Engineer">
+      <End Role="Engineer2" EntitySet="Engineers" />
+      <End Role="Engineer1" EntitySet="Engineers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Engineer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="SSN" Type="nvarchar" MaxLength="255" />
+    <Property Name="SecurityCleared" Type="bit" />
+    <Property Name="ClearanceReference" Type="nvarchar" MaxLength="255" />
+    <Property Name="ClearanceExpiryDate" Type="datetime" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="EngineerPhoto" Type="varbinary(max)" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Engineer_Engineer" Type="int" />
+  </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Subject" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ProblemDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+    <Property Name="TargetEndDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ClosedDateTime" Type="datetime" />
+    <Property Name="Issue_IssueStatus" Type="int" />
+    <Property Name="Engineer_Issue" Type="int" Nullable="false" />
+    <Property Name="Issue_Engineer" Type="int" />
+  </EntityType>
+  <EntityType Name="IssueStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="StatusDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SkillDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EngineerSkill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="EngineerSkill_Engineer" Type="int" Nullable="false" />
+    <Property Name="EngineerSkill_Skill" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Issue_IssueStatus">
+    <End Role="IssueStatus" Type="ApplicationDataStore.IssueStatus" Multiplicity="0..1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IssueStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_IssueStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Engineer_Issue">
+    <End Role="Engineer" Type="ApplicationDataStore.Engineer" Multiplicity="1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Engineer_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_Engineer">
+    <End Role="Engineer" Type="ApplicationDataStore.Engineer" Multiplicity="0..1" />
+    <End Role="Issue" Type="ApplicationDataStore.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EngineerSkill_Engineer">
+    <End Role="Engineer" Type="ApplicationDataStore.Engineer" Multiplicity="1" />
+    <End Role="EngineerSkill" Type="ApplicationDataStore.EngineerSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EngineerSkill">
+        <PropertyRef Name="EngineerSkill_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EngineerSkill_Skill">
+    <End Role="Skill" Type="ApplicationDataStore.Skill" Multiplicity="1" />
+    <End Role="EngineerSkill" Type="ApplicationDataStore.EngineerSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EngineerSkill">
+        <PropertyRef Name="EngineerSkill_Skill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Engineer_Engineer">
+    <End Role="Engineer2" Type="ApplicationDataStore.Engineer" Multiplicity="0..1" />
+    <End Role="Engineer1" Type="ApplicationDataStore.Engineer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer2">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Engineer1">
+        <PropertyRef Name="Engineer_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

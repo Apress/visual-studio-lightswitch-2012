@@ -1,0 +1,277 @@
+﻿<!--
+***********************************************************************************************
+Microsoft.LightSwitch.Sdk.targets
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <LightSwitchVersion Condition="'$(LightSwitchVersion)'==''">v1.0</LightSwitchVersion>
+  </PropertyGroup>
+
+  <!-- These tasks are specific to the build process defined in this file, and are not considered general-purpose build tasks. -->
+  <UsingTask TaskName="LsPkgPackageTask" AssemblyFile="Microsoft.LightSwitch.SDK.BuildTasks.dll"/>
+
+  <PropertyGroup>
+    <LspkgFileName>$(TargetName).lspkg</LspkgFileName>
+    <LspkgFullPath>$(OutDir)$(LspkgFileName)</LspkgFullPath>
+    <PrepareForRunDependsOn>
+      CreateLspkg;
+      $(PrepareForRunDependsOn)
+    </PrepareForRunDependsOn>
+  </PropertyGroup>
+
+  <UsingTask
+    TaskName="FilterCandidateFiles"
+    TaskFactory="CodeTaskFactory"
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <CandidateFiles ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <ExcludedNames ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <ExcludedNameFormat ParameterType="System.String" Required="true" />
+      <RemainingFiles ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System.Globalization"/>
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+          IList<ITaskItem> remainingFiles = new List<ITaskItem>();
+          IList<string> excludedNames = new List<string>();
+          foreach (ITaskItem excludedName in this.ExcludedNames)
+          {
+            excludedNames.Add(String.Format(CultureInfo.CurrentCulture, this.ExcludedNameFormat, excludedName.GetMetadata("Identity")));
+          }
+          foreach (ITaskItem candiateFile in this.CandidateFiles)
+          {
+            if (!excludedNames.Contains(candiateFile.GetMetadata("FileName")))
+            {
+              remainingFiles.Add(candiateFile);
+            }
+          }
+          this.RemainingFiles = remainingFiles.ToArray();
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <UsingTask
+    TaskName="PrepareLspkgResources"
+    TaskFactory="CodeTaskFactory"
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <Resources ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <ResourcesWithResourceOutputPath ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+          IList<ITaskItem> newResources = new List<ITaskItem>();
+          foreach (ITaskItem resource in this.Resources)
+          {
+            ITaskItem newResource = new TaskItem(resource);
+            string culture = resource.GetMetadata("DestinationSubDirectory").TrimEnd('\\');
+            newResource.SetMetadata("ResourceOutputPath", culture);
+            newResources.Add(newResource);
+          }
+          this.ResourcesWithResourceOutputPath = newResources.ToArray();
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="CreateLspkg" Condition="'$(CreateLspkg)'=='true'">
+    <PropertyGroup>
+      <_IntermediateLspkgFullPath>$(IntermediateOutputPath)$(LspkgFileName)</_IntermediateLspkgFullPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <!-- Get all files that have CopyLocal set to true and remove all satellite assemblies and all non-assemblies -->
+      <_PackageCandidateFiles Include="@(ReferenceCopyLocalPaths)"/>
+      <_PackageCandidateFiles Remove="@(ReferenceSatellitePaths)"/>
+      <_PackageCandidateFiles Remove="@(_PackageCandidateFiles)" Condition="'%(Extension)'!='.dll'"/>
+
+      <!-- Create a list of all references that should not be included in the package -->
+      <!-- The following are part of a standard LightSwitch application, so they do not need to be packaged -->
+      <_ExcludeFromPackage Include="Microsoft.CSharp"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.AppBridge"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Base.Client"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Base.Server"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Client"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Client.Internal"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.CodeMarker"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.ExportProvider"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.ManifestService"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.ManifestService.Client"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Model.Xaml"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Model.Xaml.Client"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Server"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Server.Host"/>
+      <_ExcludeFromPackage Include="Microsoft.LightSwitch.Server.Internal"/>
+      <_ExcludeFromPackage Include="Microsoft.VisualBasic"/>
+      <_ExcludeFromPackage Include="mscorlib"/>
+      <_ExcludeFromPackage Include="PresentationCore"/>
+      <_ExcludeFromPackage Include="System"/>
+      <_ExcludeFromPackage Include="System.ComponentModel.Composition"/>
+      <_ExcludeFromPackage Include="System.ComponentModel.DataAnnotations"/>
+      <_ExcludeFromPackage Include="System.Core"/>
+      <_ExcludeFromPackage Include="System.Data"/>
+      <_ExcludeFromPackage Include="System.Data.Entity"/>
+      <_ExcludeFromPackage Include="System.Data.Services.Client"/>
+      <_ExcludeFromPackage Include="System.Net"/>
+      <_ExcludeFromPackage Include="System.Runtime.Serialization"/>
+      <_ExcludeFromPackage Include="System.ServiceModel"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.DomainServices.EntityFramework"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.DomainServices.Client"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.DomainServices.Hosting"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.DomainServices.Hosting.OData"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.DomainServices.Server"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.Extensions"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.PollingDuplex"/>
+      <_ExcludeFromPackage Include="System.ServiceModel.Web.Extensions"/>
+      <_ExcludeFromPackage Include="System.Windows"/>
+      <_ExcludeFromPackage Include="System.Windows.Browser"/>
+      <_ExcludeFromPackage Include="System.Windows.Controls"/>
+      <_ExcludeFromPackage Include="System.Windows.Controls.Data"/>
+      <_ExcludeFromPackage Include="System.Windows.Controls.Data.Input"/>
+      <_ExcludeFromPackage Include="System.Windows.Controls.DomainServices"/>
+      <_ExcludeFromPackage Include="System.Windows.Controls.Input"/>
+      <_ExcludeFromPackage Include="System.Windows.Controls.Navigation"/>
+      <_ExcludeFromPackage Include="System.Windows.Data"/>
+      <_ExcludeFromPackage Include="System.Xml"/>
+      <_ExcludeFromPackage Include="System.Xml.Linq"/>
+    </ItemGroup>
+
+    <!-- Remove file names in the exclusion list from the group of package candidate files -->
+    <FilterCandidateFiles CandidateFiles="@(_PackageCandidateFiles)" ExcludedNames="@(_ExcludeFromPackage)" ExcludedNameFormat="{0}">
+      <Output TaskParameter="RemainingFiles" ItemName="_PackageFiles"/>
+    </FilterCandidateFiles>
+
+    <ItemGroup>
+      <!-- Classify all of the candidate files according to each supported LightSwitch package designation -->
+      <_LspkgClientContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgClientContent)' == 'true'" />
+      <_LspkgClientDebugOnlyContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgClientDebugOnlyContent)' == 'true'" />
+      <_LspkgClientGeneratedContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgClientGeneratedContent)' == 'true'" />
+      <_LspkgClientGeneratedDebugOnlyContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgClientGeneratedDebugOnlyContent)' == 'true'" />
+      <_LspkgCommonContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgCommonContent)' == 'true'" />
+      <_LspkgIDEContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgIDEContent)' == 'true'" />
+      <_LspkgServerContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgServerContent)' == 'true'" />
+      <_LspkgServerDebugOnlyContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgServerDebugOnlyContent)' == 'true'" />
+      <_LspkgServerGeneratedContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgServerGeneratedContent)' == 'true'" />
+      <_LspkgServerGeneratedDebugOnlyContent Include="@(_PackageFiles)" Condition="'%(_PackageFiles.LspkgSeverGeneratedDebugOnlyContent)' == 'true'" />
+
+      <!-- Determine the list of references that do not have at least one assigned designation -->
+      <_UndesignatedReference Include="@(ProjectReference);@(Reference)"/>
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgClientContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgClientDebugOnlyContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgClientGeneratedContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgClientGeneratedDebugOnlyContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgCommonContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgIDEContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgServerContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgServerDebugOnlyContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgServerGeneratedContent)' == 'true'" />
+      <_UndesignatedReference Remove="@(_UndesignatedReference)" Condition="'%(_UndesignatedReference.LspkgSeverGeneratedDebugOnlyContent)' == 'true'" />
+      <!-- Remove System.Core as it is automatically added to every project -->
+      <_UndesignatedReference Remove="System.Core"/>
+    </ItemGroup>
+
+    <!-- If there is at least one reference that does not have a designation, raise a build error -->
+    <Error Condition="'@(_UndesignatedReference)'!=''" Text="The following references require LightSwitch package designations: @(_UndesignatedReference)."/>
+    
+    <!-- Remove file names in the exclusion list from the group of candidate satellite files -->
+    <FilterCandidateFiles CandidateFiles="@(ReferenceSatellitePaths)" ExcludedNames="@(_ExcludeFromPackage)" ExcludedNameFormat="{0}.resources">
+      <Output TaskParameter="RemainingFiles" ItemName="_CandidateSatelliteFiles"/>
+    </FilterCandidateFiles>
+
+    <ItemGroup>
+      <!-- Transpose the list of satellite assemblies to a list of assemblies that the satellites are associated with -->
+      <_AssemblyWithSatellites Include="@(_CandidateSatelliteFiles->'%(ResolvedFrom)')">
+        <SatelliteAssembly>%(_CandidateSatelliteFiles.Identity)</SatelliteAssembly>
+      </_AssemblyWithSatellites>
+    </ItemGroup>
+
+    <ItemGroup>
+      <!-- Classify all of the satellite assemblies according to each supported LightSwitch package designation -->
+      <_IntermediateLspkgClientSatellites Include="@(_AssemblyWithSatellites->'%(SatelliteAssembly)')" Condition="'%(_AssemblyWithSatellites.LspkgClientContent)' == 'true'"/>
+      <_IntermediateLspkgClientGeneratedSatellites Include="@(_AssemblyWithSatellites->'%(SatelliteAssembly)')" Condition="'%(_AssemblyWithSatellites.LspkgClientGeneratedContent)' == 'true'"/>
+      <_IntermediateLspkgCommonSatellites Include="@(_AssemblyWithSatellites->'%(SatelliteAssembly)')" Condition="'%(_AssemblyWithSatellites.LspkgCommonContent)' == 'true'"/>
+      <_IntermediateLspkgIDESatellites Include="@(_AssemblyWithSatellites->'%(SatelliteAssembly)')" Condition="'%(_AssemblyWithSatellites.LspkgIDEContent)' == 'true'"/>
+      <_IntermediateLspkgServerSatellites Include="@(_AssemblyWithSatellites->'%(SatelliteAssembly)')" Condition="'%(_AssemblyWithSatellites.LspkgServerContent)' == 'true'"/>
+      <_IntermediateLspkgServerGeneratedSatellites Include="@(_AssemblyWithSatellites->'%(SatelliteAssembly)')" Condition="'%(_AssemblyWithSatellites.LspkgServerGeneratedContent)' == 'true'"/>
+    </ItemGroup>
+    
+    <!-- Remove the ending slash in the DestinationSubDirectory property and set it to ResourceOutputPath for each group of satellites -->
+    <PrepareLspkgResources Resources="@(_IntermediateLspkgClientSatellites)">
+      <Output TaskParameter="ResourcesWithResourceOutputPath" ItemName="_LspkgClientSatellites"/>
+    </PrepareLspkgResources>
+    <PrepareLspkgResources Resources="@(_IntermediateLspkgClientGeneratedSatellites)">
+      <Output TaskParameter="ResourcesWithResourceOutputPath" ItemName="_LspkgClientGeneratedSatellites"/>
+    </PrepareLspkgResources>
+    <PrepareLspkgResources Resources="@(_IntermediateLspkgCommonSatellites)">
+      <Output TaskParameter="ResourcesWithResourceOutputPath" ItemName="_LspkgCommonSatellites"/>
+    </PrepareLspkgResources>
+    <PrepareLspkgResources Resources="@(_IntermediateLspkgIDESatellites)">
+      <Output TaskParameter="ResourcesWithResourceOutputPath" ItemName="_LspkgIDESatellites"/>
+    </PrepareLspkgResources>
+    <PrepareLspkgResources Resources="@(_IntermediateLspkgServerSatellites)">
+      <Output TaskParameter="ResourcesWithResourceOutputPath" ItemName="_LspkgServerSatellites"/>
+    </PrepareLspkgResources>
+    <PrepareLspkgResources Resources="@(_IntermediateLspkgServerGeneratedSatellites)">
+      <Output TaskParameter="ResourcesWithResourceOutputPath" ItemName="_LspkgServerGeneratedSatellites"/>
+    </PrepareLspkgResources>
+    
+    <Message Text="Creating package $(LspkgFileName)" />
+    
+    <!-- Build the LSPKG file -->
+    <LsPkgPackageTask
+      PackageOutputFileName="$(_IntermediateLspkgFullPath)"
+      ClientDebugOnlyReferences="@(_LspkgClientDebugOnlyContent)"
+      ClientGeneratedReferences="@(_LspkgClientGeneratedContent)"
+      ClientGeneratedDebugOnlyReferences="@(_LspkgClientGeneratedDebugOnlyContent)"
+      ClientReferences="@(_LspkgClientContent)"
+      CommonReferences="@(_LspkgCommonContent)"
+      IDEReferences="@(_LspkgIDEContent)"
+      ServerDebugOnlyReferences="@(_LspkgServerDebugOnlyContent)"
+      ServerGeneratedReferences="@(_LspkgServerGeneratedContent)"
+      ServerGeneratedDebugOnlyReferences="@(_LspkgServerGeneratedDebugOnlyContent)"
+      ServerReferences="@(_LspkgServerContent)"
+      ClientReferenceResources="@(_LspkgClientSatellites)"
+      ClientGeneratedReferenceResources="@(_LspkgClientGeneratedSatellites)"
+      CommonReferenceResources="@(_LspkgCommonSatellites)"
+      IDEReferenceResources="@(_LspkgIDESatellites)"
+      ServerReferenceResources="@(_LspkgServerSatellites)"
+      ServerGeneratedReferenceResources="@(_LspkgServerGeneratedSatellites)"/>
+    
+    <!-- Add the intermediate LSPKG file to FileWrites so that Clean will remove this file -->
+    <ItemGroup>
+      <FileWrites Include="$(_IntermediateLspkgFullPath)"/>
+    </ItemGroup>
+    
+    <!-- Copy the LSPKG file to the output directory -->
+    <Copy SourceFiles="$(_IntermediateLspkgFullPath)"
+      DestinationFolder="$(OutDir)"
+      SkipUnchangedFiles="true"
+      OverwriteReadOnlyFiles="$(OverwriteReadOnlyFiles)"/>
+
+    <!-- Add the LSPKG file to FileWrites so that Clean will remove this file -->
+    <ItemGroup>
+      <FileWrites Include="$(LspkgFullPath)"/>
+    </ItemGroup>
+
+  </Target>
+
+  <PropertyGroup>
+    <LspkgOutputGroupDependsOn>PrepareForBuild</LspkgOutputGroupDependsOn>
+  </PropertyGroup>
+  <Target Name="LspkgOutputGroup"
+    Returns="@(LspkgOutputGroupOutput)"
+    DependsOnTargets="$(LspkgOutputGroupDependsOn)">
+    <ItemGroup>
+      <LspkgOutputGroupOutput Include="$(LspkgFullPath)"/>
+    </ItemGroup>
+  </Target>
+
+</Project>

@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application
+    DefaultNavigationItem="!module/NavigationItems[Tasks]"
+    Name="LightSwitchApplication"
+    Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
+    Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme"
+    Version="1.0.0.0">
+    <Application.Attributes>
+      <ModuleNamespace
+        Namespace="LightSwitchApplication" />
+    </Application.Attributes>
+    <Application.Methods>
+      <ApplicationMethod
+        Name="ShowInfo">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="Info" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowEditableIssuesGrid">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="EditableIssuesGrid" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+    </Application.Methods>
+    <Application.NavigationItems>
+      <ApplicationNavigationGroup
+        DefaultItem="!module/NavigationItems[Tasks]/Children[Info]"
+        Name="Tasks">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName
+            Value="Tasks" />
+        </ApplicationNavigationGroup.Attributes>
+        <ApplicationNavigationLink
+          Command="!module/Commands[ScreenCommandShowEditableIssuesGrid]"
+          Name="link" />
+        <ApplicationNavigationLink
+          Command="!module/Commands[ScreenCommandShowInfo]"
+          Name="Info" />
+      </ApplicationNavigationGroup>
+      <ApplicationNavigationGroup
+        Name="Administration">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName
+            Value="Administration" />
+        </ApplicationNavigationGroup.Attributes>
+        <ApplicationNavigationLink
+          Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]"
+          Name="RolesScreen" />
+        <ApplicationNavigationLink
+          Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]"
+          Name="UsersScreen" />
+      </ApplicationNavigationGroup>
+    </Application.NavigationItems>
+    <ApplicationCommand
+      Name="ScreenCommandShowInfo"
+      Target="!module/Methods[ShowInfo]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowEditableIssuesGrid"
+      Target="!module/Methods[ShowEditableIssuesGrid]" />
+  </Application>
+  <Screen
+    LaunchMode="Multiple"
+    Name="Info">
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.RootContentItem>
+      <ContentItem
+        Kind="Screen"
+        Name="RootContentItem">
+        <ContentItem.CommandItems>
+          <ContentItem
+            Kind="Command"
+            Name="Save">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Info/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Refresh">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Info/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+        <ContentItem
+          Kind="Group"
+          Name="ScreenLayout">
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property=":ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    ResultType=":Boolean"
+                    Value="True" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+          <ContentItem
+            Kind="ScreenContent"
+            Name="Text"
+            View=":StaticLabel">
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:StaticLabel/Properties[Text]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Apress LightSwitch 2012, Chapter 10" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[FontStyle]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    ResultType=":String"
+                    Value="Heading1" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Kind="ScreenContent"
+            Name="Text1"
+            View=":StaticLabel">
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:StaticLabel/Properties[Text]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Chapter 10 shows you how to work with external OData data sources. Refer to this chapter to find out how to: \n\r\n\r* Connect to third-party data by using OData\n\r* Find OData data sources that you can use\n\r* Consume your LightSwitch data from Excel and other applications \n\r \n\rThis application demonstrates how to update your LightSwitch data from an external ASP.NET application. Use the ASP.NET application to add an issue and return to this LightSwitch application to see the data.\n\r\n\r" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+      </ContentItem>
+    </Screen.RootContentItem>
+  </Screen>
+  <Screen
+    Name="EditableIssuesGrid">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="LightSwitchCommonModule:ApplicationData" />
+    </Screen.Attributes>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Issues"
+        PageSize="45"
+        PropertyType="LightSwitchCommonModule:CollectionView$Issue">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="IssuesQuery"
+            ReturnType="LightSwitchCommonModule:Issue*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.SortCriteria>
+              <SortCriterion
+                Direction="Descending">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="CreateDateTime" />
+                </ChainExpression>
+              </SortCriterion>
+            </ScreenQueryDefinition.SortCriteria>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="LightSwitchCommonModule:ApplicationData/Members[Issues]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="EditableIssuesGrid/Properties[Issues]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+    <Screen.RootContentItem>
+      <ContentItem
+        Kind="Screen"
+        Name="RootContentItem">
+        <ContentItem.CommandItems>
+          <ContentItem
+            Kind="Command"
+            Name="Save">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="EditableIssuesGrid/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Refresh">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="EditableIssuesGrid/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+        <ContentItem
+          Kind="Group"
+          Name="ScreenLayout">
+          <ContentItem
+            Kind="ScreenContent"
+            Name="Text"
+            View=":StaticLabel">
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:StaticLabel/Properties[Text]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Use this screen to view the issues that you've added through the ASP.NET application." />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            DataType="LightSwitchCommonModule:CollectionView$Issue"
+            Kind="Collection"
+            Name="grid">
+            <ContentItem.CommandItems>
+              <ContentItem
+                Kind="Command"
+                Name="Issues_AddAndEditNew">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EditableIssuesGrid/Properties[Issues]" />
+                      <CallExpression
+                        Target="AddAndEditNew" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Kind="Command"
+                Name="Issues_EditSelected">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EditableIssuesGrid/Properties[Issues]" />
+                      <CallExpression
+                        Target="EditSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Kind="Command"
+                Name="Issues_DeleteSelected">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EditableIssuesGrid/Properties[Issues]" />
+                      <CallExpression
+                        Target="DeleteSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem.CommandItems>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="EditableIssuesGrid/Properties[Issues]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property=":RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Stretch" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property=":RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Collapsed" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+            <ContentItem
+              DataType="LightSwitchCommonModule:Issue"
+              Kind="Details"
+              Name="RowTemplate">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression />
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                DataType=":String"
+                Kind="Value"
+                Name="ProblemDescription">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Issue/Properties[ProblemDescription]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                DataType=":DateTime"
+                Kind="Value"
+                Name="CreateDateTime">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Issue/Properties[CreateDateTime]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                DataType=":DateTime"
+                Kind="Value"
+                Name="TargetEndDateTime">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Issue/Properties[TargetEndDateTime]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                DataType=":DateTime?"
+                Kind="Value"
+                Name="ClosedDateTime">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Issue/Properties[ClosedDateTime]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                DataType=":String?"
+                Kind="Value"
+                Name="Subject">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Issue/Properties[Subject]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
+      </ContentItem>
+    </Screen.RootContentItem>
+  </Screen>
+</ModelFragment>

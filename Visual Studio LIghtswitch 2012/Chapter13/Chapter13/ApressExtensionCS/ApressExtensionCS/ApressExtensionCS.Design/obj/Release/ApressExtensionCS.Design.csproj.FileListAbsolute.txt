@@ -1,0 +1,15 @@
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\bin\Release\ApressExtensionCS.Design.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\bin\Release\ApressExtensionCS.Design.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\bin\Release\Microsoft.LightSwitch.Design.Utilities.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\ApressExtensionCS.Design.csprojResolveAssemblyReference.cache
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\MaxIntegerEditorDialog.baml
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\Editors\EntityPropertyDropdown.g.cs
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\MaxIntegerEditorDialog.g.cs
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\ApressExtensionCS.Design_MarkupCompile.cache
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\ApressExtensionCS.Design_MarkupCompile.lref
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\Editors\EntityPropertyDropdown.baml
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\EditorTemplates.baml
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\ApressExtensionCS.Design.g.resources
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\ApressExtensionCS.Design.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Design\obj\Release\ApressExtensionCS.Design.pdb

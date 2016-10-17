@@ -1,0 +1,24 @@
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.dll
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.pdb
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.xml
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.Resources.resources
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.vbproj.GenerateResource.Cache
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.dll
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.xml
+C:\Users\tim.BADGER2000\Documents\Visual Studio 2012\Projects\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.pdb
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.dll
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.pdb
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.xml
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.Resources.resources
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.vbproj.GenerateResource.Cache
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.dll
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.xml
+C:\Users\tim.BADGER2000\Documents\HelpDeskApp\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.pdb
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.dll
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.pdb
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Debug\HelpDeskDataServiceVB.xml
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.Resources.resources
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.vbproj.GenerateResource.Cache
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.dll
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.xml
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Debug\HelpDeskDataServiceVB.pdb

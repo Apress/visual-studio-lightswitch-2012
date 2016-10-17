@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--You can use and redistribute the code from this book (and sample application) for non-commercial and
+most commercial purposes as long as you acknowledge the source and authorship.
+You should note the source of the code in any documentation as well as in the program code itself (as a comment).
+The acknowledgment should include author, title, publisher, and ISBN.
+An example of such an acknowledgment would be "Derived from Listing 2-10, LightSwitch 2012 by Tim Leung, published by Apress, ISBN 9781430250715".-->
+
+<ModelFragment
+  xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Control Name="ComboBox"
+    SupportedContentItemKind="Details"
+    DesignerImageResource="ApressExtensionCS.ComboBox::ControlImage">
+    <Control.Attributes>
+      <DisplayName Value="ComboBox" />
+    </Control.Attributes>
+
+    <!-- 3 - Add this block of code-->                                     
+    <Control.Properties>
+
+      <ControlProperty Name="ComboDisplayItemProperty"
+                       PropertyType=":String"
+                       CategoryName="Appearance"
+                       UIEditorId="EntityPropertyDropdown"
+                       EditorVisibility="PropertySheet">
+        <ControlProperty.Attributes>
+          <DisplayName Value="Combo Display Property" />
+          <Description Value="Enter the Property that’s shown on each row" />
+        </ControlProperty.Attributes>
+
+        <ControlProperty.DefaultValueSource>
+          <ScreenExpressionTree>
+            <ConstantExpression ResultType=":String" Value="PriorityDesc"/>
+          </ScreenExpressionTree>
+        </ControlProperty.DefaultValueSource>
+      </ControlProperty>
+
+      <ControlProperty Name="ComboQueryProperty"
+                   PropertyType=":String"
+                   CategoryName="Appearance"
+                   EditorVisibility="PropertySheet">
+        <ControlProperty.Attributes>
+          <DisplayName Value="Combo Query Property" />
+          <Description Value="Enter the Screen Query - eg Screen.Priorities" />
+        </ControlProperty.Attributes>
+
+        <ControlProperty.DefaultValueSource>
+          <ScreenExpressionTree>
+            <ConstantExpression ResultType=":String"
+                Value="Screen.EnterYourQuery"/>
+          </ScreenExpressionTree>
+        </ControlProperty.DefaultValueSource>
+      </ControlProperty>
+    </Control.Properties>
+
+  </Control>
+
+</ModelFragment>

@@ -1,0 +1,6 @@
+This is the control extension example from Chapter 12 of Apress LightSwitch 2012. 
+
+You can use and redistribute this extension for non-commercial and most commercial purposes as long as you acknowledge the source and authorship. You should note the source of the code in any documentation as well as in the program code itself (as a comment). 
+
+The acknowledgment should include author, title, publisher, and ISBN. An example of such an acknowledgment would be "This application includes code derived from LightSwitch 2012 by Tim Leung, published by Apress, ISBN 9781430250715".
+ 

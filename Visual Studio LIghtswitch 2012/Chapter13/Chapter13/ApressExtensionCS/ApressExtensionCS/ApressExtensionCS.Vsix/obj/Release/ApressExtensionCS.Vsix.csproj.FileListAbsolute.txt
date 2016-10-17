@@ -1,0 +1,6 @@
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Release\license.txt
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Release\ApressExtensionCS.vsix
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Release\extension.vsixmanifest
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Release\ApressExtensionCS.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Release\ApressExtensionCS.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Release\extension.vsixmanifest

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ExternalSQLDataSourceStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ExternalSQLDataSourceStore">
+    <EntitySet Name="Employees" EntityType="ExternalSQLDataSourceStore.Employee" store:Type="Tables" Schema="dbo" Table="Employee" />
+  </EntityContainer>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Firstname" Type="nchar" MaxLength="10" />
+    <Property Name="Surname" Type="nchar" MaxLength="10" />
+    <Property Name="Address1" Type="nchar" MaxLength="10" />
+    <Property Name="Address2" Type="nchar" MaxLength="10" />
+    <Property Name="Town" Type="nchar" MaxLength="10" />
+    <Property Name="County" Type="nchar" MaxLength="10" />
+    <Property Name="Postcode" Type="nchar" MaxLength="10" />
+    <Property Name="Country" Type="nchar" MaxLength="10" />
+    <Property Name="EmployeePhoto" Type="varbinary(max)" />
+  </EntityType>
+</Schema>

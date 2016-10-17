@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project MSBuildVersion="4.0" ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c98f466f-0796-404c-9b0c-50d11dcb5596</ProjectGuid>
+    <OutputType>WinEXE</OutputType>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <RootNamespace>HelpDeskVB</RootNamespace>
+    <AssemblyName>Microsoft.LightSwitch.Server.Host</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <LightSwitchVersion>v3.0</LightSwitchVersion>
+    <LightSwitchProjectVersion>v3.1</LightSwitchProjectVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <Name>HelpDeskVB</Name>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
+    <ApplicationClientType>Browser</ApplicationClientType>
+    <ApplicationServerType>IIS</ApplicationServerType>
+    <AuthenticationType>None</AuthenticationType>
+    <ApplicationName>HelpDesk</ApplicationName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
+    <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
+    <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
+    <LightSwitchProjectTypeV3>LightSwitch</LightSwitchProjectTypeV3>
+    <DefaultLanguage>en-US</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HelpDeskVB.xml</DocumentationFile>
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HelpDeskVB.xml</DocumentationFile>
+    <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration">
+      <HintPath>System.configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.LightSwitch.ManifestService">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Microsoft.LightSwitch.ManifestService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceDefinition Include="ServiceDefinition.csdef" />
+    <ServiceConfiguration Include="ServiceConfiguration.cscfg" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(BuildingInsideVisualStudio)' != 'true'">
+    <ProjectReference Include="HelpDeskVB.HTMLClient\HelpDeskVB.HTMLClient.jsproj">
+      <Name>Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="Client\Client.vbproj">
+      <Name>Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="Server\Server.vbproj">
+      <Name>Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true'">
+    <SubProject Include="Client\Client.vbproj">
+      <TypeGuid>{01074E5A-9000-460e-AB81-3A9263818D40}</TypeGuid>
+      <BaseTypeGuid>{F184B08F-C81C-45f6-A57F-5ABD9991F28F}</BaseTypeGuid>
+      <Name>Client</Name>
+      <InstanceGuid>{78ee8e92-70e6-4d60-a100-7b0da941ab57}</InstanceGuid>
+    </SubProject>
+    <SubProject Include="Server\Server.vbproj">
+      <TypeGuid>{01074E5A-9000-460e-AB81-3A9263818D40}</TypeGuid>
+      <BaseTypeGuid>{F184B08F-C81C-45f6-A57F-5ABD9991F28F}</BaseTypeGuid>
+      <Name>Server</Name>
+      <InstanceGuid>{a3d7f7af-1639-4660-9bce-aa9ef30251b1}</InstanceGuid>
+    </SubProject>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ItemGroup>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Design\vslshost.exe">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>EntryPoint</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Design\vslshost.exe.config">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Desktop</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Design\vslshost.exe.manifest">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Exclude</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Server\ClientAccessPolicy.xml">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Exclude</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Design.svc">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Exclude</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.SecurityData.svc">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+    <_BuildFile Include="Server\web.config">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchExtension Include="Microsoft.LightSwitch.Cosmopolitan">
+      <Client>MICROSOFT.LIGHTSWITCH.COSMOPOLITAN.CLIENT</Client>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Microsoft.LightSwitch.Extensions">
+      <Client>MICROSOFT.LIGHTSWITCH.EXTENSIONS.CLIENT;MICROSOFT.LIGHTSWITCH.EXTENSIONS.DESIGN.CLIENT</Client>
+      <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
+    </LightSwitchExtension>
+  </ItemGroup>
+  <ItemGroup Condition="'$(AuthenticationType)' == 'Forms'">
+    <_BuildFile Include="Server\LogIn.aspx">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+    <_BuildFile Include="Server\LogOut.aspx">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <SubProject Include="HelpDeskVB.HTMLClient\HelpDeskVB.HTMLClient.jsproj">
+      <InstanceGuid>{7a4cbab9-9884-4a0d-b8e2-fe516c6398ae}</InstanceGuid>
+      <Name>Client</Name>
+    </SubProject>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
+</Project>

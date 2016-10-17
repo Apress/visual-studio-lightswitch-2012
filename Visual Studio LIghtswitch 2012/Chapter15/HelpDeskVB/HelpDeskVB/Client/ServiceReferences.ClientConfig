@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IMailService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:60878/MailService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IMailService" contract="MailService.IMailService"
+                name="BasicHttpBinding_IMailService" />
+        </client>
+    </system.serviceModel>
+</configuration>

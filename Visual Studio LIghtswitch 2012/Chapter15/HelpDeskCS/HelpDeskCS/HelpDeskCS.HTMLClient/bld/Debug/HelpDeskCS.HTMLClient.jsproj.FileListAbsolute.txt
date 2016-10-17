@@ -1,0 +1,2 @@
+C:\Source\Chapter15\HelpDeskCS\HelpDeskCS\HelpDeskCS.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Source\Chapter15\HelpDeskCS\HelpDeskCS\HelpDeskCS.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

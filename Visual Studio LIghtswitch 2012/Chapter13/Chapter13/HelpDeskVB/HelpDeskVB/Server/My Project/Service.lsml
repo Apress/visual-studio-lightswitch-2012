@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication
+    Name="LightSwitchServiceApplication"
+    Version="1.0.0.0">
+    <ServiceApplication.Attributes>
+      <ModuleNamespace
+        Namespace="LightSwitchApplication" />
+    </ServiceApplication.Attributes>
+  </ServiceApplication>
+  <DataService
+    DataProvider="EntityFrameworkDataProvider"
+    EntityContainer="LightSwitchCommonModule:ApplicationData"
+    Name="ApplicationDataMapping">
+    <AssociationSetMapping
+      AssociationSet="Issue_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Issue_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Issue_Engineers]/Members[Issue]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Issue_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Issue_Engineers]/Members[Engineer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="Issues">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Issue_Engineer"
+          Nullable="False"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Issue_Engineer1"
+          Nullable="True"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Issue_Priority"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Issue_Engineer1Set">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Issue_Engineer1Set" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Issue_Engineer1Set]/Members[Issue]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Issue_Engineer1" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Issue_Engineer1Set]/Members[Engineer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Engineer_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Engineer_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Engineer_Engineers]/Members[Engineer1]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Engineer_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Engineer_Engineers]/Members[Engineer2]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="Engineers">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Engineer_Engineer"
+          Nullable="True"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="EngineerSkill_Skills">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="EngineerSkill_Skills" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Skills]/Members[EngineerSkill]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="EngineerSkill_Skill" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Skills]/Members[Skill]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="EngineerSkills">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="EngineerSkill_Skill"
+          Nullable="False"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="EngineerSkill_Engineer"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="EngineerSkill_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="EngineerSkill_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Engineers]/Members[EngineerSkill]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="EngineerSkill_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[EngineerSkill_Engineers]/Members[Engineer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="TimeTracking_Engineers">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="TimeTracking_Engineers" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[TimeTracking_Engineers]/Members[TimeTracking]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimeTracking_Engineer" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[TimeTracking_Engineers]/Members[Engineer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <EntitySetMapping
+      EntitySet="TimeTrackings">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="TimeTracking_Engineer"
+          Nullable="False"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="TimeTracking_Issue"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="TimeTracking_Issues">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="TimeTracking_Issues" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[TimeTracking_Issues]/Members[TimeTracking]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimeTracking_Issue" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[TimeTracking_Issues]/Members[Issue]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Issue_Priorities">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Issue_Priorities" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Issue_Priorities]/Members[Issue]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Issue_Priority" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:ApplicationData/Members[Issue_Priorities]/Members[Priority]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+  <DataService
+    DataProvider="CustomDataProvider"
+    EntityContainer="LightSwitchCommonModule:WindowsEventLogData"
+    Name="WindowsEventLogDataDataService">
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="AssemblyName"
+        Value="ApressExtensionVB.Server" />
+      <ConnectionProperty
+        Name="FullClassName"
+        Value="ApressExtensionVB.DataSources.WindowsEventLog" />
+      <ConnectionProperty
+        Name="SafeConnectionString"
+        Value="" />
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="db205ff0-0009-4e59-bb89-6103aa39aa90" />
+      <ConnectionProperty
+        Name="ConnectionStringDescription"
+        Value="Enter your server path." />
+    </DataService.ConnectionProperties>
+    <EntitySetMapping
+      EntitySet="LogEntries">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetEventEntries"
+          EntityTypeName="ApressExtensionVB.LogEntry" />
+        <WcfRiaProperty
+          Name="LogEntryID"
+          Property="LightSwitchCommonModule:LogEntry/Properties[LogEntryID]" />
+        <WcfRiaProperty
+          Name="Message"
+          Property="LightSwitchCommonModule:LogEntry/Properties[Message]" />
+        <WcfRiaProperty
+          Name="EventDateTime"
+          Property="LightSwitchCommonModule:LogEntry/Properties[EventDateTime]" />
+        <WcfRiaProperty
+          Name="EventSource"
+          Property="LightSwitchCommonModule:LogEntry/Properties[EventSource]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="LogSources">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetEventLogTypes"
+          EntityTypeName="ApressExtensionVB.LogSource" />
+        <WcfRiaProperty
+          Name="SourceName"
+          Property="LightSwitchCommonModule:LogSource/Properties[SourceName]" />
+        <WcfRiaProperty
+          Name="EventEntries"
+          Property="LightSwitchCommonModule:LogSource/Properties[EventEntries]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="EventLog_EventEntry">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="LightSwitchCommonModule:WindowsEventLogData/Members[EventLog_EventEntry]/Members[LogEntry]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SourceName" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="LightSwitchCommonModule:WindowsEventLogData/Members[EventLog_EventEntry]/Members[LogSource]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SourceName" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ModelFragment>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="WindowsEventLogDataObjectContext" StorageEntityContainer="WindowsEventLogDataStore">
+    <EntitySetMapping Name="LogEntries">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.LogEntry)">
+        <MappingFragment StoreEntitySet="GetEventEntries">
+          <ScalarProperty Name="LogEntryID" ColumnName="LogEntryID" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogSources">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.LogSource)">
+        <MappingFragment StoreEntitySet="GetEventLogTypes">
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

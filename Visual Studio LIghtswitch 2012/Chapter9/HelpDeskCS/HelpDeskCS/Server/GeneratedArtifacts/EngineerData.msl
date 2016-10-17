@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="EngineerDataObjectContext" StorageEntityContainer="EngineerDataStore">
+    <EntitySetMapping Name="EngineerRecords">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.EngineerRecord)">
+        <MappingFragment StoreEntitySet="GetEngineerData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="SecurityVetted" ColumnName="SecurityVetted" />
+          <ScalarProperty Name="IssueCount" ColumnName="IssueCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

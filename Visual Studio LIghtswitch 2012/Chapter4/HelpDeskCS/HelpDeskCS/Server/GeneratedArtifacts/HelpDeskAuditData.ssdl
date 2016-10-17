@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="HelpDeskAuditDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="HelpDeskAuditDataStore">
+    <EntitySet Name="AuditDetails" EntityType="HelpDeskAuditDataStore.AuditDetail" store:Type="Tables" Schema="dbo" Table="AuditDetail" />
+  </EntityContainer>
+  <EntityType Name="AuditDetail">
+    <Key>
+      <PropertyRef Name="AuditID" />
+    </Key>
+    <Property Name="AuditID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AuditDesc" Type="nvarchar(max)" />
+  </EntityType>
+</Schema>

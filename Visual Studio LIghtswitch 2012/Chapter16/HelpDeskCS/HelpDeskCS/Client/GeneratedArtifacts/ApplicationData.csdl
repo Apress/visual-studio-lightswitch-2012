@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Engineer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="EmailAddress" Type="Edm.String" MaxLength="255" />
+    <Property Name="SSN" Type="Edm.String" MaxLength="255" />
+    <Property Name="SecurityCleared" Type="Edm.Boolean" />
+    <Property Name="ClearanceReference" Type="Edm.String" MaxLength="255" />
+    <Property Name="ClearanceExpiryDate" Type="Edm.DateTime" />
+    <Property Name="DateOfBirth" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="PhoneNumber" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="EngineerPhoto" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="LoginName" Type="Edm.String" MaxLength="255" />
+    <Property Name="Engineer_Engineer" Type="Edm.Int32" />
+    <NavigationProperty Name="Issues" Relationship="LightSwitchApplication.Engineer_Issue" ToRole="Issue" FromRole="Engineer" />
+    <NavigationProperty Name="IssuesClosed" Relationship="LightSwitchApplication.Issue_Engineer" ToRole="Issue" FromRole="Engineer" />
+    <NavigationProperty Name="EngineerSkills" Relationship="LightSwitchApplication.EngineerSkill_Engineer" ToRole="EngineerSkill" FromRole="Engineer" />
+    <NavigationProperty Name="Manager" Relationship="LightSwitchApplication.Engineer_Engineer" ToRole="Engineer2" FromRole="Engineer1" />
+    <NavigationProperty Name="Subordinates" Relationship="LightSwitchApplication.Engineer_Engineer" ToRole="Engineer1" FromRole="Engineer2" />
+    <NavigationProperty Name="TimeTracking" Relationship="LightSwitchApplication.TimeTracking_Engineer" ToRole="TimeTracking" FromRole="Engineer" />
+  </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ProblemDescription" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreateDateTime" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="TargetEndDateTime" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="ClosedDateTime" Type="Edm.DateTime" />
+    <Property Name="Issue_IssueStatus" Type="Edm.Int32" />
+    <Property Name="Engineer_Issue" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Issue_Engineer" Type="Edm.Int32" />
+    <NavigationProperty Name="IssueStatus" Relationship="LightSwitchApplication.Issue_IssueStatus" ToRole="IssueStatus" FromRole="Issue" />
+    <NavigationProperty Name="AssignedTo" Relationship="LightSwitchApplication.Engineer_Issue" ToRole="Engineer" FromRole="Issue" />
+    <NavigationProperty Name="ClosedByEngineer" Relationship="LightSwitchApplication.Issue_Engineer" ToRole="Engineer" FromRole="Issue" />
+    <NavigationProperty Name="TimeTrackings" Relationship="LightSwitchApplication.TimeTracking_Issue" ToRole="TimeTracking" FromRole="Issue" />
+  </EntityType>
+  <EntityType Name="IssueStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="StatusDescription" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <NavigationProperty Name="Issues" Relationship="LightSwitchApplication.Issue_IssueStatus" ToRole="Issue" FromRole="IssueStatus" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="SkillDescription" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <NavigationProperty Name="EngineerSkills" Relationship="LightSwitchApplication.EngineerSkill_Skill" ToRole="EngineerSkill" FromRole="Skill" />
+  </EntityType>
+  <EntityType Name="EngineerSkill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="EngineerSkill_Engineer" Type="Edm.Int32" Nullable="false" />
+    <Property Name="EngineerSkill_Skill" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Engineer" Relationship="LightSwitchApplication.EngineerSkill_Engineer" ToRole="Engineer" FromRole="EngineerSkill" />
+    <NavigationProperty Name="Skill" Relationship="LightSwitchApplication.EngineerSkill_Skill" ToRole="Skill" FromRole="EngineerSkill" />
+  </EntityType>
+  <EntityType Name="TimeTracking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DurationMins" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimeTracking_Engineer" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimeTracking_Issue" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Engineers" Relationship="LightSwitchApplication.TimeTracking_Engineer" ToRole="Engineer" FromRole="TimeTracking" />
+    <NavigationProperty Name="Issue" Relationship="LightSwitchApplication.TimeTracking_Issue" ToRole="Issue" FromRole="TimeTracking" />
+  </EntityType>
+  <Association Name="Issue_IssueStatus">
+    <End Role="IssueStatus" Type="LightSwitchApplication.IssueStatus" Multiplicity="0..1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IssueStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_IssueStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Engineer_Issue">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Engineer_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Issue_Engineer">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="0..1" />
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="Issue_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EngineerSkill_Engineer">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="1" />
+    <End Role="EngineerSkill" Type="LightSwitchApplication.EngineerSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EngineerSkill">
+        <PropertyRef Name="EngineerSkill_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EngineerSkill_Skill">
+    <End Role="Skill" Type="LightSwitchApplication.Skill" Multiplicity="1" />
+    <End Role="EngineerSkill" Type="LightSwitchApplication.EngineerSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EngineerSkill">
+        <PropertyRef Name="EngineerSkill_Skill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Engineer_Engineer">
+    <End Role="Engineer2" Type="LightSwitchApplication.Engineer" Multiplicity="0..1" />
+    <End Role="Engineer1" Type="LightSwitchApplication.Engineer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer2">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Engineer1">
+        <PropertyRef Name="Engineer_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TimeTracking_Engineer">
+    <End Role="Engineer" Type="LightSwitchApplication.Engineer" Multiplicity="1" />
+    <End Role="TimeTracking" Type="LightSwitchApplication.TimeTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Engineer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TimeTracking">
+        <PropertyRef Name="TimeTracking_Engineer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TimeTracking_Issue">
+    <End Role="Issue" Type="LightSwitchApplication.Issue" Multiplicity="1" />
+    <End Role="TimeTracking" Type="LightSwitchApplication.TimeTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TimeTracking">
+        <PropertyRef Name="TimeTracking_Issue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationDataObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Engineers" EntityType="LightSwitchApplication.Engineer" />
+    <EntitySet Name="Issues" EntityType="LightSwitchApplication.Issue" />
+    <EntitySet Name="IssueStatusSet" EntityType="LightSwitchApplication.IssueStatus" />
+    <EntitySet Name="Skills" EntityType="LightSwitchApplication.Skill" />
+    <EntitySet Name="EngineerSkills" EntityType="LightSwitchApplication.EngineerSkill" />
+    <EntitySet Name="TimeTrackings" EntityType="LightSwitchApplication.TimeTracking" />
+    <AssociationSet Name="Issue_IssueStatus" Association="LightSwitchApplication.Issue_IssueStatus">
+      <End Role="IssueStatus" EntitySet="IssueStatusSet" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Engineer_Issue" Association="LightSwitchApplication.Engineer_Issue">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="Issue_Engineer" Association="LightSwitchApplication.Issue_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="EngineerSkill_Engineer" Association="LightSwitchApplication.EngineerSkill_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="EngineerSkill" EntitySet="EngineerSkills" />
+    </AssociationSet>
+    <AssociationSet Name="EngineerSkill_Skill" Association="LightSwitchApplication.EngineerSkill_Skill">
+      <End Role="Skill" EntitySet="Skills" />
+      <End Role="EngineerSkill" EntitySet="EngineerSkills" />
+    </AssociationSet>
+    <AssociationSet Name="Engineer_Engineer" Association="LightSwitchApplication.Engineer_Engineer">
+      <End Role="Engineer2" EntitySet="Engineers" />
+      <End Role="Engineer1" EntitySet="Engineers" />
+    </AssociationSet>
+    <AssociationSet Name="TimeTracking_Engineer" Association="LightSwitchApplication.TimeTracking_Engineer">
+      <End Role="Engineer" EntitySet="Engineers" />
+      <End Role="TimeTracking" EntitySet="TimeTrackings" />
+    </AssociationSet>
+    <AssociationSet Name="TimeTracking_Issue" Association="LightSwitchApplication.TimeTracking_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="TimeTracking" EntitySet="TimeTrackings" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

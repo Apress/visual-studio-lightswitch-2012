@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportingDataSet" targetNamespace="http://tempuri.org/ReportingDataSet.xsd" xmlns:mstns="http://tempuri.org/ReportingDataSet.xsd" xmlns="http://tempuri.org/ReportingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="HelpDeskCSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HelpDeskCSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.HelpDeskCSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DepartmentsTableAdapter" GeneratorDataComponentClassName="DepartmentsTableAdapter" Name="Departments" UserDataComponentName="DepartmentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HelpDeskCSConnectionString (Web.config)" DbObjectName="dbo.Departments" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        d.DepartmentName, COUNT(i.Id) AS 'DeptIssueCount'
+FROM            Departments AS d INNER JOIN
+                         Users AS u ON d.Id = u.Department_User INNER JOIN
+                         Issues AS i ON i.User_Issue = u.Id
+WHERE        (i.CreateDateTime &gt;= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) - 6, 0))
+GROUP BY d.DepartmentName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="DeptIssueCount" DataSetColumn="DeptIssueCount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportingDataSet" msprop:Generator_UserDSName="ReportingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Departments" msprop:Generator_TableClassName="DepartmentsDataTable" msprop:Generator_TableVarName="tableDepartments" msprop:Generator_TablePropName="Departments" msprop:Generator_RowDeletingName="DepartmentsRowDeleting" msprop:Generator_RowChangingName="DepartmentsRowChanging" msprop:Generator_RowEvHandlerName="DepartmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="DepartmentsRowDeleted" msprop:Generator_UserTableName="Departments" msprop:Generator_RowChangedName="DepartmentsRowChanged" msprop:Generator_RowEvArgName="DepartmentsRowChangeEvent" msprop:Generator_RowClassName="DepartmentsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeptIssueCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDeptIssueCount" msprop:Generator_ColumnPropNameInRow="DeptIssueCount" msprop:Generator_ColumnPropNameInTable="DeptIssueCountColumn" msprop:Generator_UserColumnName="DeptIssueCount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

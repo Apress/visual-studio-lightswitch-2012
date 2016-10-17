@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="WindowsEventLogDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WindowsEventLogDataStore">
+    <EntitySet Name="GetEventEntries" EntityType="WindowsEventLogDataStore.LogEntry" store:Type="Tables" Schema="dbo" Table="ApressExtensionCS.LogEntry" />
+    <EntitySet Name="GetEventLogTypes" EntityType="WindowsEventLogDataStore.LogSource" store:Type="Tables" Schema="dbo" Table="ApressExtensionCS.LogSource" />
+    <AssociationSet Name="EventLog_EventEntry" Association="WindowsEventLogDataStore.EventLog_EventEntry">
+      <End Role="LogSource" EntitySet="GetEventLogTypes" />
+      <End Role="LogEntry" EntitySet="GetEventEntries" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="LogEntry">
+    <Key>
+      <PropertyRef Name="LogEntryID" />
+    </Key>
+    <Property Name="LogEntryID" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SourceName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LogSource">
+    <Key>
+      <PropertyRef Name="SourceName" />
+    </Key>
+    <Property Name="SourceName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="EventLog_EventEntry">
+    <End Role="LogSource" Type="WindowsEventLogDataStore.LogSource" Multiplicity="0..1" />
+    <End Role="LogEntry" Type="WindowsEventLogDataStore.LogEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LogSource">
+        <PropertyRef Name="SourceName" />
+      </Principal>
+      <Dependent Role="LogEntry">
+        <PropertyRef Name="SourceName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

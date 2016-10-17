@@ -1,0 +1,7 @@
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Release\HelpDeskDataServiceVB.dll
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\bin\Release\HelpDeskDataServiceVB.xml
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Release\HelpDeskDataServiceVB.Resources.resources
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Release\HelpDeskDataServiceVB.vbproj.GenerateResource.Cache
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Release\HelpDeskDataServiceVB.dll
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Release\HelpDeskDataServiceVB.xml
+C:\Source\Chapter9\HelpDeskDataServiceVB\HelpDeskDataServiceVB\obj\Release\HelpDeskDataServiceVB.pdb

@@ -1,0 +1,11 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Debug\ApressExtensionCS.vsix
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Debug\extension.vsixmanifest
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Debug\ApressExtensionCS.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Debug\ApressExtensionCS.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Debug\extension.vsixmanifest
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Debug\license.txt
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Debug\ApressExtensionCS.vsix
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Debug\ApressExtensionCS.dll
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Debug\ApressExtensionCS.pdb
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\obj\Debug\extension.vsixmanifest
+C:\Source\Chapter13\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Vsix\bin\Debug\extension.vsixmanifest

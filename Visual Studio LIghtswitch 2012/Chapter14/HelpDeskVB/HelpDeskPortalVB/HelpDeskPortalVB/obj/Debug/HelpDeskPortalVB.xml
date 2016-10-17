@@ -1,0 +1,1346 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+HelpDeskPortalVB
+</name>
+</assembly>
+<members>
+<member name="F:HelpDeskPortalVB.StatusChart.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.StatusChart.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.StatusChart.Chart1">
+	<summary>
+Chart1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Login.RegisterHyperLink">
+	<summary>
+RegisterHyperLink control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Login.OpenAuthLogin">
+	<summary>
+OpenAuthLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.RegisterExternalLogin.userNameForm">
+	<summary>
+userNameForm control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.RegisterExternalLogin.userName">
+	<summary>
+userName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.#ctor(System.Uri)">
+	<summary>
+Initialize a new ApplicationData object.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.ResolveTypeFromName(System.String)">
+	<summary>
+Since the namespace configured for this service reference
+in Visual Studio is different from the one indicated in the
+server schema, use type-mappers to map between the two.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.ResolveNameFromType(System.Type)">
+	<summary>
+Since the namespace configured for this service reference
+in Visual Studio is different from the one indicated in the
+server schema, use type-mappers to map between the two.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Engineers">
+	<summary>
+There are no comments for Engineers in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Issues">
+	<summary>
+There are no comments for Issues in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.IssueStatusSet">
+	<summary>
+There are no comments for IssueStatusSet in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.IssueDocuments">
+	<summary>
+There are no comments for IssueDocuments in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.IssueResponses">
+	<summary>
+There are no comments for IssueResponses in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Priorities">
+	<summary>
+There are no comments for Priorities in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.TimeTrackings">
+	<summary>
+There are no comments for TimeTrackings in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.IssueFeedbacks">
+	<summary>
+There are no comments for IssueFeedbacks in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Users">
+	<summary>
+There are no comments for Users in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.EmailOperations">
+	<summary>
+There are no comments for EmailOperations in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Offices">
+	<summary>
+There are no comments for Offices in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Departments">
+	<summary>
+There are no comments for Departments in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AppOptions">
+	<summary>
+There are no comments for AppOptions in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Tests">
+	<summary>
+There are no comments for Tests in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.Table1Items">
+	<summary>
+There are no comments for Table1Items in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.IssueStatusChanges">
+	<summary>
+There are no comments for IssueStatusChanges in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.SkillsSet">
+	<summary>
+There are no comments for SkillsSet in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.EngineerSkills">
+	<summary>
+There are no comments for EngineerSkills in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToEngineers(HelpDeskPortalVB.HelpDeskServiceReference.Engineer)">
+	<summary>
+There are no comments for Engineers in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToIssues(HelpDeskPortalVB.HelpDeskServiceReference.Issue)">
+	<summary>
+There are no comments for Issues in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToIssueStatusSet(HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus)">
+	<summary>
+There are no comments for IssueStatusSet in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToIssueDocuments(HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument)">
+	<summary>
+There are no comments for IssueDocuments in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToIssueResponses(HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse)">
+	<summary>
+There are no comments for IssueResponses in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToPriorities(HelpDeskPortalVB.HelpDeskServiceReference.Priority)">
+	<summary>
+There are no comments for Priorities in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToTimeTrackings(HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking)">
+	<summary>
+There are no comments for TimeTrackings in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToIssueFeedbacks(HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback)">
+	<summary>
+There are no comments for IssueFeedbacks in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToUsers(HelpDeskPortalVB.HelpDeskServiceReference.User)">
+	<summary>
+There are no comments for Users in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToEmailOperations(HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation)">
+	<summary>
+There are no comments for EmailOperations in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToOffices(HelpDeskPortalVB.HelpDeskServiceReference.Office)">
+	<summary>
+There are no comments for Offices in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToDepartments(HelpDeskPortalVB.HelpDeskServiceReference.Department)">
+	<summary>
+There are no comments for Departments in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToAppOptions(HelpDeskPortalVB.HelpDeskServiceReference.AppOption)">
+	<summary>
+There are no comments for AppOptions in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToTests(HelpDeskPortalVB.HelpDeskServiceReference.Test)">
+	<summary>
+There are no comments for Tests in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToTable1Items(HelpDeskPortalVB.HelpDeskServiceReference.Table1Item)">
+	<summary>
+There are no comments for Table1Items in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToIssueStatusChanges(HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange)">
+	<summary>
+There are no comments for IssueStatusChanges in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToSkillsSet(HelpDeskPortalVB.HelpDeskServiceReference.Skills)">
+	<summary>
+There are no comments for SkillsSet in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData.AddToEngineerSkills(HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill)">
+	<summary>
+There are no comments for EngineerSkills in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.ApplicationData">
+	<summary>
+There are no comments for ApplicationData in the schema.
+</summary>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.CreateEngineer(System.Int32,System.Byte[],System.String,System.String,System.DateTime,System.Boolean)">
+	<summary>
+Create a new Engineer object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="surname">Initial value of Surname.</param>
+	<param name="firstname">Initial value of Firstname.</param>
+	<param name="dateOfBirth">Initial value of DateOfBirth.</param>
+	<param name="securityVetted">Initial value of SecurityVetted.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Surname">
+	<summary>
+There are no comments for Property Surname in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Firstname">
+	<summary>
+There are no comments for Property Firstname in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.DateOfBirth">
+	<summary>
+There are no comments for Property DateOfBirth in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.LoginName">
+	<summary>
+There are no comments for Property LoginName in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.SSN">
+	<summary>
+There are no comments for Property SSN in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.EngineerPhoto">
+	<summary>
+There are no comments for Property EngineerPhoto in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.SecurityVetted">
+	<summary>
+There are no comments for Property SecurityVetted in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.ClearanceReference">
+	<summary>
+There are no comments for Property ClearanceReference in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.VettingExpiryDate">
+	<summary>
+There are no comments for Property VettingExpiryDate in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.EmailAddress">
+	<summary>
+There are no comments for Property EmailAddress in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Engineer_Engineer">
+	<summary>
+There are no comments for Property Engineer_Engineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Issues">
+	<summary>
+There are no comments for Issues in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.EngineerIssues">
+	<summary>
+There are no comments for EngineerIssues in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.TimeTracking">
+	<summary>
+There are no comments for TimeTracking in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Manager">
+	<summary>
+There are no comments for Manager in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.Subordinates">
+	<summary>
+There are no comments for Subordinates in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Engineer.EngineerSkills">
+	<summary>
+There are no comments for EngineerSkills in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Engineer">
+	<summary>
+There are no comments for LightSwitchApplication.Engineer in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Issue.CreateIssue(System.Int32,System.Byte[],System.DateTime,System.String,System.DateTime,System.String,System.Int32)">
+	<summary>
+Create a new Issue object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="targetEndDateTime">Initial value of TargetEndDateTime.</param>
+	<param name="subject">Initial value of Subject.</param>
+	<param name="createDateTime">Initial value of CreateDateTime.</param>
+	<param name="problemDescription">Initial value of ProblemDescription.</param>
+	<param name="issue_Engineer">Initial value of Issue_Engineer.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.TargetEndDateTime">
+	<summary>
+There are no comments for Property TargetEndDateTime in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Subject">
+	<summary>
+There are no comments for Property Subject in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.ClosedDateTime">
+	<summary>
+There are no comments for Property ClosedDateTime in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.CreateDateTime">
+	<summary>
+There are no comments for Property CreateDateTime in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.ProblemDescription">
+	<summary>
+There are no comments for Property ProblemDescription in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Issue_Engineer">
+	<summary>
+There are no comments for Property Issue_Engineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Issue_Engineer1">
+	<summary>
+There are no comments for Property Issue_Engineer1 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Issue_Priority">
+	<summary>
+There are no comments for Property Issue_Priority in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Issue_IssueStatus">
+	<summary>
+There are no comments for Property Issue_IssueStatus in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Issue_User">
+	<summary>
+There are no comments for Property Issue_User in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.AssignedTo">
+	<summary>
+There are no comments for AssignedTo in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.ClosedByEngineer">
+	<summary>
+There are no comments for ClosedByEngineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.IssueResponses">
+	<summary>
+There are no comments for IssueResponses in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.Priority">
+	<summary>
+There are no comments for Priority in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.TimeTrackings">
+	<summary>
+There are no comments for TimeTrackings in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.IssueStatus">
+	<summary>
+There are no comments for IssueStatus in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.IssueDocuments">
+	<summary>
+There are no comments for IssueDocuments in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.IssueFeedback">
+	<summary>
+There are no comments for IssueFeedback in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.User">
+	<summary>
+There are no comments for User in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Issue.IssueStatusChanges">
+	<summary>
+There are no comments for IssueStatusChanges in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Issue">
+	<summary>
+There are no comments for LightSwitchApplication.Issue in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.CreateIssueStatus(System.Int32,System.Byte[],System.String)">
+	<summary>
+Create a new IssueStatus object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="statusDescription">Initial value of StatusDescription.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.StatusDescription">
+	<summary>
+There are no comments for Property StatusDescription in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.Issues">
+	<summary>
+There are no comments for Issues in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.ChangeHistory_OldStatus">
+	<summary>
+There are no comments for ChangeHistory_OldStatus in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus.ChangeHistory_NewStatus">
+	<summary>
+There are no comments for ChangeHistory_NewStatus in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatus">
+	<summary>
+There are no comments for LightSwitchApplication.IssueStatus in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.CreateIssueDocument(System.Int32,System.Byte[],System.String,System.Byte[],System.Int32)">
+	<summary>
+Create a new IssueDocument object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="documentName">Initial value of DocumentName.</param>
+	<param name="issueFile">Initial value of IssueFile.</param>
+	<param name="issueDocument_Issue">Initial value of IssueDocument_Issue.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.DocumentName">
+	<summary>
+There are no comments for Property DocumentName in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.IssueFile">
+	<summary>
+There are no comments for Property IssueFile in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.IssueDocument_Issue">
+	<summary>
+There are no comments for Property IssueDocument_Issue in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument.Issue">
+	<summary>
+There are no comments for Issue in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.IssueDocument">
+	<summary>
+There are no comments for LightSwitchApplication.IssueDocument in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.CreateIssueResponse(System.Int32,System.Byte[],System.DateTime,System.String,System.Boolean,System.Int32)">
+	<summary>
+Create a new IssueResponse object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="responseDateTime">Initial value of ResponseDateTime.</param>
+	<param name="responseText">Initial value of ResponseText.</param>
+	<param name="awaitingClient">Initial value of AwaitingClient.</param>
+	<param name="issueResponse_Issue">Initial value of IssueResponse_Issue.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.ResponseDateTime">
+	<summary>
+There are no comments for Property ResponseDateTime in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.ResponseText">
+	<summary>
+There are no comments for Property ResponseText in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.ReviewDate">
+	<summary>
+There are no comments for Property ReviewDate in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.AwaitingClient">
+	<summary>
+There are no comments for Property AwaitingClient in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.IssueResponse_Issue">
+	<summary>
+There are no comments for Property IssueResponse_Issue in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse.Issue">
+	<summary>
+There are no comments for Issue in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.IssueResponse">
+	<summary>
+There are no comments for LightSwitchApplication.IssueResponse in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Priority.CreatePriority(System.Int32,System.Byte[],System.String)">
+	<summary>
+Create a new Priority object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="priorityDesc">Initial value of PriorityDesc.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Priority.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Priority.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Priority.PriorityDesc">
+	<summary>
+There are no comments for Property PriorityDesc in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Priority.Issues">
+	<summary>
+There are no comments for Issues in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Priority">
+	<summary>
+There are no comments for LightSwitchApplication.Priority in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.CreateTimeTracking(System.Int32,System.Byte[],System.Int32,System.DateTime,System.Int32,System.Int32)">
+	<summary>
+Create a new TimeTracking object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="durationMins">Initial value of DurationMins.</param>
+	<param name="entryDate">Initial value of EntryDate.</param>
+	<param name="timeTracking_Engineer">Initial value of TimeTracking_Engineer.</param>
+	<param name="timeTracking_Issue">Initial value of TimeTracking_Issue.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.DurationMins">
+	<summary>
+There are no comments for Property DurationMins in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.EntryDate">
+	<summary>
+There are no comments for Property EntryDate in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.TimeTracking_Engineer">
+	<summary>
+There are no comments for Property TimeTracking_Engineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.TimeTracking_Issue">
+	<summary>
+There are no comments for Property TimeTracking_Issue in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.Engineer">
+	<summary>
+There are no comments for Engineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking.Issue">
+	<summary>
+There are no comments for Issue in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.TimeTracking">
+	<summary>
+There are no comments for LightSwitchApplication.TimeTracking in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.CreateIssueFeedback(System.Int32,System.Byte[],System.Int32,System.Int32,System.Int32,System.String,System.Double,System.Int32)">
+	<summary>
+Create a new IssueFeedback object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="qualityRating">Initial value of QualityRating.</param>
+	<param name="responseRating">Initial value of ResponseRating.</param>
+	<param name="staffRating">Initial value of StaffRating.</param>
+	<param name="comment">Initial value of Comment.</param>
+	<param name="overallRating">Initial value of OverallRating.</param>
+	<param name="issueFeedback_Issue">Initial value of IssueFeedback_Issue.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.QualityRating">
+	<summary>
+There are no comments for Property QualityRating in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.ResponseRating">
+	<summary>
+There are no comments for Property ResponseRating in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.StaffRating">
+	<summary>
+There are no comments for Property StaffRating in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.Comment">
+	<summary>
+There are no comments for Property Comment in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.OverallRating">
+	<summary>
+There are no comments for Property OverallRating in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.IssueFeedback_Issue">
+	<summary>
+There are no comments for Property IssueFeedback_Issue in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback.Issue">
+	<summary>
+There are no comments for Issue in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.IssueFeedback">
+	<summary>
+There are no comments for LightSwitchApplication.IssueFeedback in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.User.CreateUser(System.Int32,System.Byte[],System.String,System.String,System.String)">
+	<summary>
+Create a new User object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="firstname">Initial value of Firstname.</param>
+	<param name="surname">Initial value of Surname.</param>
+	<param name="phoneNumber">Initial value of PhoneNumber.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Firstname">
+	<summary>
+There are no comments for Property Firstname in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Surname">
+	<summary>
+There are no comments for Property Surname in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.PhoneNumber">
+	<summary>
+There are no comments for Property PhoneNumber in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Username">
+	<summary>
+There are no comments for Property Username in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Password">
+	<summary>
+There are no comments for Property Password in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Address1">
+	<summary>
+There are no comments for Property Address1 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Address2">
+	<summary>
+There are no comments for Property Address2 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.City">
+	<summary>
+There are no comments for Property City in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Postcode">
+	<summary>
+There are no comments for Property Postcode in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Country">
+	<summary>
+There are no comments for Property Country in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.User_Department">
+	<summary>
+There are no comments for Property User_Department in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.User_Office">
+	<summary>
+There are no comments for Property User_Office in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Department">
+	<summary>
+There are no comments for Department in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Issues">
+	<summary>
+There are no comments for Issues in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.User.Office">
+	<summary>
+There are no comments for Office in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.User">
+	<summary>
+There are no comments for LightSwitchApplication.User in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.CreateEmailOperation(System.Int32,System.Byte[],System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+Create a new EmailOperation object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="senderEmail">Initial value of SenderEmail.</param>
+	<param name="recipientEmail">Initial value of RecipientEmail.</param>
+	<param name="subject">Initial value of Subject.</param>
+	<param name="body">Initial value of Body.</param>
+	<param name="attachmentFileName">Initial value of AttachmentFileName.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.SenderEmail">
+	<summary>
+There are no comments for Property SenderEmail in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.RecipientEmail">
+	<summary>
+There are no comments for Property RecipientEmail in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.Subject">
+	<summary>
+There are no comments for Property Subject in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.Body">
+	<summary>
+There are no comments for Property Body in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.Attachment">
+	<summary>
+There are no comments for Property Attachment in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation.AttachmentFileName">
+	<summary>
+There are no comments for Property AttachmentFileName in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.EmailOperation">
+	<summary>
+There are no comments for LightSwitchApplication.EmailOperation in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Office.CreateOffice(System.Int32,System.Byte[],System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+Create a new Office object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="officeName">Initial value of OfficeName.</param>
+	<param name="country">Initial value of Country.</param>
+	<param name="address1">Initial value of Address1.</param>
+	<param name="address2">Initial value of Address2.</param>
+	<param name="city">Initial value of City.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.OfficeName">
+	<summary>
+There are no comments for Property OfficeName in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.Country">
+	<summary>
+There are no comments for Property Country in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.Address1">
+	<summary>
+There are no comments for Property Address1 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.Address2">
+	<summary>
+There are no comments for Property Address2 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.City">
+	<summary>
+There are no comments for Property City in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Office.Users">
+	<summary>
+There are no comments for Users in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Office">
+	<summary>
+There are no comments for LightSwitchApplication.Office in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Department.CreateDepartment(System.Int32,System.Byte[],System.String)">
+	<summary>
+Create a new Department object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="departmentName">Initial value of DepartmentName.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.DepartmentName">
+	<summary>
+There are no comments for Property DepartmentName in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.Address1">
+	<summary>
+There are no comments for Property Address1 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.Address2">
+	<summary>
+There are no comments for Property Address2 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.City">
+	<summary>
+There are no comments for Property City in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.Postcode">
+	<summary>
+There are no comments for Property Postcode in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.Country">
+	<summary>
+There are no comments for Property Country in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Department.Users">
+	<summary>
+There are no comments for Users in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Department">
+	<summary>
+There are no comments for LightSwitchApplication.Department in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.CreateAppOption(System.Int32,System.Byte[],System.Boolean,System.Boolean)">
+	<summary>
+Create a new AppOption object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="auditChangesOn">Initial value of AuditChangesOn.</param>
+	<param name="sendEmailOn">Initial value of SendEmailOn.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.AuditChangesOn">
+	<summary>
+There are no comments for Property AuditChangesOn in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.SendEmailOn">
+	<summary>
+There are no comments for Property SendEmailOn in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.SMTPServer">
+	<summary>
+There are no comments for Property SMTPServer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.SMTPPort">
+	<summary>
+There are no comments for Property SMTPPort in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.SMTPUsername">
+	<summary>
+There are no comments for Property SMTPUsername in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.SMTPPassword">
+	<summary>
+There are no comments for Property SMTPPassword in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.AppOption.ReportWebSiteRootURL">
+	<summary>
+There are no comments for Property ReportWebSiteRootURL in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.AppOption">
+	<summary>
+There are no comments for LightSwitchApplication.AppOption in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Test.CreateTest(System.Int32,System.Byte[],System.String,System.Int32,System.String)">
+	<summary>
+Create a new Test object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="timesheetDescription">Initial value of TimesheetDescription.</param>
+	<param name="duration">Initial value of Duration.</param>
+	<param name="phoneNum">Initial value of PhoneNum.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Test.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Test.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Test.TimesheetDescription">
+	<summary>
+There are no comments for Property TimesheetDescription in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Test.Duration">
+	<summary>
+There are no comments for Property Duration in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Test.PhoneNum">
+	<summary>
+There are no comments for Property PhoneNum in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Test">
+	<summary>
+There are no comments for LightSwitchApplication.Test in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Table1Item.CreateTable1Item(System.Int32,System.Byte[],System.String)">
+	<summary>
+Create a new Table1Item object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="test5">Initial value of test5.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Table1Item.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Table1Item.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Table1Item.test5">
+	<summary>
+There are no comments for Property test5 in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Table1Item">
+	<summary>
+There are no comments for LightSwitchApplication.Table1Item in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.CreateIssueStatusChange(System.Int32,System.Byte[],System.DateTime)">
+	<summary>
+Create a new IssueStatusChange object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="changeDate">Initial value of ChangeDate.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.ChangeDate">
+	<summary>
+There are no comments for Property ChangeDate in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.IssueStatusChange_IssueStatus">
+	<summary>
+There are no comments for Property IssueStatusChange_IssueStatus in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.IssueStatusChange_IssueStatus1">
+	<summary>
+There are no comments for Property IssueStatusChange_IssueStatus1 in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.IssueStatusChange_Issue">
+	<summary>
+There are no comments for Property IssueStatusChange_Issue in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.OldStatus">
+	<summary>
+There are no comments for OldStatus in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.NewStatus">
+	<summary>
+There are no comments for NewStatus in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange.Issue">
+	<summary>
+There are no comments for Issue in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.IssueStatusChange">
+	<summary>
+There are no comments for LightSwitchApplication.IssueStatusChange in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.Skills.CreateSkills(System.Int32,System.Byte[],System.String)">
+	<summary>
+Create a new Skills object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="skillDescription">Initial value of SkillDescription.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Skills.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Skills.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Skills.SkillDescription">
+	<summary>
+There are no comments for Property SkillDescription in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.Skills.EngineerSkills">
+	<summary>
+There are no comments for EngineerSkills in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.Skills">
+	<summary>
+There are no comments for LightSwitchApplication.Skills in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="M:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.CreateEngineerSkill(System.Int32,System.Byte[],System.Int32,System.Int32)">
+	<summary>
+Create a new EngineerSkill object.
+</summary>
+	<param name="ID">Initial value of Id.</param>
+	<param name="rowVersion">Initial value of RowVersion.</param>
+	<param name="engineerSkill_Engineer">Initial value of EngineerSkill_Engineer.</param>
+	<param name="engineerSkill_Skills">Initial value of EngineerSkill_Skills.</param>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.Id">
+	<summary>
+There are no comments for Property Id in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.RowVersion">
+	<summary>
+There are no comments for Property RowVersion in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.EngineerSkill_Engineer">
+	<summary>
+There are no comments for Property EngineerSkill_Engineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.EngineerSkill_Skills">
+	<summary>
+There are no comments for Property EngineerSkill_Skills in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.Engineer">
+	<summary>
+There are no comments for Engineer in the schema.
+</summary>
+</member><member name="P:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill.Skills">
+	<summary>
+There are no comments for Skills in the schema.
+</summary>
+</member><member name="T:HelpDeskPortalVB.HelpDeskServiceReference.EngineerSkill">
+	<summary>
+There are no comments for LightSwitchApplication.EngineerSkill in the schema.
+</summary>
+	<KeyProperties>
+Id
+</KeyProperties>
+</member><member name="F:HelpDeskPortalVB.Manage.successMessage">
+	<summary>
+successMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Manage.setPassword">
+	<summary>
+setPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Manage.password">
+	<summary>
+password control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Manage.confirmPassword">
+	<summary>
+confirmPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Manage.changePassword">
+	<summary>
+changePassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.SiteMaster.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.SiteMaster.FeaturedContent">
+	<summary>
+FeaturedContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.SiteMaster.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Register.RegisterUser">
+	<summary>
+RegisterUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.Register.RegisterUserWizardStep">
+	<summary>
+RegisterUserWizardStep control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.IssuesByEngineer.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.IssuesByEngineer.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:HelpDeskPortalVB.IssuesByEngineer.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:HelpDeskPortalVB.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:HelpDeskPortalVB.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:HelpDeskPortalVB.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:HelpDeskPortalVB.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:HelpDeskPortalVB.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:HelpDeskPortalVB.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:HelpDeskPortalVB.OpenAuthProviders.providerDetails">
+	<summary>
+providerDetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSet.DepartmentsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSet.DepartmentsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSet.DepartmentsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSetTableAdapters.DepartmentsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(HelpDeskPortalVB.ReportingDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(HelpDeskPortalVB.ReportingDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(HelpDeskPortalVB.ReportingDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.UpdateAll(HelpDeskPortalVB.ReportingDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:HelpDeskPortalVB.ReportingDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

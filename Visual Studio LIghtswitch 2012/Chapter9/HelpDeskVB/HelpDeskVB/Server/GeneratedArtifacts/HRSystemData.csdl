@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firstname" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Surname" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Address1" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Address2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Town" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="County" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Postcode" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Country" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="EmployeePhoto" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
+  <EntityContainer Name="HRSystemDataObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Employees" EntityType="LightSwitchApplication.Employee" />
+  </EntityContainer>
+</Schema>

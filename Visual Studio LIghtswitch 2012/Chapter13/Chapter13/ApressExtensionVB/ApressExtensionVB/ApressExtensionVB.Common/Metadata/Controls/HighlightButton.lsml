@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelFragment
+  xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Control Name="HighlightButton"
+    SupportedContentItemKind="Command"
+    DesignerImageResource="ApressExtensionVB.HighlightButton::ControlImage"
+           AttachedLabelSupport="DisplayedByControl">
+    <Control.Attributes>
+      <DisplayName Value="HighlightButton" />
+    </Control.Attributes>
+    <Control.SupportedDataTypes>
+      <SupportedDataType DataType=":String"/>
+    </Control.SupportedDataTypes>
+  </Control>
+
+</ModelFragment>

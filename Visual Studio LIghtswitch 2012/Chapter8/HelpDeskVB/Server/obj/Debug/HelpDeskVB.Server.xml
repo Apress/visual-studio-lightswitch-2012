@@ -1,0 +1,2097 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Application.Server
+</name>
+</assembly>
+<members>
+<member name="M:LightSwitchApplication.OfficeLocation.#ctor">
+	<summary>
+ Initializes a new instance of the OfficeLocation entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.OfficeName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.Country">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.Address1">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.Address2">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.OfficeLocation.City">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.OfficeLocation">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.DataWorkspace.#ctor">
+	<summary>
+ Initializes a new instance of a DataWorkspace.  Changes can be made to data sources in the new instance independent of changes made to data sources in the default DataWorkspace.
+ </summary>
+</member><member name="P:LightSwitchApplication.DataWorkspace.ApplicationData">
+	<summary>
+ Gets the ApplicationData datasource.  This provides members to query and update data in the data source.
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.#ctor">
+	<summary>
+ This constructor is used for the internal LightSwitch framework. Use DataWorkspace instead.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Engineers">
+	<summary>
+ Gets the Engineers entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Issues">
+	<summary>
+ Gets the Issues entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.IssueStatusSet">
+	<summary>
+ Gets the IssueStatusSet entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.IssueDocuments">
+	<summary>
+ Gets the IssueDocuments entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.IssueResponses">
+	<summary>
+ Gets the IssueResponses entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Priorities">
+	<summary>
+ Gets the Priorities entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.TimeTrackings">
+	<summary>
+ Gets the TimeTrackings entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.IssueFeedbacks">
+	<summary>
+ Gets the IssueFeedbacks entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Users">
+	<summary>
+ Gets the Users entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.EmailOperations">
+	<summary>
+ Gets the EmailOperations entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.OfficeLocations">
+	<summary>
+ Gets the OfficeLocations entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Departments">
+	<summary>
+ Gets the Departments entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.AppOptions">
+	<summary>
+ Gets the AppOptions entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.IssueStatusChanges">
+	<summary>
+ Gets the IssueStatusChanges entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.Engineers_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Engineers_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Issues_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Issues_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueStatusSet_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueStatusSet_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesDueThisWeek">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueDocuments_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueDocuments_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueResponses_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueResponses_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Priorities_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Priorities_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.TimeTrackings_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.TimeTrackings_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.EngineersWithOutstandingIssues">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesWithAttachments">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesByMonthAndYear(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+	<summary>
+ No Modeled Description Available
+ </summary>
+	<param name="IssueMonth">
+ No Modeled Description Available
+ </param>
+	<param name="IssueYear">
+ No Modeled Description Available
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesWithHighestFeedback">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueFeedbacks_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueFeedbacks_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueSearchAll(System.Nullable{System.DateTime},System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+	<summary>
+ No Modeled Description Available
+ </summary>
+	<param name="ClosedDateTime">
+ No Modeled Description Available
+ </param>
+	<param name="ClosedByEngineerId">
+ No Modeled Description Available
+ </param>
+	<param name="ProblemDescription">
+ No Modeled Description Available
+ </param>
+	<param name="TargetEndDateTime">
+ No Modeled Description Available
+ </param>
+	<param name="IssueFeedbackId">
+ No Modeled Description Available
+ </param>
+	<param name="IssueStatusId">
+ No Modeled Description Available
+ </param>
+	<param name="PriorityStatusId">
+ No Modeled Description Available
+ </param>
+	<param name="EngineerId">
+ No Modeled Description Available
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.EngineersByManager(System.Nullable{System.Int32})">
+	<summary>
+ No Modeled Description Available
+ </summary>
+	<param name="ManagerId">
+ No Modeled Description Available
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesByEngineer(System.Nullable{System.Int32})">
+	<summary>
+ No Modeled Description Available
+ </summary>
+	<param name="EngineerId">
+ No Modeled Description Available
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Users_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Users_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.EmailOperations_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.EmailOperations_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.OfficeLocations_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.OfficeLocations_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Departments_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Departments_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.AppOptions_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.AppOptions_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesOverdue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesWithNoResponse">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueStatusChanges_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssueStatusChanges_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesGreaterThan7Days">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.EngineersByName(System.String)">
+	<summary>
+ No Modeled Description Available
+ </summary>
+	<param name="Name">
+ No Modeled Description Available
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.IssuesDueSoon">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.ApplicationData">
+	<summary>
+ Provides members to query and update data in the ApplicationData datasource.
+ </summary>
+</member><member name="M:LightSwitchApplication.Engineer.#ctor">
+	<summary>
+ Initializes a new instance of the Engineer entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Surname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Firstname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Fullname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.DateOfBirth">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Age">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.LoginName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.IssueCount">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.SSN">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.EngineerPhoto">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.SecurityVetted">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.ClearanceReference">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.VettingExpiryDate">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Issues">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.EngineerIssues">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.TimeTracking">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Manager">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Engineer.Subordinates">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Engineer">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Department.#ctor">
+	<summary>
+ Initializes a new instance of the Department entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.DepartmentName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Address1">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Address2">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.City">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Postcode">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Country">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.DepartmentManager">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Department.Users">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Department">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Issue.#ctor">
+	<summary>
+ Initializes a new instance of the Issue entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.TargetEndDateTime">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.ClosedDateTime">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.CreateDateTime">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.ProblemDescription">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.IssueSummary">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.Subject">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.AssignedTo">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.ClosedByEngineer">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.IssueResponses">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.Priority">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.TimeTrackings">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.IssueStatus">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.IssueDocuments">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.IssueFeedback">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.User">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Issue.IssueStatusChanges">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Issue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.AppOption.#ctor">
+	<summary>
+ Initializes a new instance of the AppOption entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.AuditChangesOn">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.SendEmailOn">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.SMTPServer">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.SMTPPort">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.SMTPUsername">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.SMTPPassword">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.AppOption.ReportWebSiteRootURL">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.AppOption">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.IssueStatus.#ctor">
+	<summary>
+ Initializes a new instance of the IssueStatus entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.StatusDescription">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.Issues">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.IssueStatusChanges">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatus.IssueStatusChanges1">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.IssueStatus">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.IssueStatusChange.#ctor">
+	<summary>
+ Initializes a new instance of the IssueStatusChange entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.ChangeDate">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.OldStatus">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.NewStatus">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueStatusChange.Issue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.IssueStatusChange">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.IssueDocument.#ctor">
+	<summary>
+ Initializes a new instance of the IssueDocument entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.DocumentName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.IssueFile">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueDocument.Issue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.IssueDocument">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.IssueResponse.#ctor">
+	<summary>
+ Initializes a new instance of the IssueResponse entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.ResponseDateTime">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.ResponseText">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.ReviewDate">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.AwaitingClient">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueResponse.Issue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.IssueResponse">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Priority.#ctor">
+	<summary>
+ Initializes a new instance of the Priority entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Priority.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Priority.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Priority.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Priority.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Priority.PriorityDesc">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Priority.Issues">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Priority">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.TimeTracking.#ctor">
+	<summary>
+ Initializes a new instance of the TimeTracking entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.DurationMins">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.Engineer">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.TimeTracking.Issue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.TimeTracking">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.IssueFeedback.#ctor">
+	<summary>
+ Initializes a new instance of the IssueFeedback entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.QualityRating">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.ResponseRating">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.StaffRating">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.Comment">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.OverallRating">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.IssueFeedback.Issue">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.IssueFeedback">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.User.#ctor">
+	<summary>
+ Initializes a new instance of the User entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.User.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Firstname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Surname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.PhoneNumber">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Username">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Password">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Address1">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Address2">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.City">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Postcode">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Country">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Email">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Department">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Issues">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.User">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.#ctor">
+	<summary>
+ Initializes a new ApplicationData object using the connection string found in the 'ApplicationData' section of the application configuration file.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.#ctor(System.String)">
+	<summary>
+ Initialize a new ApplicationData object.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.#ctor(System.Data.EntityClient.EntityConnection)">
+	<summary>
+ Initialize a new ApplicationData object.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.Engineers">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.Issues">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.IssueStatusSet">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.IssueDocuments">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.IssueResponses">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.Priorities">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.TimeTrackings">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.IssueFeedbacks">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.Users">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.EmailOperations">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.OfficeLocations">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.Departments">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.AppOptions">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.ApplicationData.IssueStatusChanges">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToEngineers(LightSwitchApplication.Implementation.Engineer)">
+	<summary>
+ Deprecated Method for adding a new object to the Engineers EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToIssues(LightSwitchApplication.Implementation.Issue)">
+	<summary>
+ Deprecated Method for adding a new object to the Issues EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToIssueStatusSet(LightSwitchApplication.Implementation.IssueStatus)">
+	<summary>
+ Deprecated Method for adding a new object to the IssueStatusSet EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToIssueDocuments(LightSwitchApplication.Implementation.IssueDocument)">
+	<summary>
+ Deprecated Method for adding a new object to the IssueDocuments EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToIssueResponses(LightSwitchApplication.Implementation.IssueResponse)">
+	<summary>
+ Deprecated Method for adding a new object to the IssueResponses EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToPriorities(LightSwitchApplication.Implementation.Priority)">
+	<summary>
+ Deprecated Method for adding a new object to the Priorities EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToTimeTrackings(LightSwitchApplication.Implementation.TimeTracking)">
+	<summary>
+ Deprecated Method for adding a new object to the TimeTrackings EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToIssueFeedbacks(LightSwitchApplication.Implementation.IssueFeedback)">
+	<summary>
+ Deprecated Method for adding a new object to the IssueFeedbacks EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToUsers(LightSwitchApplication.Implementation.User)">
+	<summary>
+ Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToEmailOperations(LightSwitchApplication.Implementation.EmailOperation)">
+	<summary>
+ Deprecated Method for adding a new object to the EmailOperations EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToOfficeLocations(LightSwitchApplication.Implementation.OfficeLocation)">
+	<summary>
+ Deprecated Method for adding a new object to the OfficeLocations EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToDepartments(LightSwitchApplication.Implementation.Department)">
+	<summary>
+ Deprecated Method for adding a new object to the Departments EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToAppOptions(LightSwitchApplication.Implementation.AppOption)">
+	<summary>
+ Deprecated Method for adding a new object to the AppOptions EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.ApplicationData.AddToIssueStatusChanges(LightSwitchApplication.Implementation.IssueStatusChange)">
+	<summary>
+ Deprecated Method for adding a new object to the IssueStatusChanges EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.ApplicationData">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.AppOption.CreateAppOption(System.Int32,System.Byte[],System.Boolean,System.Boolean)">
+	<summary>
+ Create a new AppOption object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="auditChangesOn">Initial value of the AuditChangesOn property.</param>
+	<param name="sendEmailOn">Initial value of the SendEmailOn property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.AuditChangesOn">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.SendEmailOn">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.SMTPServer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.SMTPPort">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.SMTPUsername">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.SMTPPassword">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.AppOption.ReportWebSiteRootURL">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.AppOption">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.Department.CreateDepartment(System.Int32,System.Byte[],System.String)">
+	<summary>
+ Create a new Department object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="departmentName">Initial value of the DepartmentName property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.Department.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.DepartmentName">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.Address1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.Address2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.City">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.Postcode">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.Country">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.DepartmentManager">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Department.Users">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.Department">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.EmailOperation.CreateEmailOperation(System.Int32,System.Byte[],System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Create a new EmailOperation object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="senderEmail">Initial value of the SenderEmail property.</param>
+	<param name="recipientEmail">Initial value of the RecipientEmail property.</param>
+	<param name="subject">Initial value of the Subject property.</param>
+	<param name="body">Initial value of the Body property.</param>
+	<param name="attachmentFileName">Initial value of the AttachmentFileName property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.SenderEmail">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.RecipientEmail">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.Subject">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.Body">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.Attachment">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.EmailOperation.AttachmentFileName">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.EmailOperation">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.Engineer.CreateEngineer(System.Int32,System.Byte[],System.String,System.String,System.DateTime,System.Boolean)">
+	<summary>
+ Create a new Engineer object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="surname">Initial value of the Surname property.</param>
+	<param name="firstname">Initial value of the Firstname property.</param>
+	<param name="dateOfBirth">Initial value of the DateOfBirth property.</param>
+	<param name="securityVetted">Initial value of the SecurityVetted property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Surname">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Firstname">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.DateOfBirth">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.LoginName">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.SSN">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.EngineerPhoto">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.SecurityVetted">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.ClearanceReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.VettingExpiryDate">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Engineer_Engineer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Issues">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.EngineerIssues">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.TimeTracking">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Manager">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.ManagerReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Engineer.Subordinates">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.Engineer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.Issue.CreateIssue(System.Int32,System.Byte[],System.DateTime,System.DateTime,System.String,System.Int32)">
+	<summary>
+ Create a new Issue object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="targetEndDateTime">Initial value of the TargetEndDateTime property.</param>
+	<param name="createDateTime">Initial value of the CreateDateTime property.</param>
+	<param name="problemDescription">Initial value of the ProblemDescription property.</param>
+	<param name="issue_Engineer">Initial value of the Issue_Engineer property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.TargetEndDateTime">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.ClosedDateTime">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.CreateDateTime">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.ProblemDescription">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Subject">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Issue_Engineer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Issue_Engineer1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Issue_Priority">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Issue_IssueStatus">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Issue_User">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.AssignedTo">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.AssignedToReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.ClosedByEngineer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.ClosedByEngineerReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.IssueResponses">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.Priority">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.PriorityReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.TimeTrackings">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.IssueStatus">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.IssueStatusReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.IssueDocuments">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.IssueFeedback">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.User">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.UserReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Issue.IssueStatusChanges">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.IssueDocument.CreateIssueDocument(System.Int32,System.Byte[],System.String,System.Byte[],System.Int32)">
+	<summary>
+ Create a new IssueDocument object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="documentName">Initial value of the DocumentName property.</param>
+	<param name="issueFile">Initial value of the IssueFile property.</param>
+	<param name="issueDocument_Issue">Initial value of the IssueDocument_Issue property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.DocumentName">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.IssueFile">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.IssueDocument_Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueDocument.IssueReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.IssueDocument">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.IssueFeedback.CreateIssueFeedback(System.Int32,System.Byte[],System.Int32,System.Int32,System.Int32,System.String,System.Double,System.Int32)">
+	<summary>
+ Create a new IssueFeedback object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="qualityRating">Initial value of the QualityRating property.</param>
+	<param name="responseRating">Initial value of the ResponseRating property.</param>
+	<param name="staffRating">Initial value of the StaffRating property.</param>
+	<param name="comment">Initial value of the Comment property.</param>
+	<param name="overallRating">Initial value of the OverallRating property.</param>
+	<param name="issueFeedback_Issue">Initial value of the IssueFeedback_Issue property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.QualityRating">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.ResponseRating">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.StaffRating">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.Comment">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.OverallRating">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.IssueFeedback_Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueFeedback.IssueReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.IssueFeedback">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.IssueResponse.CreateIssueResponse(System.Int32,System.Byte[],System.DateTime,System.String,System.Boolean,System.Int32)">
+	<summary>
+ Create a new IssueResponse object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="responseDateTime">Initial value of the ResponseDateTime property.</param>
+	<param name="responseText">Initial value of the ResponseText property.</param>
+	<param name="awaitingClient">Initial value of the AwaitingClient property.</param>
+	<param name="issueResponse_Issue">Initial value of the IssueResponse_Issue property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.ResponseDateTime">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.ResponseText">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.ReviewDate">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.AwaitingClient">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.IssueResponse_Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueResponse.IssueReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.IssueResponse">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.IssueStatus.CreateIssueStatus(System.Int32,System.Byte[],System.String)">
+	<summary>
+ Create a new IssueStatus object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="statusDescription">Initial value of the StatusDescription property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatus.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatus.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatus.StatusDescription">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatus.Issues">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatus.IssueStatusChanges">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatus.IssueStatusChanges1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.IssueStatus">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.IssueStatusChange.CreateIssueStatusChange(System.Int32,System.Byte[],System.DateTime)">
+	<summary>
+ Create a new IssueStatusChange object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="changeDate">Initial value of the ChangeDate property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.ChangeDate">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.IssueStatusChange_IssueStatus">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.IssueStatusChange_IssueStatus1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.IssueStatusChange_Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.OldStatus">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.OldStatusReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.NewStatus">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.NewStatusReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.IssueStatusChange.IssueReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.IssueStatusChange">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.OfficeLocation.CreateOfficeLocation(System.Int32,System.Byte[],System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Create a new OfficeLocation object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="officeName">Initial value of the OfficeName property.</param>
+	<param name="country">Initial value of the Country property.</param>
+	<param name="address1">Initial value of the Address1 property.</param>
+	<param name="address2">Initial value of the Address2 property.</param>
+	<param name="city">Initial value of the City property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.OfficeName">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.Country">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.Address1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.Address2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.OfficeLocation.City">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.OfficeLocation">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.Priority.CreatePriority(System.Int32,System.Byte[],System.String)">
+	<summary>
+ Create a new Priority object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="priorityDesc">Initial value of the PriorityDesc property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.Priority.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Priority.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Priority.PriorityDesc">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.Priority.Issues">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.Priority">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.TimeTracking.CreateTimeTracking(System.Int32,System.Byte[],System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Create a new TimeTracking object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="durationMins">Initial value of the DurationMins property.</param>
+	<param name="timeTracking_Engineer">Initial value of the TimeTracking_Engineer property.</param>
+	<param name="timeTracking_Issue">Initial value of the TimeTracking_Issue property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.DurationMins">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.TimeTracking_Engineer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.TimeTracking_Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.Engineer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.EngineerReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.Issue">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.TimeTracking.IssueReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.TimeTracking">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:LightSwitchApplication.Implementation.User.CreateUser(System.Int32,System.Byte[],System.String,System.String,System.String)">
+	<summary>
+ Create a new User object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="rowVersion">Initial value of the RowVersion property.</param>
+	<param name="firstname">Initial value of the Firstname property.</param>
+	<param name="surname">Initial value of the Surname property.</param>
+	<param name="phoneNumber">Initial value of the PhoneNumber property.</param>
+</member><member name="P:LightSwitchApplication.Implementation.User.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.RowVersion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Firstname">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Surname">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.PhoneNumber">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Username">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Password">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Address1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Address2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.City">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Postcode">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Country">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Email">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.User_Department">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Department">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.DepartmentReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.Implementation.User.Issues">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:LightSwitchApplication.Implementation.User">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationDataService.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationDataService.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="T:LightSwitchApplication.ApplicationDataService">
+	<summary>
+ Provides members to query and update data in the ApplicationData datasource.
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.SecurityAdministration">
+	<summary>
+ Provides the ability to manage security for the application.
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanEditEngineers">
+	<summary>
+ Allows users to edit engineer records
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanEditBaseData">
+	<summary>
+ Allows users to edit status, priority, and department codes
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanDeleteIssues">
+	<summary>
+ Allows users to delete issues
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanRunIssueSearch">
+	<summary>
+ Allows users to open the Issue Search Screen
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanModifyClosedIssues">
+	<summary>
+ Allows users to set the status of issues to closed
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanChangeIssueDescription">
+	<summary>
+ Allows users to change the issue text
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanMantainSystemSetup">
+	<summary>
+ Allows users to open the System Setup Screen
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanAssignIssueToEngineer">
+	<summary>
+ Allows users to assign issues to engineers
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanUpdateUsers">
+	<summary>
+ Allows users to update the User table
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanBypassValidation">
+	<summary>
+ Allows users to save records with Validation Errors
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanViewAllIssues">
+	<summary>
+ Allows users to view all issues
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.CanViewReport">
+	<summary>
+ Allows users to view reports
+ </summary>
+</member><member name="P:LightSwitchApplication.Permissions.AllPermissions">
+	<summary>
+ Gets all permissions defined for the application.  This includes system and user-defined permissions.
+ </summary>
+</member><member name="T:LightSwitchApplication.Permissions">
+	<summary>
+ Defines the names of the application permissions.
+ </summary>
+</member><member name="M:LightSwitchApplication.EmailOperation.#ctor">
+	<summary>
+ Initializes a new instance of the EmailOperation entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.RowVersion">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.SenderEmail">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.RecipientEmail">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.Subject">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.Body">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.Attachment">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.EmailOperation.AttachmentFileName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.EmailOperation">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member>
+</members>
+</doc>

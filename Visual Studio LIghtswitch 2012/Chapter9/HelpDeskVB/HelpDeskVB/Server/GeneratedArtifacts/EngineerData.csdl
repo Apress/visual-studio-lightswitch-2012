@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="EngineerRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="DateOfBirth" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SecurityVetted" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="IssueCount" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityContainer Name="EngineerDataObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="EngineerRecords" EntityType="LightSwitchApplication.EngineerRecord" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationSchemaChange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityChanges>
+    <EntitySchemaChange IsNew="false" OriginalName="AppOptions">
+      <PropertyChanges>
+        <EntityPropertySchemaChange IsNew="false" OriginalName="SMTTUsername" NewName="SMTPUsername" />
+      </PropertyChanges>
+    </EntitySchemaChange>
+  </EntityChanges>
+</ApplicationSchemaChange>

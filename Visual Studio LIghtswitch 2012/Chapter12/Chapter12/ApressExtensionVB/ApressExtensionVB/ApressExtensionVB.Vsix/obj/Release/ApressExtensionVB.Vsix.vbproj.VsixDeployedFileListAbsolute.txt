@@ -1,0 +1,9 @@
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.4\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.4\\license.txt
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.4\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.5\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.5\\license.txt
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.5\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.0\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.0\\license.txt
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.0\\ApressExtensionVB.lspkg

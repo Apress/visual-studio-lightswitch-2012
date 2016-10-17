@@ -1,0 +1,15 @@
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.1\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.1\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.11\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.11\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.15\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.15\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.16\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.16\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.17\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\0.17\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.0\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB\1.0\\ApressExtensionVB.lspkg
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB-Chapter12\1.0\\extension.vsixmanifest
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB-Chapter12\1.0\\license.txt
+C:\Users\tim.BADGER2000\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Tim Leung\ApressExtensionVB-Chapter12\1.0\\ApressExtensionVB.lspkg

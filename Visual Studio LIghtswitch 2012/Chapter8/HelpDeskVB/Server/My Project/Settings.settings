@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMTPServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">relay.yourMailServer.net</Value>
+    </Setting>
+    <Setting Name="SMTPPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="SMTPUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">myUsername</Value>
+    </Setting>
+    <Setting Name="SMTPPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">myPassword</Value>
+    </Setting>
+    <Setting Name="SMTPFromAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin@lsfaq.co.uk</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

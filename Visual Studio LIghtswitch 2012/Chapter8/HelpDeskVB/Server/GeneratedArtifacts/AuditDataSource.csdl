@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="AuditDetail">
+    <Key>
+      <PropertyRef Name="AuditID" />
+    </Key>
+    <Property Name="AuditID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuditDesc" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityContainer Name="AuditDataSource" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="AuditDetails" EntityType="LightSwitchApplication.AuditDetail" />
+  </EntityContainer>
+</Schema>

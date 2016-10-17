@@ -1,0 +1,6 @@
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\Bin\Release\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\Bin\Release\ApressExtensionCS.Client.Design.pdb
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Release\Editors\SilverlightEntityPropertyDropdown.g.cs
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Release\ApressExtensionCS.Client.Design.g.resources
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Release\ApressExtensionCS.Client.Design.dll
+C:\Source\Chapter12\ApressExtensionCS\ApressExtensionCS\ApressExtensionCS.Client.Design\obj\Release\ApressExtensionCS.Client.Design.pdb

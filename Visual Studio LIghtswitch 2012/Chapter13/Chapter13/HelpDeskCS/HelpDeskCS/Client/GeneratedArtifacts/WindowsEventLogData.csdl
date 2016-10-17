@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="LogEntry">
+    <Key>
+      <PropertyRef Name="LogEntryID" />
+    </Key>
+    <Property Name="LogEntryID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <Property Name="EventDateTime" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SourceName" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="EventSource" Relationship="LightSwitchApplication.EventLog_EventEntry" ToRole="LogSource" FromRole="LogEntry" />
+  </EntityType>
+  <EntityType Name="LogSource">
+    <Key>
+      <PropertyRef Name="SourceName" />
+    </Key>
+    <Property Name="SourceName" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <NavigationProperty Name="EventEntries" Relationship="LightSwitchApplication.EventLog_EventEntry" ToRole="LogEntry" FromRole="LogSource" />
+  </EntityType>
+  <Association Name="EventLog_EventEntry">
+    <End Role="LogSource" Type="LightSwitchApplication.LogSource" Multiplicity="0..1" />
+    <End Role="LogEntry" Type="LightSwitchApplication.LogEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LogSource">
+        <PropertyRef Name="SourceName" />
+      </Principal>
+      <Dependent Role="LogEntry">
+        <PropertyRef Name="SourceName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WindowsEventLogDataObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="LogEntries" EntityType="LightSwitchApplication.LogEntry" />
+    <EntitySet Name="LogSources" EntityType="LightSwitchApplication.LogSource" />
+    <AssociationSet Name="EventLog_EventEntry" Association="LightSwitchApplication.EventLog_EventEntry">
+      <End Role="LogSource" EntitySet="LogSources" />
+      <End Role="LogEntry" EntitySet="LogEntries" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
